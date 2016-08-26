@@ -1,6 +1,5 @@
 # v1_08_01
-Microchip Harmony v1-08. Demo for encx24j600+spi flash
-
+Microchip Harmony v1-08. Demo for encx24j600+spi flash. This demo also works well for email demo using tls v1-2 to talk with google server.
 You will need PIM(pic32mx795f512l), Explorer 16, pictail plus ssd1926 and fast 100mbps ethernet pictailplus/enc28j60. 
 Pictail plus ssd1926 cointains spi flash sst29vf016b. The system was tested with mplabx v3-35, and xc32 v1.42 or 1.31
 
