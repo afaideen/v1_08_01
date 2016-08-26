@@ -1,0 +1,83 @@
+#
+# Generated - do not edit!
+#
+# NOCDDL
+#
+CND_BASEDIR=`pwd`
+# pic32mx_eth_sk configuration
+CND_ARTIFACT_DIR_pic32mx_eth_sk=dist/pic32mx_eth_sk/production
+CND_ARTIFACT_NAME_pic32mx_eth_sk=pic32_eth_web_server.X.production.hex
+CND_ARTIFACT_PATH_pic32mx_eth_sk=dist/pic32mx_eth_sk/production/pic32_eth_web_server.X.production.hex
+CND_PACKAGE_DIR_pic32mx_eth_sk=${CND_DISTDIR}/pic32mx_eth_sk/package
+CND_PACKAGE_NAME_pic32mx_eth_sk=pic32ethwebserver.x.tar
+CND_PACKAGE_PATH_pic32mx_eth_sk=${CND_DISTDIR}/pic32mx_eth_sk/package/pic32ethwebserver.x.tar
+# pic32mx_eth_sk2 configuration
+CND_ARTIFACT_DIR_pic32mx_eth_sk2=dist/pic32mx_eth_sk2/production
+CND_ARTIFACT_NAME_pic32mx_eth_sk2=pic32_eth_web_server.X.production.hex
+CND_ARTIFACT_PATH_pic32mx_eth_sk2=dist/pic32mx_eth_sk2/production/pic32_eth_web_server.X.production.hex
+CND_PACKAGE_DIR_pic32mx_eth_sk2=${CND_DISTDIR}/pic32mx_eth_sk2/package
+CND_PACKAGE_NAME_pic32mx_eth_sk2=pic32ethwebserver.x.tar
+CND_PACKAGE_PATH_pic32mx_eth_sk2=${CND_DISTDIR}/pic32mx_eth_sk2/package/pic32ethwebserver.x.tar
+# pic32mz_ec_sk configuration
+CND_ARTIFACT_DIR_pic32mz_ec_sk=dist/pic32mz_ec_sk/production
+CND_ARTIFACT_NAME_pic32mz_ec_sk=pic32_eth_web_server.X.production.hex
+CND_ARTIFACT_PATH_pic32mz_ec_sk=dist/pic32mz_ec_sk/production/pic32_eth_web_server.X.production.hex
+CND_PACKAGE_DIR_pic32mz_ec_sk=${CND_DISTDIR}/pic32mz_ec_sk/package
+CND_PACKAGE_NAME_pic32mz_ec_sk=pic32ethwebserver.x.tar
+CND_PACKAGE_PATH_pic32mz_ec_sk=${CND_DISTDIR}/pic32mz_ec_sk/package/pic32ethwebserver.x.tar
+# pic32mz_ef_sk configuration
+CND_ARTIFACT_DIR_pic32mz_ef_sk=dist/pic32mz_ef_sk/production
+CND_ARTIFACT_NAME_pic32mz_ef_sk=pic32_eth_web_server.X.production.hex
+CND_ARTIFACT_PATH_pic32mz_ef_sk=dist/pic32mz_ef_sk/production/pic32_eth_web_server.X.production.hex
+CND_PACKAGE_DIR_pic32mz_ef_sk=${CND_DISTDIR}/pic32mz_ef_sk/package
+CND_PACKAGE_NAME_pic32mz_ef_sk=pic32ethwebserver.x.tar
+CND_PACKAGE_PATH_pic32mz_ef_sk=${CND_DISTDIR}/pic32mz_ef_sk/package/pic32ethwebserver.x.tar
+# pic32mz_da_sk configuration
+CND_ARTIFACT_DIR_pic32mz_da_sk=dist/pic32mz_da_sk/production
+CND_ARTIFACT_NAME_pic32mz_da_sk=pic32_eth_web_server.X.production.hex
+CND_ARTIFACT_PATH_pic32mz_da_sk=dist/pic32mz_da_sk/production/pic32_eth_web_server.X.production.hex
+CND_PACKAGE_DIR_pic32mz_da_sk=${CND_DISTDIR}/pic32mz_da_sk/package
+CND_PACKAGE_NAME_pic32mz_da_sk=pic32ethwebserver.x.tar
+CND_PACKAGE_PATH_pic32mz_da_sk=${CND_DISTDIR}/pic32mz_da_sk/package/pic32ethwebserver.x.tar
+# pic32mz_ef_sk_16b configuration
+CND_ARTIFACT_DIR_pic32mz_ef_sk_16b=dist/pic32mz_ef_sk_16b/production
+CND_ARTIFACT_NAME_pic32mz_ef_sk_16b=pic32_eth_web_server.X.production.hex
+CND_ARTIFACT_PATH_pic32mz_ef_sk_16b=dist/pic32mz_ef_sk_16b/production/pic32_eth_web_server.X.production.hex
+CND_PACKAGE_DIR_pic32mz_ef_sk_16b=${CND_DISTDIR}/pic32mz_ef_sk_16b/package
+CND_PACKAGE_NAME_pic32mz_ef_sk_16b=pic32ethwebserver.x.tar
+CND_PACKAGE_PATH_pic32mz_ef_sk_16b=${CND_DISTDIR}/pic32mz_ef_sk_16b/package/pic32ethwebserver.x.tar
+# pic32mx_eth_e16 configuration
+CND_ARTIFACT_DIR_pic32mx_eth_e16=dist/pic32mx_eth_e16/production
+CND_ARTIFACT_NAME_pic32mx_eth_e16=pic32_eth_web_server.X.production.hex
+CND_ARTIFACT_PATH_pic32mx_eth_e16=dist/pic32mx_eth_e16/production/pic32_eth_web_server.X.production.hex
+CND_PACKAGE_DIR_pic32mx_eth_e16=${CND_DISTDIR}/pic32mx_eth_e16/package
+CND_PACKAGE_NAME_pic32mx_eth_e16=pic32ethwebserver.x.tar
+CND_PACKAGE_PATH_pic32mx_eth_e16=${CND_DISTDIR}/pic32mx_eth_e16/package/pic32ethwebserver.x.tar
+# eagleeye2014 configuration
+CND_ARTIFACT_DIR_eagleeye2014=dist/eagleeye2014/production
+CND_ARTIFACT_NAME_eagleeye2014=pic32_eth_web_server.X.production.hex
+CND_ARTIFACT_PATH_eagleeye2014=dist/eagleeye2014/production/pic32_eth_web_server.X.production.hex
+CND_PACKAGE_DIR_eagleeye2014=${CND_DISTDIR}/eagleeye2014/package
+CND_PACKAGE_NAME_eagleeye2014=pic32ethwebserver.x.tar
+CND_PACKAGE_PATH_eagleeye2014=${CND_DISTDIR}/eagleeye2014/package/pic32ethwebserver.x.tar
+# e16_encx24j600_spiflash configuration
+CND_ARTIFACT_DIR_e16_encx24j600_spiflash=dist/e16_encx24j600_spiflash/production
+CND_ARTIFACT_NAME_e16_encx24j600_spiflash=pic32_eth_web_server.X.production.hex
+CND_ARTIFACT_PATH_e16_encx24j600_spiflash=dist/e16_encx24j600_spiflash/production/pic32_eth_web_server.X.production.hex
+CND_PACKAGE_DIR_e16_encx24j600_spiflash=${CND_DISTDIR}/e16_encx24j600_spiflash/package
+CND_PACKAGE_NAME_e16_encx24j600_spiflash=pic32ethwebserver.x.tar
+CND_PACKAGE_PATH_e16_encx24j600_spiflash=${CND_DISTDIR}/e16_encx24j600_spiflash/package/pic32ethwebserver.x.tar
+# e16_enc28j60_spiflash configuration
+CND_ARTIFACT_DIR_e16_enc28j60_spiflash=dist/e16_enc28j60_spiflash/production
+CND_ARTIFACT_NAME_e16_enc28j60_spiflash=pic32_eth_web_server.X.production.hex
+CND_ARTIFACT_PATH_e16_enc28j60_spiflash=dist/e16_enc28j60_spiflash/production/pic32_eth_web_server.X.production.hex
+CND_PACKAGE_DIR_e16_enc28j60_spiflash=${CND_DISTDIR}/e16_enc28j60_spiflash/package
+CND_PACKAGE_NAME_e16_enc28j60_spiflash=pic32ethwebserver.x.tar
+CND_PACKAGE_PATH_e16_enc28j60_spiflash=${CND_DISTDIR}/e16_enc28j60_spiflash/package/pic32ethwebserver.x.tar
+# e16_encx24j600_nvm configuration
+CND_ARTIFACT_DIR_e16_encx24j600_nvm=dist/e16_encx24j600_nvm/production
+CND_ARTIFACT_NAME_e16_encx24j600_nvm=pic32_eth_web_server.X.production.hex
+CND_ARTIFACT_PATH_e16_encx24j600_nvm=dist/e16_encx24j600_nvm/production/pic32_eth_web_server.X.production.hex
+CND_PACKAGE_DIR_e16_encx24j600_nvm=${CND_DISTDIR}/e16_encx24j600_nvm/package
+CND_PACKAGE_NAME_e16_encx24j600_nvm=pic32ethwebserver.x.tar
+CND_PACKAGE_PATH_e16_encx24j600_nvm=${CND_DISTDIR}/e16_encx24j600_nvm/package/pic32ethwebserver.x.tar

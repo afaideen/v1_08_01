@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<project>                                  
+  <executable name="dist/e16_encx24j600_spiflash/production/pic32_eth_web_server.X.production.elf">                 
+    <memory name="program">                 
+      <units>bytes</units>                 
+      <length>531968</length>                 
+      <used>454924</used>                     
+      <free>77044</free>                     
+    </memory>                              
+    <memory name="data">              
+      <units>bytes</units>                 
+      <length>131072</length>                 
+      <used>28572</used>                     
+      <free>102500</free>                     
+    </memory>                              
+  </executable>                            
+</project>                                 
