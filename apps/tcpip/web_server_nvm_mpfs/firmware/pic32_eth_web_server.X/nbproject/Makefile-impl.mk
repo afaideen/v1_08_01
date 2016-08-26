@@ -31,7 +31,7 @@ DEFAULTCONF=e16_encx24j600_spiflash
 CONF=${DEFAULTCONF}
 
 # All Configurations
-ALLCONFS=pic32mx_eth_sk pic32mx_eth_sk2 pic32mz_ec_sk pic32mz_ef_sk pic32mz_da_sk pic32mz_ef_sk_16b pic32mx_eth_e16 eagleeye2014 e16_encx24j600_spiflash e16_enc28j60_spiflash e16_encx24j600_nvm 
+ALLCONFS=pic32mx_eth_sk pic32mx_eth_sk2 pic32mz_ec_sk pic32mz_ef_sk pic32mz_da_sk pic32mz_ef_sk_16b pic32mx_eth_e16 e16_encx24j600_spiflash e16_enc28j60_spiflash e16_encx24j600_nvm 
 
 
 # build
@@ -52,7 +52,6 @@ ALLCONFS=pic32mx_eth_sk pic32mx_eth_sk2 pic32mz_ec_sk pic32mz_ef_sk pic32mz_da_s
 	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=pic32mz_da_sk clean
 	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=pic32mz_ef_sk_16b clean
 	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=pic32mx_eth_e16 clean
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=eagleeye2014 clean
 	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=e16_encx24j600_spiflash clean
 	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=e16_enc28j60_spiflash clean
 	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=e16_encx24j600_nvm clean
@@ -68,7 +67,6 @@ ALLCONFS=pic32mx_eth_sk pic32mx_eth_sk2 pic32mz_ec_sk pic32mz_ef_sk pic32mz_da_s
 	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=pic32mz_da_sk build
 	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=pic32mz_ef_sk_16b build
 	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=pic32mx_eth_e16 build
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=eagleeye2014 build
 	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=e16_encx24j600_spiflash build
 	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=e16_enc28j60_spiflash build
 	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=e16_encx24j600_nvm build

@@ -53,13 +53,6 @@ CND_ARTIFACT_PATH_pic32mx_eth_e16=dist/pic32mx_eth_e16/production/pic32_eth_web_
 CND_PACKAGE_DIR_pic32mx_eth_e16=${CND_DISTDIR}/pic32mx_eth_e16/package
 CND_PACKAGE_NAME_pic32mx_eth_e16=pic32ethwebserver.x.tar
 CND_PACKAGE_PATH_pic32mx_eth_e16=${CND_DISTDIR}/pic32mx_eth_e16/package/pic32ethwebserver.x.tar
-# eagleeye2014 configuration
-CND_ARTIFACT_DIR_eagleeye2014=dist/eagleeye2014/production
-CND_ARTIFACT_NAME_eagleeye2014=pic32_eth_web_server.X.production.hex
-CND_ARTIFACT_PATH_eagleeye2014=dist/eagleeye2014/production/pic32_eth_web_server.X.production.hex
-CND_PACKAGE_DIR_eagleeye2014=${CND_DISTDIR}/eagleeye2014/package
-CND_PACKAGE_NAME_eagleeye2014=pic32ethwebserver.x.tar
-CND_PACKAGE_PATH_eagleeye2014=${CND_DISTDIR}/eagleeye2014/package/pic32ethwebserver.x.tar
 # e16_encx24j600_spiflash configuration
 CND_ARTIFACT_DIR_e16_encx24j600_spiflash=dist/e16_encx24j600_spiflash/production
 CND_ARTIFACT_NAME_e16_encx24j600_spiflash=pic32_eth_web_server.X.production.hex
