@@ -7,7 +7,13 @@ Pictail plus ssd1926 cointains spi flash sst29vf016b. The system was tested with
 2. Extract it to a folder under c:/ drive
 3. Open mplabx ide.
 4. Go to project folder ..apps\tcpip\web_server_nvm_mpfs\firmware\pic32_eth_web_server.X
-5. On the tool bar menu, there is drag down list on configuration profile. Eg you can choose 'e16_encx24j600_spiflash' for demonstration
+5. On the tool bar menu, there is drop down list on configuration profile. Eg you can choose 'e16_encx24j600_spiflash' for demonstration
 of webserver on external spi flash.
 6. Build main project. Upon successfull download the hex into the board.
 7. Enjoy!
+
+Take note the code also includes configuration for demo list as below
+1.encx+nvm
+and
+2.enc28j60+spiflash
+
