@@ -58,16 +58,43 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #include <stdbool.h>
 #include "peripheral/ports/plib_ports.h"
 
+#define     EX16
 // *****************************************************************************
 // *****************************************************************************
 // Section: Constants and Type Definitions.
 // *****************************************************************************
-// *****************************************************************************
 
-#define     EX16
+#define BSP_POTENTIOMETER       PORTS_BIT_POS_2
+#define SIZE_READING            30
 
-#define     DIR_LED_D3      TRISAbits.TRISA0
-#define     LED_D3          LATAbits.LATA0
+typedef struct
+{
+    uint16_t reading[SIZE_READING];
+    float ave;
+    float tot;
+    uint8_t count;
+    uint32_t t1;
+    
+}AN_SENSOR;
+
+
+typedef enum
+{
+    BSP_LED_EASY_CONFIGURATION,            
+    BSP_LED_CONNECTING_TO_AP,       
+    BSP_LED_CONNECTION_FAILED,      
+    BSP_LED_SERVER_CONNECT_FAILED,  
+    BSP_LED_AP_CONNECTED,     
+    BSP_LED_ALL_GOOD,  
+    BSP_LED_TX,
+    BSP_LED_RX,
+    BSP_LED_DNS_FAILED,
+    BSP_LED_TCPIP_STACK_INIT_FAILURE,
+    BSP_LED_INTIAL_CONNECT,
+    BSP_LED_ALL_OFF,
+    BSP_LED_NVM_FAILED_MOUNT
+} BSP_LED_LIGHT_SHOW;
+
 // *****************************************************************************
 /* BSP Switch.
 
@@ -80,23 +107,56 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   Remarks:
     None.
 */
+typedef enum
+{
+
+     /* SWITCH 1 */
+     BSP_SWITCH_1_PORT = /*DOM-IGNORE-BEGIN*/PORTS_BIT_POS_13/*DOM-IGNORE-END*/,
+
+     /* SWITCH 2 */
+     BSP_SWITCH_2_PORT = /*DOM-IGNORE-BEGIN*/PORTS_BIT_POS_7/*DOM-IGNORE-END*/,
+    
+     /* SWITCH 3 */
+     BSP_SWITCH_3_PORT = /*DOM-IGNORE-BEGIN*/PORTS_BIT_POS_7/*DOM-IGNORE-END*/,
+     
+     /* SWITCH 4 */
+     BSP_SWITCH_4_PORT = /*DOM-IGNORE-BEGIN*/PORTS_BIT_POS_6/*DOM-IGNORE-END*/,
+
+} BSP_SWITCH_PORT;
 
 typedef enum
 {
 
-    /* SWITCH 3 */
-     BSP_SWITCH_3 = /*DOM-IGNORE-BEGIN*/PORTS_BIT_POS_6/*DOM-IGNORE-END*/,
+    /* SWITCH 1 */
+     BSP_SWITCH_1 = /*DOM-IGNORE-BEGIN*/PORTS_BIT_POS_13/*DOM-IGNORE-END*/,//RD13
 
-    /* SWITCH 4 */
-     BSP_SWITCH_4 = /*DOM-IGNORE-BEGIN*/PORTS_BIT_POS_13/*DOM-IGNORE-END*/,
+    /* SWITCH 2 */
+     BSP_SWITCH_2 = /*DOM-IGNORE-BEGIN*/PORTS_BIT_POS_7/*DOM-IGNORE-END*/,//RA7
     
-     /* SWITCH 5 */
-     BSP_SWITCH_5 = /*DOM-IGNORE-BEGIN*/37/*DOM-IGNORE-END*/,
+     /* SWITCH 3 */
+     BSP_SWITCH_3 = /*DOM-IGNORE-BEGIN*/PORTS_BIT_POS_7/*DOM-IGNORE-END*/,//RD7
      
-     /* SWITCH 6 */
-     BSP_SWITCH_6 = /*DOM-IGNORE-BEGIN*/PORTS_BIT_POS_7/*DOM-IGNORE-END*/,
+     /* SWITCH 4 */
+     BSP_SWITCH_4 = /*DOM-IGNORE-BEGIN*/PORTS_BIT_POS_6/*DOM-IGNORE-END*/,//RD6
 
 } BSP_SWITCH;
+
+typedef enum
+{
+
+     /* SWITCH 1 */
+     BSP_SWITCH_1_CHANNEL = /*DOM-IGNORE-BEGIN*/PORT_CHANNEL_D/*DOM-IGNORE-END*/,
+
+     /* SWITCH 2 */
+     BSP_SWITCH_2_CHANNEL = /*DOM-IGNORE-BEGIN*/PORT_CHANNEL_A/*DOM-IGNORE-END*/,
+    
+     /* SWITCH 3 */
+     BSP_SWITCH_3_CHANNEL = /*DOM-IGNORE-BEGIN*/PORT_CHANNEL_D/*DOM-IGNORE-END*/,
+     
+     /* SWITCH 4 */
+     BSP_SWITCH_4_CHANNEL = /*DOM-IGNORE-BEGIN*/PORT_CHANNEL_D/*DOM-IGNORE-END*/,
+
+} BSP_SWITCH_CHANNEL;
 
 // *****************************************************************************
 /* BSP Switch state.
@@ -115,11 +175,39 @@ typedef enum
 {
     /* Switch pressed */
     BSP_SWITCH_STATE_PRESSED = /*DOM-IGNORE-BEGIN*/0/*DOM-IGNORE-END*/,
-
+    BSP_SWITCH_STATE_ASSERTED = BSP_SWITCH_STATE_PRESSED,
    /* Switch not pressed */
-    BSP_SWITCH_STATE_RELEASED = /*DOM-IGNORE-BEGIN*/1/*DOM-IGNORE-END*/
+    BSP_SWITCH_STATE_RELEASED = /*DOM-IGNORE-BEGIN*/1/*DOM-IGNORE-END*/,
+    BSP_SWITCH_STATE_DEASSERTED = BSP_SWITCH_STATE_RELEASED,
 
 } BSP_SWITCH_STATE;
+
+#define BSP_SWITCH_BUSY -1
+
+//DGC_FINISH  Comment these
+typedef struct
+{
+    int32_t prevValue;
+    int32_t timerActive;
+    int32_t duration; // In milliseconds
+    uint32_t startTick;
+    uint32_t endTick;
+
+}BSP_SWITCH_DEBOUNCE_T;
+
+#define BSP_MAX_SWITCHES 4
+#define BSP_SWITCH_DEBOUNCE_TIME 60
+
+typedef struct
+{
+    BSP_LED_LIGHT_SHOW light_show;
+    BSP_SWITCH_STATE  s1, s2, s3, s4;
+    BSP_SWITCH_STATE previousStateS1;
+    BSP_SWITCH_STATE previousStateS2;
+    BSP_SWITCH_STATE previousStateS3;
+    BSP_SWITCH_STATE previousStateS4;
+    BSP_SWITCH_DEBOUNCE_T switches[BSP_MAX_SWITCHES];
+} BSP_DATA;
 
 // *****************************************************************************
 /* LED Number.
@@ -136,31 +224,87 @@ typedef enum
 
 typedef enum
 {
+    /* LED 1 */
+    BSP_LED_1_PORT = PORTS_BIT_POS_0,
+                                                                      
+    /* LED 2 */
+    BSP_LED_2_PORT = PORTS_BIT_POS_1,
+                                                                      
     /* LED 3 */
-    BSP_LED_3 = /*DOM-IGNORE-BEGIN*/PORTS_BIT_POS_0/*DOM-IGNORE-END*/,
+    BSP_LED_3_PORT = PORTS_BIT_POS_2,
+                                                                      
+    /* LED 4 */
+    BSP_LED_4_PORT = PORTS_BIT_POS_3,
+                                                                      
+    /* LED 5 */
+    BSP_LED_5_PORT = PORTS_BIT_POS_4,
+                                                                      
+    /* LED 6 */
+    BSP_LED_6_PORT = PORTS_BIT_POS_5,
+                                                                      
+    /* LED 7 */
+    BSP_LED_7_PORT = PORTS_BIT_POS_6,
+    
+    /* LED 8 */
+    BSP_LED_8_PORT = PORTS_BIT_POS_7,
+
+} BSP_LED_PORT;
+
+typedef enum
+{
+    /* LED 3 */
+    BSP_LED_1 = /*DOM-IGNORE-BEGIN*/PORTS_BIT_POS_0/*DOM-IGNORE-END*/,
                                                                       
     /* LED 4 */                                                       
-    BSP_LED_4 = /*DOM-IGNORE-BEGIN*/PORTS_BIT_POS_1/*DOM-IGNORE-END*/,
+    BSP_LED_2 = /*DOM-IGNORE-BEGIN*/PORTS_BIT_POS_1/*DOM-IGNORE-END*/,
                                                                       
     /* LED 5 */                                                       
-    BSP_LED_5 = /*DOM-IGNORE-BEGIN*/PORTS_BIT_POS_2/*DOM-IGNORE-END*/,
+    BSP_LED_3 = /*DOM-IGNORE-BEGIN*/PORTS_BIT_POS_2/*DOM-IGNORE-END*/,
                                                                       
     /* LED 6 */                                                       
-    BSP_LED_6 = /*DOM-IGNORE-BEGIN*/PORTS_BIT_POS_3/*DOM-IGNORE-END*/,
+    BSP_LED_4 = /*DOM-IGNORE-BEGIN*/PORTS_BIT_POS_3/*DOM-IGNORE-END*/,
                                                                       
     /* LED 7 */                                                       
-    BSP_LED_7 = /*DOM-IGNORE-BEGIN*/PORTS_BIT_POS_4/*DOM-IGNORE-END*/,
+    BSP_LED_5 = /*DOM-IGNORE-BEGIN*/PORTS_BIT_POS_4/*DOM-IGNORE-END*/,
                                                                       
     /* LED 8 */                                                       
-    BSP_LED_8 = /*DOM-IGNORE-BEGIN*/PORTS_BIT_POS_5/*DOM-IGNORE-END*/,
+    BSP_LED_6 = /*DOM-IGNORE-BEGIN*/PORTS_BIT_POS_5/*DOM-IGNORE-END*/,
                                                                       
     /* LED 9 */                                                       
-    BSP_LED_9 = /*DOM-IGNORE-BEGIN*/PORTS_BIT_POS_6/*DOM-IGNORE-END*/,
+    BSP_LED_7 = /*DOM-IGNORE-BEGIN*/PORTS_BIT_POS_6/*DOM-IGNORE-END*/,
 
     /* LED 10 */
-    BSP_LED_10 = /*DOM-IGNORE-BEGIN*/PORTS_BIT_POS_7/*DOM-IGNORE-END*/
+    BSP_LED_8 = /*DOM-IGNORE-BEGIN*/PORTS_BIT_POS_7/*DOM-IGNORE-END*/
 
 } BSP_LED;
+
+typedef enum
+{
+    /* LED 1 */
+    BSP_LED_1_CHANNEL = PORT_CHANNEL_A,
+                                                                      
+    /* LED 2 */
+    BSP_LED_2_CHANNEL = PORT_CHANNEL_A,
+                                                                      
+    /* LED 3 */
+    BSP_LED_3_CHANNEL = PORT_CHANNEL_A,
+                                                                      
+    /* LED 4 */
+    BSP_LED_4_CHANNEL = PORT_CHANNEL_A,
+                                                                      
+    /* LED 5 */
+    BSP_LED_5_CHANNEL = PORT_CHANNEL_A,
+                                                                      
+    /* LED 6 */
+    BSP_LED_6_CHANNEL = PORT_CHANNEL_A,
+                                                                      
+    /* LED 7 */
+    BSP_LED_7_CHANNEL = PORT_CHANNEL_A,
+            
+    /* LED 8 */
+    BSP_LED_8_CHANNEL = PORT_CHANNEL_A,
+
+} BSP_LED_CHANNEL;
 
 // *****************************************************************************
 /* LED State
@@ -224,7 +368,7 @@ typedef enum
 */
 
 void BSP_Initialize(void);
-
+void BSP_Init_AtoD(void);
 // *****************************************************************************
 /* Function: 
     void BSP_LEDStateSet(BSP_LED led, BSP_LED_STATE state);
@@ -264,6 +408,7 @@ void BSP_Initialize(void);
 */
 
 void BSP_LEDStateSet(BSP_LED led, BSP_LED_STATE state);
+void BSP_LEDStateSet2(BSP_LED_PORT led_port, BSP_LED_CHANNEL led_channel, BSP_LED_STATE led_state);
 
 // *****************************************************************************
 /* Function: 
@@ -304,6 +449,7 @@ void BSP_LEDStateSet(BSP_LED led, BSP_LED_STATE state);
 */
 
 BSP_LED_STATE BSP_LEDStateGet(BSP_LED led);
+BSP_LED_STATE BSP_LEDStateGet2(BSP_LED_CHANNEL led_channel, BSP_LED_PORT led_port);
 
 // *****************************************************************************
 /* Function: 
@@ -346,6 +492,8 @@ BSP_LED_STATE BSP_LEDStateGet(BSP_LED led);
 */
 
 void BSP_LEDToggle(BSP_LED led);
+void BSP_LEDToggle2(BSP_LED_CHANNEL led_channel, BSP_LED_PORT led_port);
+
 
 // *****************************************************************************
 /* Function: 
@@ -382,6 +530,7 @@ void BSP_LEDToggle(BSP_LED led);
 */
 
 void BSP_LEDOn(BSP_LED led);
+void BSP_LEDOn2(BSP_LED_CHANNEL led_channel, BSP_LED_PORT led_port);
 
 // *****************************************************************************
 /* Function: 
@@ -418,6 +567,10 @@ void BSP_LEDOn(BSP_LED led);
 */
 
 void BSP_LEDOff(BSP_LED led);
+void BSP_LEDOff2(BSP_LED_CHANNEL led_channel, BSP_LED_PORT led_port);
+void BSP_LED_LightShowSet(BSP_LED_LIGHT_SHOW lightShow);
+void BSP_SYS_Tasks ();
+void BSP_LED_LightShow(BSP_LED_LIGHT_SHOW lightShow);
 
 // *****************************************************************************
 /* Function: 
@@ -458,6 +611,7 @@ void BSP_LEDOff(BSP_LED led);
 */
 
 BSP_SWITCH_STATE BSP_SwitchStateGet(BSP_SWITCH bspSwitch);
+BSP_SWITCH_STATE BSP_SWITCH_StateGet(BSP_SWITCH_CHANNEL bspSwitchChannel, BSP_SWITCH_PORT bspSwitchPort);
 
 // *****************************************************************************
 /* Function: 
@@ -583,6 +737,54 @@ void BSP_USBVBUSPowerEnable(uint8_t port, bool enable);
 */
 
 bool BSP_USBVBUSSwitchOverCurrentDetect(uint8_t port);
+
+// Select which UART the STACK_USE_UART and STACK_USE_UART2TCP_BRIDGE 
+// options will use.  You can change these to U1BRG, U1MODE, etc. if you 
+// want to use the UART1 module instead of UART2.
+#define UBRG				U2BRG
+#define UMODE				U2MODE
+#define USTA				U2STA
+#define BusyUART()			BusyUART2()
+#define CloseUART()			CloseUART2()
+#define ConfigIntUART(a)	ConfigIntUART2(a)
+#define DataRdyUART()		DataRdyUART2()
+#define OpenUART(a,b,c)		OpenUART2(a,b,c)
+#define ReadUART()			ReadUART2()
+#define WriteUART(a)		WriteUART2(a)
+#define getsUART(a,b,c)		getsUART2(a,b,c)
+#define putsUART(a)			putsUART2(a)
+#define getcUART()			getcUART2()
+#define putcUART(a)			do{while(BusyUART()); WriteUART(a); while(BusyUART()); }while(0)
+#define putrsUART(a)		putrsUART2(a)
+
+//MLA EX16 LCD BLOCKING
+	//EX16 LCD
+    /*** LCD Configuration ***/
+	#define     USE_LCD
+	// Clock frequency values
+	// These directly influence timed events using the Tick module.  They also are used for UART and SPI baud rate generation.
+	#ifndef SYS_CLK_FrequencySystemGet
+	#define SYS_CLK_FrequencySystemGet  		(SYS_CLK_FREQ) // Hz
+	#define SYS_CLK_FrequencyInstructionGet()   (SYS_CLK_FrequencySystemGet / 1) // Normally SYS_CLK_FrequencySystemGet() / 4 for PIC18, SYS_CLK_FrequencySystemGet() / 2 for PIC24, and SYS_CLK_FrequencySystemGet() / 1 for PIC32.  Might need changing if using Doze modes.
+	#define SYS_CLK_FrequencyPeripheralGet()    (SYS_CLK_FrequencySystemGet / 1) // Normally SYS_CLK_FrequencySystemGet() / 4 for PIC18, SYS_CLK_FrequencySystemGet() / 2 for PIC24, and SYS_CLK_FrequencySystemGet() / 1 for PIC32.  Divisor may be different if using a PIC32 since it's configurable.
+	#endif
+
+	#include "common/src/delay.h"    
+	#include "driver/lcd/src/lcd_blocking.h"
+	// LCD Module I/O pins.  NOTE: On the Explorer 16, the LCD is wired to the
+	// same PMP lines required to communicate with an ENCX24J600 in parallel
+	// mode.  Since the LCD does not have a chip select wire, if you are using
+	// the ENC424J600/624J600 in parallel mode, the LCD cannot be used.
+	// #if !defined(ENC100_INTERFACE_MODE) || (ENC100_INTERFACE_MODE == 0) // SPI only
+	#define LCD_DATA_TRIS       (*((volatile unsigned char *)&TRISE))
+	#define LCD_DATA_IO         (*((volatile unsigned char *)&LATE))
+	#define LCD_RD_WR_TRIS      (TRISDbits.TRISD5)
+	#define LCD_RD_WR_IO        (LATDbits.LATD5)
+	#define LCD_RS_TRIS         (TRISBbits.TRISB15)
+	#define LCD_RS_IO           (LATBbits.LATB15)
+	#define LCD_E_TRIS          (TRISDbits.TRISD4)
+	#define LCD_E_IO            (LATDbits.LATD4)
+	// #endif
 
 #endif //_BSP_CONFIG_H
 

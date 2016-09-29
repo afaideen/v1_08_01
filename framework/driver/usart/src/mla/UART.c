@@ -110,6 +110,33 @@ void putsUART2(unsigned int *buffer)
     }
 }
 
+/*************************************************************************
+* Function Name     : BusyUART2                                          *
+* Description       : This returns status whether the transmission       *  
+*                     is in progress or not, by checking Status bit TRMT *
+* Parameters        : None                                               *
+* Return Value      : char info whether transmission is in progress      *
+*************************************************************************/
+
+char BusyUART2(void)
+{  
+    return(!U2STAbits.TRMT);
+}
+
+/*********************************************************************
+* Function Name     : WriteUART2                                     *
+* Description       : This function writes data into the UxTXREG,    *
+* Parameters        : unsigned int data the data to be written       *
+* Return Value      : None                                           *
+*********************************************************************/
+void WriteUART2(unsigned int data)
+{
+    if(U2MODEbits.PDSEL == 3)
+        U2TXREG = data;
+    else
+        U2TXREG = data & 0xFF;  
+}
+
 
 
 #if defined(__18CXX)	// PIC18

@@ -546,7 +546,8 @@ SYS_MODULE_OBJ TCPIP_STACK_Initialize(const SYS_MODULE_INDEX index, const SYS_MO
     {   // cannot run with no interface/init data
         return SYS_MODULE_OBJ_INVALID;
     }
-
+//    LATHbits.LATH0 = 1;
+//    Nop();
     // snapshot of the initialization data
     tcpip_init_data = *((TCPIP_STACK_INIT*)init);
     
@@ -731,7 +732,7 @@ static bool TCPIP_STACK_BringNetUp(TCPIP_STACK_MODULE_CTRL* stackCtrlData, const
         moduleInit.sys.powerState = SYS_MODULE_POWER_IDLE_STOP;
     }
 
-
+    
     while(true)
     {
 #if defined(TCPIP_STACK_USE_EVENT_NOTIFICATION) && (TCPIP_STACK_USER_NOTIFICATION != 0)

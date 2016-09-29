@@ -144,11 +144,12 @@ void DRV_ETHMAC_LibInit(DRV_ETHMAC_INSTANCE_DCPT* pMacD)
     PLIB_ETH_Disable(ethId);
     PLIB_ETH_TxRTSDisable(ethId);
     PLIB_ETH_RxDisable(ethId);
-
+    
     while( PLIB_ETH_EthernetIsBusy(ethId) )
     {
         //Do Nothing.
     }
+    
     PLIB_ETH_Enable(ethId);
 
     while(PLIB_ETH_RxPacketCountGet(ethId) > 0 )

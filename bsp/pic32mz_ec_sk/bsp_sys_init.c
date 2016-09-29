@@ -81,6 +81,23 @@ void BSP_Initialize(void )
     PLIB_PORTS_PinClear( PORTS_ID_0, PORT_CHANNEL_H, BSP_LED_1 );
     PLIB_PORTS_PinClear( PORTS_ID_0, PORT_CHANNEL_H, BSP_LED_2 );
     PLIB_PORTS_PinClear( PORTS_ID_0, PORT_CHANNEL_H, BSP_LED_3 );
+    PLIB_PORTS_PinDirectionOutputSet(PORTS_ID_0, PORT_CHANNEL_H, BSP_LED_1);
+    PLIB_PORTS_PinDirectionOutputSet(PORTS_ID_0, PORT_CHANNEL_H, BSP_LED_2);
+    PLIB_PORTS_PinDirectionOutputSet(PORTS_ID_0, PORT_CHANNEL_H, BSP_LED_3);
+//    LATHbits.LATH0 = 1;
+//    PORTHbits.RH0 = 1;
+    
+    PLIB_PORTS_PinDirectionInputSet(PORTS_ID_0, PORT_CHANNEL_B, BSP_SWITCH_1);//S1
+    PLIB_PORTS_PinDirectionInputSet(PORTS_ID_0, PORT_CHANNEL_B, BSP_SWITCH_2);//S2
+    PLIB_PORTS_PinDirectionInputSet(PORTS_ID_0, PORT_CHANNEL_B, BSP_SWITCH_3);//S3
+//    LATHbits.LATH1 = 1;
+//    PORTHbits.RH1 = 1;
+    
+    CNPUBbits.CNPUB12 = 1;
+    CNPUBbits.CNPUB13 = 1;
+    CNPUBbits.CNPUB14 = 1;
+//    LATHbits.LATH2 = 1;
+//    PORTHbits.RH2 = 1;
 }
 
 // *****************************************************************************

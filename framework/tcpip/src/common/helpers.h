@@ -70,5 +70,7 @@ signed char stricmppgm2ram(uint8_t* a, const uint8_t* b);
 
 int16_t     str_replace(uint8_t *vExpression, const uint8_t *vFind, const uint8_t *vReplacement, uint16_t wMaxLen, bool bSearchCaseInsensitive);
 
+uint16_t CalcIPChecksum(uint8_t *buffer, uint16_t count);
+
 #endif  // __HELPERS_H_
 

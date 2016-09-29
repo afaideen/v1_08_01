@@ -466,6 +466,7 @@ signed char stricmppgm2ram(uint8_t* a, const uint8_t* b)
 	return 0;
 }
 
+
 /*****************************************************************************
   Function:
 	int16_t str_replace(uint8_t *vExpression, const uint8_t *vFind, const uint8_t *vReplacement, 
@@ -753,4 +754,64 @@ int16_t str_replace(uint8_t *vExpression, const uint8_t *vFind, const uint8_t *v
 	}
 	return wFindCount;
 }
+
 #endif
+
+/*****************************************************************************
+  Function:
+    uint16_t CalcIPChecksum(uint8_t *buffer, uint16_t count)
+
+  Summary:
+    Calculates an IP checksum value.
+
+  Description:
+    This function calculates an IP checksum over an array of input data.  The
+    checksum is the 16-bit one's complement of one's complement sum of all
+    words in the data (with zero-padding if an odd number of bytes are
+    summed).  This checksum is defined in RFC 793.
+
+  Precondition:
+    buffer is uint16_t aligned (even memory address) on 16- and 32-bit PICs.
+
+  Parameters:
+    buffer - pointer to the data to be checksummed
+    count  - number of bytes to be checksummed
+
+  Returns:
+    The calculated checksum.
+
+  Internal:
+    This function could be improved to do 32-bit sums on PIC32 platforms.
+ ***************************************************************************/
+uint16_t CalcIPChecksum(uint8_t *buffer, uint16_t count)
+{
+    uint16_t i;
+    uint16_t *val;
+
+    union {
+        uint16_t w[2];
+        uint32_t dw;
+    } sum;
+
+    i = count >> 1;
+    val = (uint16_t *)buffer;
+
+    // Calculate the sum of all words
+    sum.dw = 0x00000000ul;
+    while (i--)
+        sum.dw += (uint32_t)*val++;
+
+    // Add in the sum of the remaining byte, if present
+    if (count & 0x1)
+        sum.dw += (uint32_t)*((uint8_t *)val);
+
+    // Do an end-around carry (one's complement arrithmatic)
+    sum.dw = (uint32_t) sum.w[0] + (uint32_t) sum.w[1];
+
+    // Do another end-around carry in case if the prior add
+    // caused a carry out
+    sum.w[0] += sum.w[1];
+
+    // Return the resulting checksum
+    return ~sum.w[0];
+}

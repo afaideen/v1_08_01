@@ -824,6 +824,7 @@ bool NET_PRES_SocketIsSecure(NET_PRES_SKT_HANDLE_T handle)
     NET_PRES_SocketData * pSkt;
     if ((pSkt = _NET_PRES_SocketValidate(handle)) == NULL)
     {
+        Nop();
         return false;
     }
 

@@ -77,6 +77,14 @@ void BSP_Initialize(void )
     PLIB_PORTS_PinClear( PORTS_ID_0, PORT_CHANNEL_D, BSP_LED_1 );
     PLIB_PORTS_PinClear( PORTS_ID_0, PORT_CHANNEL_D, BSP_LED_2 );
     PLIB_PORTS_PinClear( PORTS_ID_0, PORT_CHANNEL_D, BSP_LED_3 );
+    PLIB_PORTS_PinDirectionOutputSet(PORTS_ID_0, PORT_CHANNEL_D, BSP_LED_1);
+    PLIB_PORTS_PinDirectionOutputSet(PORTS_ID_0, PORT_CHANNEL_D, BSP_LED_2);
+    PLIB_PORTS_PinDirectionOutputSet(PORTS_ID_0, PORT_CHANNEL_D, BSP_LED_3);
+    
+    PLIB_PORTS_PinDirectionInputSet( PORTS_ID_0, PORT_CHANNEL_D, BSP_SWITCH_1 );
+    PLIB_PORTS_PinDirectionInputSet( PORTS_ID_0, PORT_CHANNEL_D, BSP_SWITCH_2 );
+    PLIB_PORTS_PinDirectionInputSet( PORTS_ID_0, PORT_CHANNEL_D, BSP_SWITCH_3 );
+    
 }
 
 // *****************************************************************************
