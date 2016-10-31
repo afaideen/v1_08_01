@@ -726,7 +726,13 @@ SYS_FS_MEDIA_BLOCK_COMMAND_HANDLE SYS_FS_MEDIA_MANAGER_Read
     startAddress = mediaObj->driverFunctions->addressGet(mediaObj->driverHandle);
     Nop();
     #if defined(DRV_SST25VF016B_CLIENTS_NUMBER)
+        #if defined(EAGLEEYE2014)
+            WF_INT_IE = 0;
+        #endif
     mediaObj->driverFunctions->Read(*source, destination, nBytes);
+        #if defined(EAGLEEYE2014)
+            WF_INT_IE = 1;
+        #endif
     #else
     address = (uint32_t)source - (uint32_t)startAddress;
     mediaObj->driverFunctions->Read(mediaObj->driverHandle, &(mediaObj->commandHandle), destination, address, nBytes);
@@ -763,27 +769,19 @@ SYS_FS_MEDIA_BLOCK_COMMAND_HANDLE SYS_FS_MEDIA_MANAGER_SectorWrite
 
     if (mediaObj->driverHandle == DRV_HANDLE_INVALID)
     {
-        Nop();
-        Nop();
         return SYS_FS_MEDIA_BLOCK_COMMAND_HANDLE_INVALID;
     }
 
     mediaWriteBlockSize = mediaObj->mediaGeometry->geometryTable[1].blockSize;
     Nop();
     Nop();
-    Nop();
-    Nop();
 
     if (mediaWriteBlockSize > 512)
     {
-        Nop();
-        Nop();
         sectorsPerBlock = mediaWriteBlockSize / 512;
     }
     else if (mediaWriteBlockSize == 512)
     {
-        Nop();
-        Nop();
         sectorsPerBlock = 1;
         blocksPerSector = 1;
     }
@@ -806,16 +804,34 @@ SYS_FS_MEDIA_BLOCK_COMMAND_HANDLE SYS_FS_MEDIA_MANAGER_SectorWrite
         mediaObj->commandStatus = SYS_FS_MEDIA_COMMAND_IN_PROGRESS;
 //        SYS_CONSOLE_PRINT("sector:%lu, numSectors:%lu\r\n", sector, numSectors);
 #if defined(DRV_SST25VF016B_CLIENTS_NUMBER)
-        if(sector == 4096){//uncomment for blocking function
-            SPIFlashInit();//uncomment for blocking function
-            SPIFlashBeginWrite(4096);//uncomment for blocking function
+        if(sector == DRV_SST25FV016B_MEDIA_START_ADDRESS()){//uncomment for blocking function
+//            SPIFlashInit();//uncomment for blocking function
+            SPIFlashBeginWrite(sector);//uncomment for blocking function
         }//uncomment for blocking function
         mediaObj->driverFunctions->Write (dataBuffer, len);//uncomment for blocking function
         
         // If address is a sector boundary
 //        if((sector & SPI_FLASH_SECTOR_MASK) == 0) //uncomment for non-blocking function
+//        {
 //            mediaObj->driverFunctions->erase (mediaObj->driverHandle, &(mediaObj->commandHandle), sector, 1);//uncomment for non-blocking function
+//            /////////////////////////////////
+//            /* Read the memory block from the media. Update the media data. */
+//            mediaObj->driverObj = 0;
+//            mediaObj->commandStatus = SYS_FS_MEDIA_COMMAND_IN_PROGRESS;
+//            while(mediaObj->commandStatus == SYS_FS_MEDIA_COMMAND_IN_PROGRESS){
+//                if(mediaObj->driverFunctions->tasks != NULL)
+//                    mediaObj->driverFunctions->tasks(mediaObj->driverObj);
+//            }
+//        }
 //        mediaObj->driverFunctions->sectorWrite (mediaObj->driverHandle, &(mediaObj->commandHandle), dataBuffer, addr, len);//uncomment for non-blocking function
+//        /////////////////////////////////
+//        /* Read the memory block from the media. Update the media data. */
+//        mediaObj->driverObj = 0;
+//        mediaObj->commandStatus = SYS_FS_MEDIA_COMMAND_IN_PROGRESS;
+//        while(mediaObj->commandStatus == SYS_FS_MEDIA_COMMAND_IN_PROGRESS){
+//            if(mediaObj->driverFunctions->tasks != NULL)
+//                mediaObj->driverFunctions->tasks(mediaObj->driverObj);
+//        }
 #else
         mediaObj->driverFunctions->sectorWrite (mediaObj->driverHandle, &(mediaObj->commandHandle), dataBuffer, sector, numSectors);
 #endif

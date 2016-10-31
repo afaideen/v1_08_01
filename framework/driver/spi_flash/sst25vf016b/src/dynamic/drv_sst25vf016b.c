@@ -94,7 +94,7 @@ const SYS_FS_MEDIA_FUNCTIONS spiflashMediaFunctions =
     .addressGet         = DRV_SST25VF016B_AddressGet,
     .open               = DRV_SST25VF016B_Open,
     .close              = DRV_SST25VF016B_Close,
-    .tasks              = 0,//DRV_SPIFLASH_Tasks,
+    .tasks              = 0,//DRV_SST25VF016B_Tasks,
 };
 
 // *****************************************************************************
@@ -1164,7 +1164,11 @@ void DRV_SST25VF016B_Tasks ( SYS_MODULE_OBJ object )
         {
             /* Open SPI Driver to read/write in NON Blocking mode with Exclusive privilage */
             hDriver->spiDriverOpenHandle =
+#if defined(EAGLEEYE2014)
+            DRV_SPI_Open (hDriver->spiDriverModuleIndex, DRV_IO_INTENT_READWRITE | DRV_IO_INTENT_NONBLOCKING | DRV_IO_INTENT_SHARED);
+#else
             DRV_SPI_Open (hDriver->spiDriverModuleIndex, DRV_IO_INTENT_READWRITE | DRV_IO_INTENT_NONBLOCKING | DRV_IO_INTENT_EXCLUSIVE);
+#endif
 
             if(hDriver->spiDriverOpenHandle != DRV_HANDLE_INVALID)
             {
@@ -1210,19 +1214,27 @@ void DRV_SST25VF016B_Tasks ( SYS_MODULE_OBJ object )
         case DRV_SST25VF016B_WREN_EXECUTION_STATUS_CHECK_WRSR:
         {
             /* Check if the transfer status is success or not */
+//#if defined(EAGLEEYE2014)
+//            while(!(DRV_SPI_BUFFER_EVENT_COMPLETE & DRV_SPI_BufferStatus(hDriver->spiBufferHandle)))
+//                Nop();
+//#else
             if(DRV_SPI_BUFFER_EVENT_COMPLETE & DRV_SPI_BufferStatus(hDriver->spiBufferHandle))
+//#endif
             {
                 /* this means WREN command has been send,
                  * now disable the CS Line and go to the next state */
                 SYS_PORTS_PinSet(PORTS_ID_0, hDriver->chipSelectPortChannel, hDriver->chipSelectBitPosition);
                 hDriver->state = DRV_SST25VF016B_SEND_WRSR_CMD_AND_VALUE;
             }
+//#if !defined(EAGLEEYE2014)
             else
             {
                 /* this means WREN command is not yet send,
                  * so wait in the same state for it to be sent */
+                Nop();
                 break;
             }
+//#endif
         }
         case DRV_SST25VF016B_SEND_WRSR_CMD_AND_VALUE:
         {
@@ -1891,6 +1903,18 @@ DRV_SPIFLASH_COMMAND_STATUS DRV_SST25VF016B_CommandStatus
     /* Return the last known buffer object status */
     return (gDrvSST25VF016BBufferObj[iEntry].status);
     #endif
+}
+
+uint32_t DRV_SST25FV016B_MEDIA_START_ADDRESS(void)
+{
+    uint32_t val;
+    DRV_SST25VF016B_CLIENT_OBJ *clientObj;
+    
+    clientObj = &gDrvSST25VF016BClientObj[0];
+    
+    val = clientObj->hDriver->blockStartAddress;
+    Nop();
+    return val;
 }
 
 /*******************************************************************************

@@ -41,7 +41,12 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 
 #if defined(TCPIP_STACK_USE_SNTP_CLIENT)
 
-
+#if defined(EAGLEEYE2014)
+//#include "DS1307.h"
+    #define MALAYSIAN_GMT	8	
+    struct tm *newtime;
+    NTP_INFO NTPinfo={0,0};
+#endif
 // Defines the structure of an NTP packet
 typedef struct
 {
@@ -288,9 +293,9 @@ static void TCPIP_SNTP_SocketRxSignalHandler(UDP_SOCKET hUDP, TCPIP_NET_HANDLE h
         _TCPIPStackModuleSignalRequest(TCPIP_THIS_MODULE_ID, TCPIP_MODULE_SIGNAL_RX_PENDING, true); 
     }
 }
-
-
-
+#if defined(EAGLEEYE2014)
+extern BYTE _time_str[16], _date_str[16];
+#endif
 static void TCPIP_SNTP_Process(void)
 {
     NTP_PACKET          pkt;
@@ -441,6 +446,59 @@ static void TCPIP_SNTP_Process(void)
             {
                 ntpLastError = SNTP_RES_NTP_SERVER_TMO; 
             }
+            //////////////////////////////////////
+            SYS_CONSOLE_PRINT("SNTP updated dwSNTPSeconds is %lu\r\n", dwSNTPSeconds);
+#if defined(EAGLEEYE2014)
+            
+			if(appData.config.ntp.en == 1)
+			{
+				NTPinfo.ntp_update++;			
+				NTPinfo.ntp_timer = dwSNTPSeconds;
+				newtime = gmtime(&NTPinfo.ntp_timer);
+//                newtime = localtime(&NTPinfo.ntp_timer);
+				
+				if(24-newtime->tm_hour > appData.config.ntp.GMT_TIME)
+					newtime->tm_hour += appData.config.ntp.GMT_TIME;
+				else if(24-newtime->tm_hour == appData.config.ntp.GMT_TIME)
+				{
+					newtime->tm_hour=0; 
+					newtime->tm_mday++;
+		
+				}
+				else
+				{
+					newtime->tm_hour = newtime->tm_hour + appData.config.ntp.GMT_TIME - 24;
+					newtime->tm_mday++;
+		
+				}
+				NTPinfo.ntp_timer = mktime(newtime);	
+				appData.config.TimeNow = NTPinfo.ntp_timer;
+				newtime = gmtime(&NTPinfo.ntp_timer);
+				update_ds1307(newtime);
+//                read_ds1307();
+                show_clock();
+                SYS_CONSOLE_PRINT("%s, %s\r\n", _time_str, _date_str);
+                Nop();
+			
+			}
+            uint32_t val;
+            val = TCPIP_SNTP_UTCSecondsGet();
+            SYS_CONSOLE_PRINT("SNTP updated val is %lu\r\n", val);
+            TCPIP_SNTP_RESULT sntpRes;
+            uint32_t    lastUpdateTick;
+            union
+            {
+                struct
+                {
+                    uint64_t    eui64;
+                    uint64_t    tStamp;
+                };
+                uint8_t         b[128/8];
+            }ulaTStamp;
+            sntpRes = TCPIP_SNTP_TimeStampGet(&ulaTStamp.tStamp, &lastUpdateTick);
+            SYS_CONSOLE_PRINT("sntpRes is %d\r\nulaTStamp.tStamp is %llu\r\nlastUpdateTick is %lu\r\n", sntpRes, ulaTStamp.tStamp, lastUpdateTick);
+#endif
+			//////////////////////////////////////
 
             // disable RX of further packets
             TCPIP_UDP_OptionsSet(sntpSocket, UDP_OPTION_RX_QUEUE_LIMIT, (void*)0);

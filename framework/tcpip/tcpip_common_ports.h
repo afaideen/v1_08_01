@@ -101,7 +101,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 
 // ************************************************************
 // HTTP server listening TCP port
+#if defined(EAGLEEYE2014)
+        #define TCPIP_HTTP_SERVER_PORT          (8181)              
+#else
 #define TCPIP_HTTP_SERVER_PORT                  (80)
+#endif
 #define TCPIP_HTTP_NET_SERVER_PORT              (80)
 
 // HTTPS server listening TCP port

@@ -528,11 +528,13 @@ SYS_MODULE_OBJ TCPIP_STACK_Initialize(const SYS_MODULE_INDEX index, const SYS_MO
 
     if(tcpipNetIf != 0)
     {   // already up and running
+        SYS_CONSOLE_MESSAGE("TCPIP_STACK_Initialize: already up..\r\n");
         return (SYS_MODULE_OBJ)&tcpip_stack_ctrl_data;
     }
 
     if(init == 0)
     {   // no initialization data passed
+        
         return SYS_MODULE_OBJ_INVALID;
     }
 
@@ -546,8 +548,7 @@ SYS_MODULE_OBJ TCPIP_STACK_Initialize(const SYS_MODULE_INDEX index, const SYS_MO
     {   // cannot run with no interface/init data
         return SYS_MODULE_OBJ_INVALID;
     }
-//    LATHbits.LATH0 = 1;
-//    Nop();
+
     // snapshot of the initialization data
     tcpip_init_data = *((TCPIP_STACK_INIT*)init);
     
@@ -854,6 +855,7 @@ bool TCPIP_STACK_NetUp(TCPIP_NET_HANDLE netH, const TCPIP_NETWORK_CONFIG* pUsrCo
     {
         if(pNetIf->Flags.bInterfaceEnabled || pNetIf->Flags.bMacInitialize)
         {   // already up
+            SYS_CONSOLE_MESSAGE("already up..\r\n");
             return true;
         }
 
@@ -901,6 +903,7 @@ bool TCPIP_STACK_NetDown(TCPIP_NET_HANDLE netH)
     TCPIP_NET_IF *pIf, *pNewIf;
     TCPIP_NET_IF* pDownIf = _TCPIPStackHandleToNet(netH);
 
+//    SYS_CONSOLE_MESSAGE("TCPIP_STACK_NetDown..\r\n");
     if(pDownIf)
     {
         if(pDownIf->Flags.bInterfaceEnabled)
@@ -923,6 +926,7 @@ bool TCPIP_STACK_NetDown(TCPIP_NET_HANDLE netH)
             }
 
         }
+        SYS_CONSOLE_PRINT("bInterfaceEnabled=%d\r\n", pDownIf->Flags.bInterfaceEnabled);
         return true;
     }
 
@@ -1041,7 +1045,7 @@ static void TCPIP_STACK_BringNetDown(TCPIP_STACK_MODULE_CTRL* stackCtrlData, TCP
         (*pNetIf->pMacObj->TCPIP_MAC_Deinitialize)(pNetIf->macObjHandle);
         pNetIf->macObjHandle = 0;
     }
-
+    SYS_CONSOLE_MESSAGE("b..\r\n");
     pNetIf->Flags.bInterfaceEnabled = pNetIf->Flags.bMacInitialize = false;
     pNetIf->Flags.powerMode = stackCtrlData->powerMode;
 
@@ -1123,9 +1127,6 @@ void TCPIP_STACK_Task(SYS_MODULE_OBJ object)
     {   // not properly initialized yet
         return;
     }
-    Nop();
-    Nop();
-    Nop();
 #if defined(TCPIP_STACK_TIME_MEASUREMENT)
     uint32_t    tTaskStart;
     if(tcpip_stack_timeEnable)

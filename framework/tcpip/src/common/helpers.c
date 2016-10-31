@@ -815,3 +815,47 @@ uint16_t CalcIPChecksum(uint8_t *buffer, uint16_t count)
     // Return the resulting checksum
     return ~sum.w[0];
 }
+
+/*****************************************************************************
+  Function:
+	void FormatNetBIOSName(BYTE Name[])
+
+  Summary:
+	Formats a string to a valid NetBIOS name.
+
+  Description:
+	This function formats a string to a valid NetBIOS name.  Names will be
+	exactly 16 characters, as defined by the NetBIOS spec.  The 16th 
+	character will be a 0x00 byte, while the other 15 will be the 
+	provided string, padded with spaces as necessary.
+
+  Precondition:
+	None
+
+  Parameters:
+	Name - the string to format as a NetBIOS name.  This parameter must have
+	  at least 16 bytes allocated.
+
+  Returns:
+	None
+  ***************************************************************************/
+void FormatNetBIOSName(BYTE Name[])
+{
+	BYTE i;
+
+	Name[15] = '\0';
+	strupr((char*)Name);
+	i = 0;
+	while(i < 15u)
+	{
+		if(Name[i] == '\0')
+		{
+			while(i < 15u)
+			{
+				Name[i++] = ' ';
+			}
+			break;
+		}
+		i++;
+	}
+}

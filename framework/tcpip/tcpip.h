@@ -583,6 +583,7 @@ typedef struct
     SYS_MODULE_INIT                     moduleInit; 
     /* pointer to array of network configurations */
 	const TCPIP_NETWORK_CONFIG*         pNetConf;   
+ 
     /* number of networks in the configuration array */
     int                                 nNets;      
     /* pointer to array of module configurations */

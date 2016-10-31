@@ -38,7 +38,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 
 #include <stdint.h>
 #include <stdbool.h>
-
+#include <GenericTypeDefs.h>
 
 void        uitoa(uint16_t Value, uint8_t* Buffer);
 
@@ -71,6 +71,7 @@ signed char stricmppgm2ram(uint8_t* a, const uint8_t* b);
 int16_t     str_replace(uint8_t *vExpression, const uint8_t *vFind, const uint8_t *vReplacement, uint16_t wMaxLen, bool bSearchCaseInsensitive);
 
 uint16_t CalcIPChecksum(uint8_t *buffer, uint16_t count);
+void FormatNetBIOSName(BYTE Name[16]);
 
 #endif  // __HELPERS_H_
 

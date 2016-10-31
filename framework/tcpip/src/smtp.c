@@ -415,7 +415,7 @@ static void TCPIP_SMTP_ClientProcess(void)
     uint16_t			w;
     uint8_t			    vBase64Buffer[4];
     static uint32_t	    SMTPTimer;
-    UINT8 var[25] = {0};
+    uint8_t var[25] = {0};
 
     static uint8_t		RXBuffer[4];
     static const uint8_t *ROMStrPtr, *ROMStrPtr2;
@@ -596,7 +596,9 @@ static void TCPIP_SMTP_ClientProcess(void)
 
 									case SMTP_AUTH_LOGIN_ACK:
 									case SMTP_AUTH_USERNAME_ACK:
+#if defined(STACK_USE_UART)
                                         putsUART2("SMTP_AUTH_USERNAME_ACK#");
+#endif
 										if(ResponseCode == 334u)
 											SMTPState++;
 										else
@@ -604,7 +606,9 @@ static void TCPIP_SMTP_ClientProcess(void)
 										break;
 
 									case SMTP_AUTH_PASSWORD_ACK:
+#if defined(STACK_USE_UART)
                                         putsUART2("SMTP_AUTH_PASSWORD_ACK#");
+#endif
 										if(ResponseCode == 235u)
 											SMTPState++;
 										else
@@ -623,7 +627,9 @@ static void TCPIP_SMTP_ClientProcess(void)
 										break;
 							
 									case SMTP_DATA_ACK:  
+#if defined(STACK_USE_UART)
                                         putsUART2("SMTP_DATA_ACK#");
+#endif
 										if(ResponseCode == 354u){  
                                             
 //                                            sprintf(var, "SMTPState=%d#", SMTPState);
@@ -632,15 +638,17 @@ static void TCPIP_SMTP_ClientProcess(void)
                                         }
 										else
                                         {
+#if defined(STACK_USE_UART)
                                             putsUART2("SMTPState=SMTP_QUIT_INIT#");
+#endif
 											SMTPState = SMTP_QUIT_INIT;
                                         }
 										break;
 							
 									case SMTP_DATA_BODY_ACK:    
-                                        
+#if defined(STACK_USE_UART)                                        
                                         putsUART2("SMTP_DATA_BODY_ACK#");
-                                       
+#endif                                       
 										if(ResponseCode >= 200u && ResponseCode <= 299u){
 											SMTPFlags.bits.SentSuccessfully = true;
                                         }
@@ -985,7 +993,9 @@ static void TCPIP_SMTP_ClientProcess(void)
 					// No break here
 		
 				case SMTP_DATA_BODY:
+#if defined(STACK_USE_UART)
                     putsUART2("SMTP_DATA_BODY#");
+#endif
 					if(SMTPClient.Body)
 					{
 						if(*ROMStrPtr2)
@@ -1022,10 +1032,14 @@ static void TCPIP_SMTP_ClientProcess(void)
 					{
 						if(SMTPFlags.bits.ReadyToFinish)
 						{
+#if defined(STACK_USE_UART)
                             putsUART2("bits.ReadyToFinish#");
+#endif
 							if(*ROMStrPtr2)
 							{
+#if defined(STACK_USE_UART)
                                 putsUART2("c..#");
+#endif
 								ROMStrPtr2 += NET_PRES_SocketWrite(MySocket, (uint8_t*)ROMStrPtr2, strlen((const char*)ROMStrPtr2));
 								NET_PRES_SocketFlush(MySocket);
                                 
@@ -1038,29 +1052,39 @@ static void TCPIP_SMTP_ClientProcess(void)
 
 					if(*ROMStrPtr2 == 0u)
 					{
+#if defined(STACK_USE_UART)
                         putsUART2("d..#");
+#endif
 						SMTPState++;
 					}
 					break;
 		
 				case SMTP_QUIT_INIT:
+#if defined(STACK_USE_UART)
                     putsUART2("SMTP_QUIT_INIT#");
+#endif
 					SMTPState++;
 					ROMStrPtr = (const uint8_t*)"QUIT\r\n";
 					// No break here
 
 				case SMTP_QUIT:
+#if defined(STACK_USE_UART)
                     putsUART2("SMTP_QUIT#");
+#endif
 					if(*ROMStrPtr)
 					{
+#if defined(STACK_USE_UART)
                         putsUART2("NET_PRES_SocketWrite#");
+#endif
 						ROMStrPtr += NET_PRES_SocketWrite(MySocket, (uint8_t*)ROMStrPtr, strlen((const char*)ROMStrPtr));
 						NET_PRES_SocketFlush(MySocket);
 					}
 
 					if(*ROMStrPtr == 0u)
 					{
+#if defined(STACK_USE_UART)
                         putsUART2("TRANSPORT_CLOSE#");
+#endif
 						TransportState = TRANSPORT_CLOSE;
 					}                    
                         

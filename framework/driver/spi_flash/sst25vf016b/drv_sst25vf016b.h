@@ -1370,6 +1370,8 @@ void DRV_SST25VF016B_EraseWrite
     uint32_t nWriteBlock
 );
 
+uint32_t DRV_SST25FV016B_MEDIA_START_ADDRESS(void);
+
 
 // ****************************************************************************
 /*  The files included below map the interface definitions above to appropriate

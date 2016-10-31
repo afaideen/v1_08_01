@@ -152,13 +152,16 @@ int MPFS_Mount ( uint8_t diskNo )
     if(!memcmp((void*)&fatCache, (const void*)"MPFS\x02\x01", 6))
     {
         MPFSGetArray(0, (uint8_t*)&mpfsObject.numFiles, 2);
+#if defined(SYS_CONSOLE_OVERRIDE_STDIO)
         SYS_CONSOLE_MESSAGE("MPFS found!\r\n");
+#endif
     }
     else
     {
-        mpfsObject.numFiles = 0;    
+        mpfsObject.numFiles = 0;   
+#if defined(SYS_CONSOLE_OVERRIDE_STDIO)
         SYS_CONSOLE_MESSAGE("MPFS not found\r\n");
-//        return MPFS_NO_FILE;//MPFS_NOT_READY;
+#endif
        
     }
 
@@ -269,7 +272,7 @@ int MPFS_Open ( uintptr_t handle, const char* filewithDisk, uint8_t mode )
     for performance. */
     for ( ix = 0; ix < mpfsObject.numFiles; ix++ )
     {
-        Nop();
+      
         /* For new block of 8, read in data */
         if ( ( ix & 0x07 ) == 0u )
         {
@@ -277,7 +280,7 @@ int MPFS_Open ( uintptr_t handle, const char* filewithDisk, uint8_t mode )
             MPFSStubs[0].bytesRem = 16;
             MPFSGetArray ( 0, ( uint8_t* )hashCache, 16 );
         }
-        Nop();
+       
         /* If the hash matches, compare the full filename */
         if ( hashCache[ix&0x07] == nameHash )
         {
@@ -758,8 +761,7 @@ uint32_t MPFSGetArray ( MPFS_HANDLE hMPFS, uint8_t* cData, uint32_t wLen )
         MPFSStubs[hMPFS].bytesRem -= wLen;
         return wLen;
     }
-    Nop();
-    Nop();
+   
  
     #if defined(DRV_SST25VF016B_CLIENTS_NUMBER)
     uint32_t addrVal = MPFSStubs[hMPFS].basePointer + MPFSStubs[hMPFS].addr;

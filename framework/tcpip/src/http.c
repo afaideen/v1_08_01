@@ -529,6 +529,7 @@ static void TCPIP_HTTP_Process(void)
             // Make sure any opened files are closed
             if(pHttpCon->file != SYS_FS_HANDLE_INVALID)
             {
+                
                 SYS_FS_FileClose(pHttpCon->file);
                 pHttpCon->file = SYS_FS_HANDLE_INVALID;
                 // Important to clear related control variables,
@@ -2110,7 +2111,7 @@ static HTTP_IO_RESULT TCPIP_HTTP_MPFSUpload(HTTP_CONN* pHttpCon)
         // New upload, so look for the CRLFCRLF
         case HTTP_MPFS_UP:
             #if defined(DRV_SST25VF016B_CLIENTS_NUMBER)
-                pHttpCon->uploadSectNo = 1;
+                pHttpCon->uploadSectNo = DRV_SST25VF016B_MEDIA_START_ADDRESS_IDX0/4096;
             #else
                 pHttpCon->uploadSectNo = 0;
             #endif
@@ -2219,8 +2220,14 @@ static HTTP_IO_RESULT TCPIP_HTTP_MPFSUpload(HTTP_CONN* pHttpCon)
            
             Nop();
             SYS_CONSOLE_PRINT("SectorWrite(%d,%d,%X, %lu)\r\n", MPFS_UPLOAD_DISK_NO, pHttpCon->uploadSectNo, pHttpCon->uploadBufferStart, nSectors);
+#if defined(EAGLEEYE2014)
+            WF_INT_IE = 0;
+#endif
             pHttpCon->uploadBuffHandle = SYS_FS_MEDIA_MANAGER_SectorWrite(MPFS_UPLOAD_DISK_NO, pHttpCon->uploadSectNo , pHttpCon->uploadBufferStart,
                         nSectors);
+#if defined(EAGLEEYE2014)
+            WF_INT_IE = 1;
+#endif
             if ( pHttpCon->uploadBuffHandle == SYS_FS_MEDIA_BLOCK_COMMAND_HANDLE_INVALID)
             {
                 pHttpCon->httpStatus = HTTP_MPFS_ERROR;

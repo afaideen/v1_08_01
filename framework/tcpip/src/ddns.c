@@ -38,7 +38,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 
 // Delimiter to locate IP address from CheckIP server
 static const uint8_t _checkIpSrvrResponse[] = "Address:";
-
+IP_ADDR WAN_IPAddr;
 // Response codes from DynDNS Update Server
 static const char* _updateIpSrvrResponse[] =
 {
@@ -279,7 +279,17 @@ static void TCPIP_DDNS_Process(void)
                 smDDNS = SM_DONE;
                 break;
             }
-
+#if defined(EAGLEEYE2014)         
+            if(strlen(appData.config.ddns.username)&&strlen(appData.config.ddns.password)&&strlen(appData.config.ddns.hostname))
+			{
+				TCPIP_DDNS_ServiceSet(appData.config.ddns.svcid);
+				DDNSClient.Username.szRAM = &appData.config.ddns.username;
+				DDNSClient.Password.szRAM = &appData.config.ddns.password;
+				DDNSClient.Host.szRAM = &appData.config.ddns.hostname;
+				// Since user name and password changed, force an update immediately
+				//DDNSForceUpdate();
+			}
+#endif
             // If DDNSClient is not properly configured, abort
             if(
                 // Verify that each pointer is not null, and is not empty
@@ -295,6 +305,7 @@ static void TCPIP_DDNS_Process(void)
                 (!DDNSClient.ROMPointers.UpdateServer && (!DDNSClient.UpdateServer.szRAM || *DDNSClient.UpdateServer.szRAM == '\0') )
             )
             {
+                SYS_CONSOLE_MESSAGE("DDNS not properly configured...\r\n");
                 smDDNS = SM_SOFT_ERROR;
                 lastStatus = DDNS_STATUS_INVALID;
                 break;
@@ -369,6 +380,7 @@ static void TCPIP_DDNS_Process(void)
             // Wait for the remote server to accept our connection request
             if(!TCPIP_TCP_IsConnected(MySocket))
             {
+                WAN_IPAddr.Val = 0;
                 // Time out if too much time is spent in this state
                 if(SYS_TMR_TickCountGet()-DDnsTimer > 6*SYS_TMR_TickCounterFrequencyGet())
                 {
@@ -381,6 +393,7 @@ static void TCPIP_DDNS_Process(void)
                 }
                 break;
             }
+            SYS_CONSOLE_MESSAGE("\r\nCheck WAN IP Address...\r\n");
 
             DDnsTimer = SYS_TMR_TickCountGet();
 
@@ -456,7 +469,9 @@ static void TCPIP_DDNS_Process(void)
             // Parse the IP address that was read, invalidating on failure
             if(!TCPIP_Helper_StringToIPAddress((char*)vBuffer, &ipParsed))
                 vBuffer[0] = '\0';
-
+            smDDNS++;
+            SYS_CONSOLE_PRINT("WAN IP Address obtained...%s\r\n", vBuffer);
+            WAN_IPAddr.Val = ipParsed.Val;
             // Continue on to close the socket
 
         case SM_CHECKIP_DISCONNECT:
@@ -470,17 +485,41 @@ static void TCPIP_DDNS_Process(void)
             {// CheckIP Failed
                 lastStatus = DDNS_STATUS_CHECKIP_ERROR;
                 smDDNS = SM_SOFT_ERROR;
+                WAN_IPAddr.Val = 0;
                 break;
             }
-
+#if defined(EAGLEEYE2014)
+            ///////////////////////////////time update
+			show_clock();
+        	whattime = ConvertTime(); 
+        	appData.config.TimeNow = whattime;
+			///////////////////////////////time update
+#endif
+#if defined(EAGLEEYE2014)
+            if( ( (ipParsed.Val ==lastKnownIP.Val) && (!bForceUpdate)) || (appData.config.WAN_IPAddr[1].my_ip.Val == ipParsed.Val && !bForceUpdate) )
+#else
             if( (ipParsed.Val ==lastKnownIP.Val) && (!bForceUpdate))
+#endif
             {
                 // IP address has not changed and no update is forced
+                SYS_CONSOLE_MESSAGE("\r\nWAN IP unchange...\r\n");
                 lastStatus = DDNS_STATUS_UNCHANGED;
                 smDDNS = SM_DONE;
                 break;
             }
-
+#if defined(EAGLEEYE2014)   
+            if(ipParsed.Val !=lastKnownIP.Val && !bForceUpdate)
+			{
+				appData.config.WAN_IPAddr[0].my_ip.Val = appData.config.WAN_IPAddr[1].my_ip.Val;
+				appData.config.WAN_IPAddr[0].event_time = appData.config.WAN_IPAddr[1].event_time;
+			}
+			
+			appData.config.WAN_IPAddr[1].my_ip.Val = ipParsed.Val;		        	
+			appData.config.WAN_IPAddr[1].event_time = whattime;
+            SaveAppConfig(&appData.config, 0);
+            if(bForceUpdate)
+				SYS_CONSOLE_MESSAGE("IP force update...\r\n");
+#endif
             // Need to perform an update
             lastKnownIP = ipParsed;
             bForceUpdate = false;
@@ -489,6 +528,7 @@ static void TCPIP_DDNS_Process(void)
 
         case SM_IP_UPDATE_HOME:
 
+            SYS_CONSOLE_MESSAGE("Updating IP to DDNS...\r\n");
             netH = TCPIP_STACK_NetDefaultGet();
 
             // resolve the remote update server
@@ -822,29 +862,41 @@ static void TCPIP_DDNS_Process(void)
 
             // Determine what to do based on status
             if(lastStatus <= DDNS_STATUS_NUMHOST || lastStatus == DDNS_STATUS_UNCHANGED)
+            {
+                SYS_CONSOLE_MESSAGE("DynDNS Update OK!...\r\n");
                 smDDNS = SM_DONE;
+            }
             else if(lastStatus == DDNS_STATUS_911 || lastStatus == DDNS_STATUS_DNSERR)
+            {
+                SYS_CONSOLE_MESSAGE("DynDNS System Error!...\r\n");
                 smDDNS = SM_SYSTEM_ERROR;
+                break;
+            }
             else
+            {
+                SYS_CONSOLE_MESSAGE("\r\nDynDNS Soft Error!...\r\n");
                 smDDNS = SM_SOFT_ERROR;
+                break;
+            }
 
             smDDNS++;
             break;
 
         case SM_DONE:
-            dwUpdateAt = SYS_TMR_TickCountGet() + 10*60*SYS_TMR_TickCounterFrequencyGet();   // 10 minutes
+            SYS_CONSOLE_MESSAGE("\r\nWait for another 2 minutes...\r\n");
+            dwUpdateAt = SYS_TMR_TickCountGet() + 2*60*SYS_TMR_TickCounterFrequencyGet();   // 10 minutes
             smDDNS = SM_IDLE;
             break;
 
         case SM_SOFT_ERROR:
         case SM_DNS_ERROR:
         case SM_SKT_ERROR:
-            dwUpdateAt = SYS_TMR_TickCountGet() + 30*SYS_TMR_TickCounterFrequencyGet();      // 30 seconds
+            dwUpdateAt = SYS_TMR_TickCountGet() + 10*SYS_TMR_TickCounterFrequencyGet();      // 30 seconds
             smDDNS = SM_IDLE;
             break;
 
         case SM_SYSTEM_ERROR:
-            dwUpdateAt = SYS_TMR_TickCountGet() + 30*60*SYS_TMR_TickCounterFrequencyGet();       // 30 minutes
+            dwUpdateAt = SYS_TMR_TickCountGet() + 10*60*SYS_TMR_TickCounterFrequencyGet();       // 30 minutes
             smDDNS = SM_IDLE;
             break;
     }

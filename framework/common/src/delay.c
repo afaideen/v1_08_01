@@ -42,6 +42,8 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 
 #include "system_config.h"
 
+#define SYS_CLK_FrequencyInstructionGet()    SYS_CLK_FREQ
+
 void DelayMs(uint16_t ms)
 {
     unsigned char i;
