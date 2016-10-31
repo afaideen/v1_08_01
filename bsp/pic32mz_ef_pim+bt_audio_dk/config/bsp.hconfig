@@ -1,0 +1,81 @@
+menu "Select BSP Features"
+depends on USE_BSP
+depends on BSP_PIC32MZ_EF_PIM_BT_AUDIO_DK
+
+config BSP_PIC32MZ_EF_PIM_BT_AUDIO_DK_LED_D5
+    depends on USE_BSP
+    depends on BSP_PIC32MZ_EF_PIM_BT_AUDIO_DK
+    bool "Use LED D5?"
+    default y
+
+config BSP_PIC32MZ_EF_PIM_BT_AUDIO_DK_LED_D5_NAME
+    depends on USE_BSP
+    depends on BSP_PIC32MZ_EF_PIM_BT_AUDIO_DK
+    depends on BSP_PIC32MZ_EF_PIM_BT_AUDIO_DK_LED_D5
+    string "LED D5 Name"
+    default "BSP_LED_5"
+
+config BSP_PIC32MZ_EF_PIM_BT_AUDIO_DK_LED_D6
+    depends on USE_BSP
+    depends on BSP_PIC32MZ_EF_PIM_BT_AUDIO_DK
+    bool "Use LED D6?"
+    default y
+
+config BSP_PIC32MZ_EF_PIM_BT_AUDIO_DK_LED_D6_NAME
+    depends on USE_BSP
+    depends on BSP_PIC32MZ_EF_PIM_BT_AUDIO_DK
+    depends on BSP_PIC32MZ_EF_PIM_BT_AUDIO_DK_LED_D6
+    string "LED D6 Name"
+    default "BSP_LED_6"
+
+config BSP_PIC32MZ_EF_PIM_BT_AUDIO_DK_LED_D7
+    depends on USE_BSP
+    depends on BSP_PIC32MZ_EF_PIM_BT_AUDIO_DK
+    bool "Use LED D7?"
+    default y
+
+config BSP_PIC32MZ_EF_PIM_BT_AUDIO_DK_LED_D7_NAME
+    depends on USE_BSP
+    depends on BSP_PIC32MZ_EF_PIM_BT_AUDIO_DK
+    depends on BSP_PIC32MZ_EF_PIM_BT_AUDIO_DK_LED_D7
+    string "LED D7 Name"
+    default "BSP_LED_7"
+
+config BSP_PIC32MZ_EF_PIM_BT_AUDIO_DK_LED_D8
+    depends on USE_BSP
+    depends on BSP_PIC32MZ_EF_PIM_BT_AUDIO_DK
+    bool "Use LED D8?"
+    default y
+
+config BSP_PIC32MZ_EF_PIM_BT_AUDIO_DK_LED_D8_NAME
+    depends on USE_BSP
+    depends on BSP_PIC32MZ_EF_PIM_BT_AUDIO_DK
+    depends on BSP_PIC32MZ_EF_PIM_BT_AUDIO_DK_LED_D8
+    string "LED D8 Name"
+    default "BSP_LED_8"
+
+config BSP_PIC32MZ_EF_PIM_BT_AUDIO_DK_LED_D9
+    depends on USE_BSP
+    depends on BSP_PIC32MZ_EF_PIM_BT_AUDIO_DK
+    bool "Use LED D9?"
+    default y
+
+config BSP_PIC32MZ_EF_PIM_BT_AUDIO_DK_LED_D9_NAME
+    depends on USE_BSP
+    depends on BSP_PIC32MZ_EF_PIM_BT_AUDIO_DK
+    depends on BSP_PIC32MZ_EF_PIM_BT_AUDIO_DK_LED_D9
+    string "LED D9 Name"
+    default "BSP_LED_9"
+
+
+endmenu
+
+ifblock BSP_PIC32MZ_EF_PIM_BT_AUDIO_DK
+
+add "<#include \"/bsp/pic32mz_ef_pim+bt_audio_dk/templates/bsp_init.c.ftl\">"  to list BSP_INIT_C_INITIALIZE_CODE
+
+file BSP_pic32mz_ef_pim_bt_audio_dk_BSP "$HARMONY_VERSION_PATH/bsp/pic32mz_ef_pim+bt_audio_dk/xml/bsp.xml" to "$BSP_CONFIGURATION_XML"
+file BSP_pic32mz_ef_pim_bt_audio_dk_H "$HARMONY_VERSION_PATH/bsp/pic32mz_ef_pim+bt_audio_dk/bsp_config.h" to "$PROJECT_HEADER_FILES/bsp/pic32mz_ef_pim+bt_audio_dk/bsp_config.h"
+file BSP_pic32mz_ef_pim_bt_audio_dk_C "$HARMONY_VERSION_PATH/bsp/pic32mz_ef_pim+bt_audio_dk/bsp_sys_init.c" to "$PROJECT_SOURCE_FILES/bsp/pic32mz_ef_pim+bt_audio_dk/bsp_sys_init.c"
+compiler BSP_COMPILER_INCLUDE_pic32mz_ef_pim_bt_audio_dk includepath "$HARMONY_VERSION_PATH/bsp/pic32mz_ef_pim+bt_audio_dk"
+endif

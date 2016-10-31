@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<bsp name="pic32mz_ec_pim+e16">
+    <function name="SWITCH_4" pin="RD8" mode="digital" direction="in"/>
+    <function name="SWITCH_5" pin="RD7" mode="digital" direction="in"/>
+    <function name="SWITCH_6" pin="RD13" mode="digital" direction="in"/>
+    <function name="LED_3" pin="RA0" mode="digital" direction="out"/>
+    <function name="LED_4" pin="RA1" mode="digital" direction="out"/>
+    <function name="LED_5" pin="RA2" mode="digital" direction="out"/>
+    <function name="LED_6" pin="RA3" mode="digital" direction="out"/>
+    <function name="LED_7" pin="RA13" mode="digital" direction="out"/>
+    <function name="LED_8" pin="RA12" mode="digital" direction="out"/>
+    <function name="LED_9" pin="RA6" mode="digital" direction="out"/>
+</bsp>

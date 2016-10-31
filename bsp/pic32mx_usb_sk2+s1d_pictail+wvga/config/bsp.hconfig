@@ -1,0 +1,7 @@
+
+ifblock BSP_PIC32MX_USB_SK2_S1D_PICTAIL_WVGA
+file BSP_pic32mx_usb_sk2_s1d_pictail_wvga_BSP "$HARMONY_VERSION_PATH/bsp/pic32mx_usb_sk2+s1d_pictail+wvga/xml/bsp.xml" to "$BSP_CONFIGURATION_XML"
+file BSP_pic32mx_usb_sk2_s1d_pictail_wvga_H "$HARMONY_VERSION_PATH/bsp/pic32mx_usb_sk2+s1d_pictail+wvga/bsp_config.h" to "$PROJECT_HEADER_FILES/bsp/pic32mx_usb_sk2+s1d_pictail+wvga/bsp_config.h"
+file BSP_pic32mx_usb_sk2_s1d_pictail_wvga_C "$HARMONY_VERSION_PATH/bsp/pic32mx_usb_sk2+s1d_pictail+wvga/bsp_sys_init.c" to "$PROJECT_SOURCE_FILES/bsp/pic32mx_usb_sk2+s1d_pictail+wvga/bsp_sys_init.c"
+compiler BSP_COMPILER_INCLUDE_pic32mx_usb_sk2_s1d_pictail_wvga includepath "$HARMONY_VERSION_PATH/bsp/pic32mx_usb_sk2+s1d_pictail+wvga"
+endif

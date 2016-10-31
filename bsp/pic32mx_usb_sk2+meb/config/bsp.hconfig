@@ -1,0 +1,9 @@
+
+ifblock BSP_PIC32MX_USB_SK2_MEB
+file BSP_pic32mx_usb_sk2_meb_BSP "$HARMONY_VERSION_PATH/bsp/pic32mx_usb_sk2+meb/xml/bsp.xml" to "$BSP_CONFIGURATION_XML"
+file BSP_pic32mx_usb_sk2_meb_H "$HARMONY_VERSION_PATH/bsp/pic32mx_usb_sk2+meb/bsp_config.h" to "$PROJECT_HEADER_FILES/bsp/pic32mx_usb_sk2+meb/bsp_config.h"
+file BSP_pic32mx_usb_sk2_meb_C "$HARMONY_VERSION_PATH/bsp/pic32mx_usb_sk2+meb/bsp_sys_init.c" to "$PROJECT_SOURCE_FILES/bsp/pic32mx_usb_sk2+meb/bsp_sys_init.c"
+file BSP_pic32mx_usb_sk2_meb_H2 "$HARMONY_VERSION_PATH/framework/driver/cpld/xc2c64a/drv_xc2c64a.h" to "$PROJECT_HEADER_FILES/framework/driver/cpld/xc2c64a/drv_xc2c64a.h"
+file BSP_pic32mx_usb_sk2_meb_C2 "$HARMONY_VERSION_PATH/framework/driver/cpld/xc2c64a/src/dynamic/drv_xc2c64a.c" to "$PROJECT_SOURCE_FILES/framework/driver/cpld/xc2c64a/src/dynamic/drv_xc2c64a.c"
+compiler BSP_COMPILER_INCLUDE_pic32mx_usb_sk2_meb includepath "$HARMONY_VERSION_PATH/bsp/pic32mx_usb_sk2+meb"
+endif

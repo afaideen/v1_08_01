@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<bsp name="pic32mx_can_sk+meb">
+    <function name="SWITCH_1" pin="RD6" mode="digital" pullup="true" direction="in" />
+    <function name="SWITCH_2" pin="RD7" mode="digital" pullup="true" direction="in" />
+    <function name="SWITCH_3" pin="RD13" mode="digital" pullup="true" direction="in" />
+    <function name="LED_1" pin="RD0" mode="digital" direction="out"/>
+    <function name="LED_2" pin="RD1" mode="digital" direction="out"/>
+    <function name="LED_3" pin="RD2" mode="digital" direction="out"/>
+    <function name="CAN_Transeiver_crtl" pin="RD15" mode="digital" pulldown="true" direction="out" />
+</bsp>

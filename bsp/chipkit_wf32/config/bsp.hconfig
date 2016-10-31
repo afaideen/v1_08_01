@@ -1,0 +1,116 @@
+menu "Select BSP Features"
+depends on USE_BSP
+depends on BSP_CHIPKIT_WF32
+
+config BSP_CK_WF32_LED3
+    depends on USE_BSP
+    depends on BSP_CHIPKIT_WF32
+    bool "Use LED LD3?"
+    default y
+    
+config BSP_CK_WF32_LED_LD3_NAME
+    depends on USE_BSP
+    depends on BSP_CHIPKIT_WF32
+    depends on BSP_CK_WF32_LED3
+    string "LED LD3 Name"
+    default "BSP_LED_3"
+
+config BSP_CK_WF32_LED4
+    depends on USE_BSP
+    depends on BSP_CHIPKIT_WF32
+    bool "Use LED LD4?"
+    default y
+
+config BSP_CK_WF32_LED_LD4_NAME
+    depends on USE_BSP
+    depends on BSP_CHIPKIT_WF32
+    depends on BSP_CK_WF32_LED4
+    string "LED LD4 Name"
+    default "BSP_LED_4"
+
+config BSP_CK_WF32_LED5
+    depends on USE_BSP
+    depends on BSP_CHIPKIT_WF32
+    bool "Use LED LD5?"
+    default y
+
+config BSP_CK_WF32_LED_LD5_NAME
+    depends on USE_BSP
+    depends on BSP_CHIPKIT_WF32
+    depends on BSP_CK_WF32_LED5
+    string "LED LD5 Name"
+    default "BSP_LED_5"
+
+config BSP_CK_WF32_LED6
+    depends on USE_BSP
+    depends on BSP_CHIPKIT_WF32
+    bool "Use LED LD6?"
+    default y
+
+config BSP_CK_WF32_LED_LD6_NAME
+    depends on USE_BSP
+    depends on BSP_CHIPKIT_WF32
+    depends on BSP_CK_WF32_LED6
+    string "LED LD6 Name"
+    default "BSP_LED_6"
+
+config BSP_CK_WF32_SW2
+    depends on USE_BSP
+    depends on BSP_CHIPKIT_WF32
+    bool "Use Switch SW2?"
+    default y
+
+config BSP_CK_WF32_SW2_NAME
+    depends on USE_BSP
+    depends on BSP_CHIPKIT_WF32
+    depends on BSP_CK_WF32_SW2
+    string "Switch SW2 Name"
+    default "BSP_SWITCH_2"
+
+config BSP_CK_WF32_SW3
+    depends on USE_BSP
+    depends on BSP_CHIPKIT_WF32
+    bool "Use Switch SW3?"
+    default y
+
+config BSP_CK_WF32_SW3_NAME
+    depends on USE_BSP
+    depends on BSP_CHIPKIT_WF32
+    depends on BSP_CK_WF32_SW3
+    string "Switch SW3 Name"
+    default "BSP_SWITCH_3"
+
+config BSP_CK_WF32_WIFI
+    depends on USE_BSP
+    depends on BSP_CHIPKIT_WF32
+    bool "Use WIFI Module?"
+    default n
+    select USE_DRV_WIFI_NEEDED
+    set USE_DRV_WIFI to y if BSP_CK_WF32_WIFI = y
+    set DRV_SPI_USE_ISR_MODE to n if BSP_CK_WF32_WIFI = y
+    set DRV_SPI_USE_POLLED_MODE to y if BSP_CK_WF32_WIFI = y
+    set USE_TCPIP_STACK to y if BSP_CK_WF32_WIFI = y
+    set TCPIP_NETWORK_DEFAULT_INTERFACE_NAME_IDX0 to "MRF24W" if BSP_CK_WF32_WIFI = y
+
+config BSP_CK_WF32_UART_USB
+    depends on USE_BSP
+    depends on BSP_CHIPKIT_WF32
+    bool "Use USB-UART interface (FTDI)?"
+    default n
+    select USE_DRV_USART_NEEDED
+    
+config BSP_CK_WF32_USB
+    depends on USE_BSP
+    depends on BSP_CHIPKIT_WF32
+    bool "Use USB Switch?"
+    default y if USE_USB_STACK
+    default n
+
+endmenu
+
+ifblock BSP_CHIPKIT_WF32
+file BSP_chipkit_wf32_BSP "$HARMONY_VERSION_PATH/bsp/chipkit_wf32/xml/bsp.xml" to "$BSP_CONFIGURATION_XML"
+file BSP_chipkit_wf32_H "$HARMONY_VERSION_PATH/bsp/chipkit_wf32/bsp_config.h" to "$PROJECT_HEADER_FILES/bsp/chipkit_wf32/bsp_config.h"
+file BSP_chipkit_wf32_C "$HARMONY_VERSION_PATH/bsp/chipkit_wf32/bsp_sys_init.c" to "$PROJECT_SOURCE_FILES/bsp/chipkit_wf32/bsp_sys_init.c"
+compiler BSP_COMPILER_INCLUDE_chipkit_wf32 includepath "$HARMONY_VERSION_PATH/bsp/chipkit_wf32"
+endif

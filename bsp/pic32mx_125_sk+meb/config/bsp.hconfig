@@ -1,0 +1,7 @@
+
+ifblock BSP_PIC32MX_125_SK_MEB
+file BSP_pic32mx_125_sk_meb_BSP "$HARMONY_VERSION_PATH/bsp/pic32mx_125_sk+meb/xml/bsp.xml" to "$BSP_CONFIGURATION_XML"
+file BSP_pic32mx_125_sk_meb_H "$HARMONY_VERSION_PATH/bsp/pic32mx_125_sk+meb/bsp_config.h" to "$PROJECT_HEADER_FILES/bsp/pic32mx_125_sk+meb/bsp_config.h"
+file BSP_pic32mx_125_sk_meb_C "$HARMONY_VERSION_PATH/bsp/pic32mx_125_sk+meb/bsp_sys_init.c" to "$PROJECT_SOURCE_FILES/bsp/pic32mx_125_sk+meb/bsp_sys_init.c"
+compiler BSP_COMPILER_INCLUDE_pic32mx_125_sk_meb includepath "$HARMONY_VERSION_PATH/bsp/pic32mx_125_sk+meb"
+endif

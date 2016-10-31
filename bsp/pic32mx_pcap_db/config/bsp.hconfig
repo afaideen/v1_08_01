@@ -1,0 +1,7 @@
+
+ifblock BSP_PIC32MX_PCAP_DB
+file BSP_pic32mx_pcap_db_BSP "$HARMONY_VERSION_PATH/bsp/pic32mx_pcap_db/xml/bsp.xml" to "$BSP_CONFIGURATION_XML"
+file BSP_pic32mx_pcap_db_H "$HARMONY_VERSION_PATH/bsp/pic32mx_pcap_db/bsp_config.h" to "$PROJECT_HEADER_FILES/bsp/pic32mx_pcap_db/bsp_config.h"
+file BSP_pic32mx_pcap_db_C "$HARMONY_VERSION_PATH/bsp/pic32mx_pcap_db/bsp_sys_init.c" to "$PROJECT_SOURCE_FILES/bsp/pic32mx_pcap_db/bsp_sys_init.c"
+compiler BSP_COMPILER_INCLUDE_pic32mx_pcap_db includepath "$HARMONY_VERSION_PATH/bsp/pic32mx_pcap_db"
+endif

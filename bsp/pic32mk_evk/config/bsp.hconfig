@@ -1,0 +1,39 @@
+menu "Select BSP Features"
+depends on USE_BSP
+depends on BSP_PIC32MK_EVK
+
+config BSP_PIC32MK_EVK_USART
+    depends on USE_BSP
+    depends on BSP_PIC32MK_EVK
+    bool "Use USART2 to USB Bridge?"
+    default y if USE_DRV_USART
+
+config BSP_PIC32MK_EVK_USART_INSTANCE
+    depends on USE_BSP
+    depends on BSP_PIC32MK_EVK
+    depends on BSP_PIC32MK_EVK_USART
+    int "USART Driver Instance Number to Use?"
+    set DRV_USART_PERIPHERAL_ID_IDX0 to "USART_ID_6" if BSP_PIC32MK_EVK_USART_INSTANCE = 0
+    set DRV_USART_PERIPHERAL_ID_IDX1 to "USART_ID_6" if BSP_PIC32MK_EVK_USART_INSTANCE = 1
+    set DRV_USART_PERIPHERAL_ID_IDX2 to "USART_ID_6" if BSP_PIC32MK_EVK_USART_INSTANCE = 2
+    set DRV_USART_PERIPHERAL_ID_IDX3 to "USART_ID_6" if BSP_PIC32MK_EVK_USART_INSTANCE = 3
+    set DRV_USART_PERIPHERAL_ID_IDX4 to "USART_ID_6" if BSP_PIC32MK_EVK_USART_INSTANCE = 4
+    set DRV_USART_PERIPHERAL_ID_IDX5 to "USART_ID_6" if BSP_PIC32MK_EVK_USART_INSTANCE = 5
+    range 0 0 if DRV_USART_INSTANCES_NUMBER = 1
+    range 0 1 if DRV_USART_INSTANCES_NUMBER = 2
+    range 0 2 if DRV_USART_INSTANCES_NUMBER = 3
+    range 0 3 if DRV_USART_INSTANCES_NUMBER = 4
+    range 0 4 if DRV_USART_INSTANCES_NUMBER = 5
+    range 0 5 if DRV_USART_INSTANCES_NUMBER = 6
+    range 0 6 if DRV_USART_INSTANCES_NUMBER = 7
+    range 0 7 if DRV_USART_INSTANCES_NUMBER = 8
+    range 0 8 if DRV_USART_INSTANCES_NUMBER = 9
+    default 0
+
+endmenu
+ifblock BSP_PIC32MK_EVK
+file BSP_PIC32MK_EVK_BSP "$HARMONY_VERSION_PATH/bsp/pic32mk_evk/xml/bsp.xml" to "$BSP_CONFIGURATION_XML"
+file BSP_PIC32MK_EVK_H "$HARMONY_VERSION_PATH/bsp/pic32mk_evk/bsp_config.h" to "$PROJECT_HEADER_FILES/bsp/pic32mk_evk/bsp_config.h"
+file BSP_PIC32MK_EVK_C "$HARMONY_VERSION_PATH/bsp/pic32mk_evk/bsp_sys_init.c" to "$PROJECT_SOURCE_FILES/bsp/pic32mk_evk/bsp_sys_init.c"
+compiler BSP_COMPILER_INCLUDE_PIC32MK_EVK includepath "$HARMONY_VERSION_PATH/bsp/pic32mk_evk"
+endif

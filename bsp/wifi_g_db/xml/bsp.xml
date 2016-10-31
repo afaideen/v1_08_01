@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<bsp name="pic32mx_wifi_g_demo">
+    <function name="SWITCH_0" pin="RD9" mode="digital" direction="in"/>
+    <function name="LED_0" pin="RE0" mode="digital" direction="out"/>
+    <function name="LED_1" pin="RF1" mode="digital" direction="out"/>
+    <function name="LED_2" pin="RF0" mode="digital" direction="out"/>
+</bsp>

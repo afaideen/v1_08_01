@@ -202,12 +202,14 @@ typedef struct
 {
     BSP_LED_LIGHT_SHOW light_show;
     BSP_SWITCH_STATE  s1, s2, s3, s4;
+    uint32_t            t[BSP_MAX_SWITCHES];
     BSP_SWITCH_STATE previousStateS1;
     BSP_SWITCH_STATE previousStateS2;
     BSP_SWITCH_STATE previousStateS3;
     BSP_SWITCH_STATE previousStateS4;
     BSP_SWITCH_DEBOUNCE_T switches[BSP_MAX_SWITCHES];
 } BSP_DATA;
+
 
 // *****************************************************************************
 /* LED Number.
@@ -305,6 +307,34 @@ typedef enum
     BSP_LED_8_CHANNEL = PORT_CHANNEL_A,
 
 } BSP_LED_CHANNEL;
+
+typedef enum
+{
+    /* AIN 1 */
+    BSP_AIN_1_CHANNEL = PORT_CHANNEL_B,
+                                                                      
+    /* AIN 2 */
+    BSP_AIN_2_CHANNEL = PORT_CHANNEL_B,
+                                                                      
+    /* AIN 3 */
+    BSP_AIN_3_CHANNEL = PORT_CHANNEL_B,
+                                                                      
+    /* AIN 4 */
+    BSP_AIN_4_CHANNEL = PORT_CHANNEL_B,
+                                                                      
+    /* AIN 5 */
+    BSP_AIN_5_CHANNEL = PORT_CHANNEL_B,
+                                                                      
+    /* AIN 6 */
+    BSP_AIN_6_CHANNEL = PORT_CHANNEL_B,
+                                                                      
+    /* AIN 7 */
+    BSP_AIN_7_CHANNEL = PORT_CHANNEL_B,
+            
+    /* AIN 8 */
+    BSP_AIN_8_CHANNEL = PORT_CHANNEL_B,
+
+} BSP_AIN_CHANNEL;
 
 // *****************************************************************************
 /* LED State
@@ -771,6 +801,7 @@ bool BSP_USBVBUSSwitchOverCurrentDetect(uint8_t port);
 
 	#include "common/src/delay.h"    
 	#include "driver/lcd/src/lcd_blocking.h"
+    #include "GenericTypeDefs.h"
 	// LCD Module I/O pins.  NOTE: On the Explorer 16, the LCD is wired to the
 	// same PMP lines required to communicate with an ENCX24J600 in parallel
 	// mode.  Since the LCD does not have a chip select wire, if you are using

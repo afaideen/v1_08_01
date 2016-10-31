@@ -1,0 +1,8 @@
+
+ifblock BSP_PIC32MX_125_SK_LCC_PICTAIL_QVGA
+file BSP_pic32mx_125_sk_lcc_pictail_qvga_BSP "$HARMONY_VERSION_PATH/bsp/pic32mx_125_sk+lcc_pictail+qvga/xml/bsp.xml" to "$BSP_CONFIGURATION_XML"
+file BSP_pic32mx_125_sk_lcc_pictail_qvga_H "$HARMONY_VERSION_PATH/bsp/pic32mx_125_sk+lcc_pictail+qvga/bsp_config.h" to "$PROJECT_HEADER_FILES/bsp/pic32mx_125_sk+lcc_pictail+qvga/bsp_config.h"
+file BSP_pic32mx_125_sk_lcc_pictail_qvga_C "$HARMONY_VERSION_PATH/bsp/pic32mx_125_sk+lcc_pictail+qvga/bsp_sys_init.c" to "$PROJECT_SOURCE_FILES/bsp/pic32mx_125_sk+lcc_pictail+qvga/bsp_sys_init.c"
+compiler BSP_COMPILER_INCLUDE_pic32mx_125_sk_lcc_pictail_qvga includepath "$HARMONY_VERSION_PATH/bsp/pic32mx_125_sk+lcc_pictail+qvga"
+endif
+

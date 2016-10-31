@@ -1,0 +1,33 @@
+menu "Select BSP Features"
+depends on USE_BSP
+depends on BSP_PIC32MZ_EF_LTS
+
+config BSP_PIC32MZ_EF_LTS_SW100
+    depends on USE_BSP
+    depends on BSP_PIC32MZ_EF_LTS
+    bool "Use Switch SW100?"
+    default y
+
+config BSP_PIC32MZ_EF_LTS_DISPLAY
+    depends on USE_BSP
+    depends on BSP_PIC32MZ_EF_LTS
+    bool "Use Graphics Display?"
+    default y if USE_GFX_STACK
+    default n
+
+config BSP_PIC32MZ_EF_LTS_DISPLAY_TOUCH
+    depends on USE_BSP
+    depends on BSP_PIC32MZ_EF_LTS
+    bool "Use Touch With Graphics Display?"
+    default y if USE_DRV_TOUCH_AR1021
+    default n
+
+endmenu
+
+ifblock BSP_PIC32MZ_EF_LTS
+file BSP_pic32_gdb_ef_BSP "$HARMONY_VERSION_PATH/bsp/pic32_gdb_ef/xml/bsp.xml" to "$BSP_CONFIGURATION_XML"
+file BSP_pic32_gdb_ef_H "$HARMONY_VERSION_PATH/bsp/pic32_gdb_ef/bsp_config.h" to "$PROJECT_HEADER_FILES/bsp/pic32_gdb_ef/bsp_config.h"
+file BSP_pic32_gdb_ef_C "$HARMONY_VERSION_PATH/bsp/pic32_gdb_ef/bsp_sys_init.c" to "$PROJECT_SOURCE_FILES/bsp/pic32_gdb_ef/bsp_sys_init.c"
+compiler BSP_COMPILER_INCLUDE_pic32_gdb_ef includepath "$HARMONY_VERSION_PATH/bsp/pic32_gdb_ef"
+endif
+

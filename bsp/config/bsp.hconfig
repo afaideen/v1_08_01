@@ -1,0 +1,158 @@
+menu "BSP Configuration"
+    
+config USE_BSP_NEEDED
+    bool
+    default n
+
+config USE_BSP
+    bool "Use BSP?"
+    default y if USE_BSP_NEEDED
+    default n
+    ---help---
+    IDH_HTML_Board_Support_Package_Help
+    ---endhelp---
+
+config BSP_JTAG
+    depends on USE_BSP
+    bool
+
+config BSP_USE_USBSWITCH
+    depends on USE_BSP
+    bool 
+
+config BSP_POSC_8MHz
+    depends on USE_BSP
+    bool
+
+config BSP_POSC_12MHz
+    depends on USE_BSP
+    bool
+
+config BSP_POSC_24MHz
+    depends on USE_BSP
+    bool
+
+config BSP_BT_AUDIO_DK_BOARD
+	depends on USE_BSP
+    bool
+	
+config BSP_TRIGGER
+    depends on USE_BSP
+	bool
+
+config BSP_GRAPHICS_NEEDED
+    depends on USE_BSP
+    bool
+
+config BSP_TOUCH_INPUT_NEEDED
+    depends on USE_BSP
+    bool
+		
+config BSP_LED0
+    depends on USE_BSP
+    bool
+
+config BSP_LED1
+    depends on USE_BSP
+    bool
+
+config BSP_LED2
+    depends on USE_BSP
+    bool
+
+config BSP_LED3
+    depends on USE_BSP
+    bool
+
+config BSP_LED4
+    depends on USE_BSP
+    bool
+
+config BSP_LED5
+    depends on USE_BSP
+    bool
+
+config BSP_LED6
+    depends on USE_BSP
+    bool
+
+config BSP_LED7
+    depends on USE_BSP
+    bool
+
+config BSP_LED8
+    depends on USE_BSP
+    bool
+
+config BSP_LED9
+    depends on USE_BSP
+    bool
+
+config BSP_LED10
+    depends on USE_BSP
+    bool
+
+config BSP_MEB_LED1
+    depends on USE_BSP
+    bool
+
+config BSP_MEB_LED2
+    depends on USE_BSP
+    bool
+
+config BSP_MEB_LED3
+    depends on USE_BSP
+    bool
+
+config BSP_MEB_LED4
+    depends on USE_BSP
+    bool
+
+config BSP_MEB_LED5
+    depends on USE_BSP
+    bool
+
+config BSP_MEB2_LED3
+    depends on USE_BSP
+    bool
+
+config BSP_MEB2_LED4
+    depends on USE_BSP
+    bool
+
+config BSP_MEB2_LED5
+    depends on USE_BSP
+    bool
+
+config BSP_MEB2_LED6
+    depends on USE_BSP
+    bool
+
+config BSP_MEB2_LED7
+    depends on USE_BSP
+    bool
+
+config BSP_LED_RED
+    depends on USE_BSP
+    bool
+
+config BSP_LED_GREEN
+    depends on USE_BSP
+    bool
+
+config BSP_LED_BLUE
+    depends on USE_BSP
+    bool
+
+source "$HARMONY_VERSION_PATH/bsp/config/DS60001143.hconfig"
+source "$HARMONY_VERSION_PATH/bsp/config/DS60001156.hconfig"
+source "$HARMONY_VERSION_PATH/bsp/config/DS60001168.hconfig"
+source "$HARMONY_VERSION_PATH/bsp/config/DS60001185.hconfig"
+source "$HARMONY_VERSION_PATH/bsp/config/DS60001191.hconfig"
+source "$HARMONY_VERSION_PATH/bsp/config/DS60001290.hconfig"
+source "$HARMONY_VERSION_PATH/bsp/config/DS60001320.hconfig"
+source "$HARMONY_VERSION_PATH/bsp/config/DS60001361.hconfig"
+source "$HARMONY_VERSION_PATH/bsp/config/DS60001402.hconfig"
+
+endmenu
+

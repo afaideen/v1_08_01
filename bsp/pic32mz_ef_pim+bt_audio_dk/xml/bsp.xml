@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<bsp name="pic32mz_ef_pim+bt_audio_dk">
+    <function name="SWITCH_1" pin="RK0" mode="digital" pullup="true"/>	
+    <function name="SWITCH_2" pin="RA10" mode="digital" pullup="true"/>	
+    <function name="SWITCH_3" pin="RJ14" mode="digital" drain="true" pullup="true"/>
+    <function name="SWITCH_4" pin="RH0" mode="digital" pullup="true"/>
+    <function name="SWITCH_5" pin="RH1" mode="digital" pullup="true"/>
+    <function name="LED_D5" pin="RB13" mode="digital" direction="out">
+        <constraint type="enable">
+            <pair key="BSP_PIC32MZ_EF_PIM_BT_AUDIO_DK_LED_D5" value="y"/>
+        </constraint>
+    </function>
+    <function name="LED_D6" pin="RB14" mode="digital" direction="out">
+        <constraint type="enable">
+            <pair key="BSP_PIC32MZ_EF_PIM_BT_AUDIO_DK_LED_D6" value="y"/>
+        </constraint>
+    </function>
+    <function name="LED_D7" pin="RF2" mode="digital" direction="out">
+        <constraint type="enable">
+            <pair key="BSP_PIC32MZ_EF_PIM_BT_AUDIO_DK_LED_D7" value="y"/>
+        </constraint>
+    </function>
+    <function name="LED_D8" pin="RH12" mode="digital" direction="out">
+        <constraint type="enable">
+            <pair key="BSP_PIC32MZ_EF_PIM_BT_AUDIO_DK_LED_D8" value="y"/>
+        </constraint>
+    </function>
+    <function name="LED_D9" pin="RJ13" mode="digital" direction="out">	
+        <constraint type="enable">
+            <pair key="BSP_PIC32MZ_EF_PIM_BT_AUDIO_DK_LED_D9" value="y"/>
+        </constraint>
+    </function>
+    <function name="USB SW0" pin="RK5" mode="digital" direction="out"/>
+    <function name="USB SW1" pin="RK4" mode="digital" direction="out"/>	
+    <function name="BT Pin" pin="RG15" mode="digital" direction="out"/>	
+	<function name="CCLK" pin="RD3"  mode="digital" direction="out"/>	
+	<function name="CCSL" pin="RD2"  mode="digital" direction="out"/>	
+	<function name="CDOUT" pin="RD12"  mode="digital" direction="out"/>	
+	<function name="PDN_AK4384" pin="RG15"  mode="digital" direction="out"/>			
+	<function name="PDN_AK4201" pin="RD5"  mode="digital" direction="out"/>		
+</bsp>

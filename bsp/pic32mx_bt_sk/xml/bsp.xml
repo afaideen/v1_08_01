@@ -1,0 +1,7 @@
+﻿<?xml version="1.0"?>
+<bsp name="pic32mx_bt_sk">
+    <function name="LED_RED" pin="RA0" mode="digital" direction="out"/>
+    <function name="LED_GREEN" pin="RA1" mode="digital" direction="out"/>
+    <function name="LED_BLUE" pin="RC9" mode="digital" direction="out"/>
+    <function name="BT Pin" pin="RB5" mode="digital" direction="out"/>
+</bsp>

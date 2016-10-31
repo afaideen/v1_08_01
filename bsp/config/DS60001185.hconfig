@@ -1,0 +1,93 @@
+ifblock DS60001185
+
+config BSP_DS60001185_COMMON
+    set JTAGEN optionally to "OFF"
+	set ICESEL optionally to "ICS_PGx2" if USE_BSP
+    set FNOSC optionally to "PRIPLL" if USE_BSP
+    set FNOSC optionally to "FRCPLL" if !USE_BSP
+	set POSCMOD optionally to "OFF" if !USE_BSP
+    set FPLLIDIV optionally to "DIV_2" if !USE_BSP
+    set FPLLODIV optionally to "DIV_1"
+	set UPLLIDIV optionally to "DIV_2" if !USE_BSP
+	set FSOSCEN optionally to "OFF"
+	set FPBDIV optionally to "DIV_2"
+    set FWDTEN optionally to "OFF"
+	set UPLLEN optionally to "ON" if USE_BSP
+    bool
+    default y if USE_BSP
+
+choice
+    prompt "Select BSP To Use For $DEVICE Device"
+    depends on USE_BSP
+    default BSP_PIC32MX_USB_SK3
+    ---help---
+    IDH_HTML_BSP_Board_Support_Packages
+    ---endhelp---
+
+	
+config BSP_BT_AUDIO_DK
+    depends on USE_BSP
+    depends on DS60001185
+	select BSP_TRIGGER
+	select BSP_POSC_12MHz
+    select BSP_LED5
+    select BSP_LED6
+    select BSP_LED7
+    select BSP_LED8
+    select BSP_LED9
+	select BSP_BT_AUDIO_DK_BOARD
+    set POSCMOD optionally to "HS" if BSP_BT_AUDIO_DK
+    set FPLLIDIV optionally to "DIV_3" if BSP_BT_AUDIO_DK
+	set UPLLIDIV optionally to "DIV_3" if BSP_BT_AUDIO_DK
+    bool "PIC32 Bluetooth Audio Development Kit"
+    ---help---
+    IDH_HTML_BSP_bt_audio_dk
+    ---endhelp---
+	
+config BSP_PIC32MX470_PIM_E16
+    depends on USE_BSP
+    depends on DS60001185
+	select BSP_TRIGGER
+	select BSP_POSC_8MHz
+    select BSP_LED3
+    select BSP_LED4
+    select BSP_LED5
+    select BSP_LED6
+    select BSP_LED7
+    select BSP_LED8
+    select BSP_LED9
+    select BSP_LED10
+    set POSCMOD optionally to "XT" if BSP_PIC32MX470_PIM_E16
+    set FPLLIDIV optionally to "DIV_2" if BSP_PIC32MX470_PIM_E16
+	set UPLLIDIV optionally to "DIV_2" if BSP_PIC32MX470_PIM_E16
+    bool "PIC32MX470F512L PIM w/Explorer16"
+    ---help---
+    IDH_HTML_BSP_pic32mx470_pim_e16
+    ---endhelp---
+	
+config BSP_PIC32MX_USB_SK3
+    depends on USE_BSP
+    depends on DS60001185
+	select BSP_TRIGGER
+	select BSP_POSC_8MHz
+    select BSP_LED1
+    select BSP_LED2
+    select BSP_LED3
+    set POSCMOD optionally to "XT" if BSP_PIC32MX_USB_SK3
+    set FPLLIDIV optionally to "DIV_2" if BSP_PIC32MX_USB_SK3
+	set UPLLIDIV optionally to "DIV_2" if BSP_PIC32MX_USB_SK3
+    bool "PIC32MX USB Starter Kit 3"
+    ---help---
+    IDH_HTML_BSP_pic32mx_usb_sk3
+    ---endhelp---
+
+	
+endchoice	
+
+
+source "$HARMONY_VERSION_PATH/bsp/bt_audio_dk/config/bsp.hconfig"
+source "$HARMONY_VERSION_PATH/bsp/pic32mx470_pim+e16/config/bsp.hconfig"
+source "$HARMONY_VERSION_PATH/bsp/pic32mx_usb_sk3/config/bsp.hconfig"
+
+endif
+

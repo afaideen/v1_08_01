@@ -1,0 +1,7 @@
+
+ifblock BSP_PIC32MZ_EF_SK_S1D_PICTAIL_VGA
+file BSP_pic32mz_ef_sk_s1d_pictail_vga_BSP "$HARMONY_VERSION_PATH/bsp/pic32mz_ef_sk+s1d_pictail+vga/xml/bsp.xml" to "$BSP_CONFIGURATION_XML"
+file BSP_pic32mz_ef_sk_s1d_pictail_vga_H "$HARMONY_VERSION_PATH/bsp/pic32mz_ef_sk+s1d_pictail+vga/bsp_config.h" to "$PROJECT_HEADER_FILES/bsp/pic32mz_ef_sk+s1d_pictail+vga/bsp_config.h"
+file BSP_pic32mz_ef_sk_s1d_pictail_vga_C "$HARMONY_VERSION_PATH/bsp/pic32mz_ef_sk+s1d_pictail+vga/bsp_sys_init.c" to "$PROJECT_SOURCE_FILES/bsp/pic32mz_ef_sk+s1d_pictail+vga/bsp_sys_init.c"
+compiler BSP_COMPILER_INCLUDE_pic32mz_ef_sk_s1d_pictail_vga includepath "$HARMONY_VERSION_PATH/bsp/pic32mz_ef_sk+s1d_pictail+vga"
+endif

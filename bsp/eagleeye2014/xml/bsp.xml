@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<bsp name="eagleeye2014">
+    <function name="BUTTON0" pin="RD6" mode="digital" direction="in"/>
+    <function name="BUTTON1" pin="RD7" mode="digital" direction="in"/>
+    <function name="BUTTON2" pin="RD13" mode="digital" direction="in"/>
+    <function name="FACSET" pin="RD2" mode="digital" direction="in"/>
+    
+    <function name="LED0" pin="RE0" mode="digital" direction="out"/>
+    <function name="LED1" pin="RE1" mode="digital" direction="out"/>  
+    <function name="LED_DRY0" pin="RE3" mode="digital" direction="out"/>
+    <function name="LED_DRY1" pin="RE2" mode="digital" direction="out"/>
+    <function name="LED_DRY2" pin="RE5" mode="digital" direction="out"/>
+    <function name="LED_DRY3" pin="RE4" mode="digital" direction="out"/>
+    <function name="LED_RED" pin="RD5" mode="digital" direction="out"/>
+	<function name="LED_BLUE" pin="RD6" mode="digital" direction="out"/>
+	<function name="LED_GREEN" pin="RD7" mode="digital" direction="out"/>
+    <function name="LED_AN0" pin="RG0" mode="digital" direction="out"/>
+    <function name="LED_AN1" pin="RG1" mode="digital" direction="out"/>
+    <function name="LED_AN2" pin="RG6" mode="digital" direction="out"/>
+    <function name="LED_AN3" pin="RG7" mode="digital" direction="out"/>
+    <function name="LED_AN4" pin="RG12" mode="digital" direction="out"/>
+    
+    <function name="OUT0" pin="RD1" mode="digital" direction="out"/>
+    <function name="OUT1" pin="RD3" mode="digital" direction="out"/>
+    <function name="DRY_DIG0" pin="RG13" mode="digital" direction="out"/>
+    <function name="DRY_DIG1" pin="RG14" mode="digital" direction="out"/>
+    <function name="DRY_DIG2" pin="RF12" mode="digital" direction="out"/>
+    <function name="DRY_DIG3" pin="RF13" mode="digital" direction="out"/>
+    
+    <function name="CHARGER_CTL" pin="RA0" mode="digital" direction="out"/>
+    
+</bsp>

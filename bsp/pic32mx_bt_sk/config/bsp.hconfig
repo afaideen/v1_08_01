@@ -1,0 +1,7 @@
+
+ifblock BSP_PIC32MX_BT_SK
+file BSP_pic32mx_bt_sk_BSP "$HARMONY_VERSION_PATH/bsp/pic32mx_bt_sk/xml/bsp.xml" to "$BSP_CONFIGURATION_XML"
+file BSP_pic32mx_bt_sk_H "$HARMONY_VERSION_PATH/bsp/pic32mx_bt_sk/bsp_config.h" to "$PROJECT_HEADER_FILES/bsp/pic32mx_bt_sk/bsp_config.h"
+file BSP_pic32mx_bt_sk_C "$HARMONY_VERSION_PATH/bsp/pic32mx_bt_sk/bsp_sys_init.c" to "$PROJECT_SOURCE_FILES/bsp/pic32mx_bt_sk/bsp_sys_init.c"
+compiler BSP_COMPILER_INCLUDE_pic32mx_bt_sk includepath "$HARMONY_VERSION_PATH/bsp/pic32mx_bt_sk"
+endif

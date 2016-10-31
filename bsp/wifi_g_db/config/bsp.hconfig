@@ -1,0 +1,7 @@
+
+ifblock BSP_WIFI_G_DB
+file BSP_wifi_g_db_BSP "$HARMONY_VERSION_PATH/bsp/wifi_g_db/xml/bsp.xml" to "$BSP_CONFIGURATION_XML"
+file BSP_wifi_g_db_H "$HARMONY_VERSION_PATH/bsp/wifi_g_db/bsp_config.h" to "$PROJECT_HEADER_FILES/bsp/wifi_g_db/bsp_config.h"
+file BSP_wifi_g_db_C "$HARMONY_VERSION_PATH/bsp/wifi_g_db/bsp_sys_init.c" to "$PROJECT_SOURCE_FILES/bsp/wifi_g_db/bsp_sys_init.c"
+compiler BSP_COMPILER_INCLUDE_wifi_g_db includepath "$HARMONY_VERSION_PATH/bsp/wifi_g_db"
+endif

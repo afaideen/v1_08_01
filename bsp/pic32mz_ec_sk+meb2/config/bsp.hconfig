@@ -1,0 +1,102 @@
+menu "Select BSP Features"
+depends on USE_BSP
+depends on BSP_PIC32MZ_EC_SK_MEB2
+
+config BSP_PIC32MZ_EC_SK_MEB2_LED1
+    depends on USE_BSP
+    depends on BSP_PIC32MZ_EC_SK_MEB2
+    bool "Use LED1?"
+    default y
+
+config BSP_PIC32MZ_EC_SK_MEB2_LED2
+    depends on USE_BSP
+    depends on BSP_PIC32MZ_EC_SK_MEB2
+    bool "Use LED2?"
+    default y
+
+config BSP_PIC32MZ_EC_SK_MEB2_LED3
+    depends on USE_BSP
+    depends on BSP_PIC32MZ_EC_SK_MEB2
+    bool "Use LED3?"
+    default y
+
+config BSP_PIC32MZ_EC_SK_MEB2_LED_D6
+    depends on USE_BSP
+    depends on BSP_PIC32MZ_EC_SK_MEB2
+    bool "Use LED D6?"
+    default y
+
+config BSP_PIC32MZ_EC_SK_MEB2_LED_D7
+    depends on USE_BSP
+    depends on BSP_PIC32MZ_EC_SK_MEB2
+    bool "Use LED D7?"
+    default y
+
+config BSP_PIC32MZ_EC_SK_MEB2_SW1
+    depends on USE_BSP
+    depends on BSP_PIC32MZ_EC_SK_MEB2
+    bool "Use Switch SW1?"
+    default y
+
+config BSP_PIC32MZ_EC_SK_MEB2_SW2
+    depends on USE_BSP
+    depends on BSP_PIC32MZ_EC_SK_MEB2
+    bool "Use Switch SW2?"
+    default y
+
+config BSP_PIC32MZ_EC_SK_MEB2_SW3
+    depends on USE_BSP
+    depends on BSP_PIC32MZ_EC_SK_MEB2
+    bool "Use Switch SW3?"
+    default y
+
+config BSP_PIC32MZ_EC_SK_MEB2_S1
+    depends on USE_BSP
+    depends on BSP_PIC32MZ_EC_SK_MEB2
+    bool "Use Switch S1?"
+    default y
+
+config BSP_PIC32MZ_EC_SK_MEB2_USB
+    depends on USE_BSP
+    depends on BSP_PIC32MZ_EC_SK_MEB2
+    bool "Use USB Switch?"
+    default y if USE_USB_STACK
+    default n
+
+config BSP_PIC32MZ_EC_SK_MEB2_BT
+    depends on USE_BSP
+    depends on BSP_PIC32MZ_EC_SK_MEB2
+    bool "Use Bluetooth Module?"
+    default y if USE_BLUETOOTH_LIBRARIES
+    default n
+
+config BSP_PIC32MZ_EC_SK_MEB2_DISPLAY
+    depends on USE_BSP
+    depends on BSP_PIC32MZ_EC_SK_MEB2
+    bool "Use Graphics Display?"
+    default y if USE_GFX_STACK
+    default n
+
+config BSP_PIC32MZ_EC_SK_MEB2_CODEC
+    depends on USE_BSP
+    depends on BSP_PIC32MZ_EC_SK_MEB2
+    bool "Use Codec?"
+    default y if SELECT_DRV_AK4953
+    default n
+
+config BSP_PIC32MZ_EC_SK_MEB2_CAMERA
+    depends on USE_BSP
+    depends on BSP_PIC32MZ_EC_SK_MEB2
+    bool "Use Camera?"
+    default y if USE_DRV_OVM7690
+    default n
+
+endmenu
+
+ifblock BSP_PIC32MZ_EC_SK_MEB2
+file BSP_pic32mz_ec_sk_meb2_BSP "$HARMONY_VERSION_PATH/bsp/pic32mz_ec_sk+meb2/xml/bsp.xml" to "$BSP_CONFIGURATION_XML"
+file BSP_pic32mz_ec_sk_meb2_H "$HARMONY_VERSION_PATH/bsp/pic32mz_ec_sk+meb2/bsp_config.h" to "$PROJECT_HEADER_FILES/bsp/pic32mz_ec_sk+meb2/bsp_config.h"
+file BSP_pic32mz_ec_sk_meb2_C "$HARMONY_VERSION_PATH/bsp/pic32mz_ec_sk+meb2/bsp_sys_init.c" to "$PROJECT_SOURCE_FILES/bsp/pic32mz_ec_sk+meb2/bsp_sys_init.c"
+compiler BSP_COMPILER_INCLUDE_pic32mz_ec_sk_meb2 includepath "$HARMONY_VERSION_PATH/bsp/pic32mz_ec_sk+meb2"
+endif
+

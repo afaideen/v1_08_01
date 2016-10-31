@@ -1,0 +1,7 @@
+
+ifblock BSP_EAGLEEYE2014
+file BSP_eagleeye2014_BSP "$HARMONY_VERSION_PATH/bsp/eagleeye2014/xml/bsp.xml" to "$BSP_CONFIGURATION_XML"
+file BSP_eagleeye2014_H "$HARMONY_VERSION_PATH/bsp/eagleeye2014/bsp_config.h" to "$PROJECT_HEADER_FILES/bsp/eagleeye2014/bsp_config.h"
+file BSP_eagleeye2014_C "$HARMONY_VERSION_PATH/bsp/eagleeye2014/bsp_sys_init.c" to "$PROJECT_SOURCE_FILES/bsp/eagleeye2014/bsp_sys_init.c"
+compiler BSP_COMPILER_INCLUDE_eagleeye2014 includepath "$HARMONY_VERSION_PATH/bsp/eagleeye2014"
+endif

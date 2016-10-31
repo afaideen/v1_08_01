@@ -1,0 +1,10 @@
+
+ifblock BSP_BT_AUDIO_DK
+
+add "<#include \"/bsp/bt_audio_dk/templates/bsp_init.c.ftl\">"  to list BSP_INIT_C_INITIALIZE_CODE
+
+file BSP_bt_audio_dk_BSP "$HARMONY_VERSION_PATH/bsp/bt_audio_dk/xml/bsp.xml" to "$BSP_CONFIGURATION_XML"
+file BSP_bt_audio_dk_H "$HARMONY_VERSION_PATH/bsp/bt_audio_dk/bsp_config.h" to "$PROJECT_HEADER_FILES/bsp/bt_audio_dk/bsp_config.h"
+file BSP_bt_audio_dk_C "$HARMONY_VERSION_PATH/bsp/bt_audio_dk/bsp_sys_init.c" to "$PROJECT_SOURCE_FILES/bsp/bt_audio_dk/bsp_sys_init.c"
+compiler BSP_COMPILER_INCLUDE_bt_audio_dk includepath "$HARMONY_VERSION_PATH/bsp/bt_audio_dk"
+endif

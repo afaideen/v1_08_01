@@ -1,0 +1,7 @@
+
+ifblock BSP_PIC32MZ_DA_SK_MEB2_WVGA
+file BSP_pic32mz_da_sk_meb2_wvga_BSP "$HARMONY_VERSION_PATH/bsp/pic32mz_da_sk+meb2+wvga/xml/bsp.xml" to "$BSP_CONFIGURATION_XML"
+file BSP_pic32mz_da_sk_meb2_wvga_H "$HARMONY_VERSION_PATH/bsp/pic32mz_da_sk+meb2+wvga/bsp_config.h" to "$PROJECT_HEADER_FILES/bsp/pic32mz_da_sk+meb2+wvga/bsp_config.h"
+file BSP_pic32mz_da_sk_meb2_wvga_C "$HARMONY_VERSION_PATH/bsp/pic32mz_da_sk+meb2+wvga/bsp_sys_init.c" to "$PROJECT_SOURCE_FILES/bsp/pic32mz_da_sk+meb2+wvga/bsp_sys_init.c"
+compiler BSP_COMPILER_INCLUDE_pic32mz_da_sk_meb2_wvga includepath "$HARMONY_VERSION_PATH/bsp/pic32mz_da_sk+meb2+wvga"
+endif

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0"?>
+<bsp name="chipkit_wf32">
+    <function name="SWITCH_1" pin="RA6" mode="digital" pullup="false">
+        <constraint type="enable">
+            <pair key="BSP_CK_WF32_SW2" value="y"/>
+        </constraint>
+    </function>
+    <function name="SWITCH_2" pin="RA7" mode="digital" pullup="false">
+        <constraint type="enable">
+            <pair key="BSP_CK_WF32_SW3" value="y"/>
+        </constraint>
+    </function>
+    <function name="LED_1" pin="RA0" mode="digital" direction="out">
+        <constraint type="enable">
+            <pair key="BSP_CK_WF32_LED3" value="y"/>
+        </constraint>
+    </function>
+    <function name="LED_2" pin="RA1" mode="digital" direction="out">
+        <constraint type="enable">
+            <pair key="BSP_CK_WF32_LED4" value="y"/>
+        </constraint>
+    </function>
+    <function name="LED_3" pin="RF0" mode="digital" direction="out">
+        <constraint type="enable">
+            <pair key="BSP_CK_WF32_LED5" value="y"/>
+        </constraint>
+    </function>
+    <function name="LED_4" pin="RG6" mode="digital" direction="out">
+        <constraint type="enable">
+            <pair key="BSP_CK_WF32_LED6" value="y"/>
+        </constraint>
+    </function>
+    <function name="USB_VBUS_SWITCH" pin="RB5" mode="digital" direction ="out">
+        <constraint type="enable">
+            <pair key="BSP_CK_WF32_USB" value="y"/>
+        </constraint>
+    </function>
+</bsp>

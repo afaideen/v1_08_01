@@ -1,0 +1,7 @@
+
+ifblock BSP_PIC32MZ_DA_SK_169LFBGA_CPU
+file BSP_pic32mz_da_sk_169lfbga_cpu_BSP "$HARMONY_VERSION_PATH/bsp/pic32mz_da_sk+169lfbga_cpu/xml/bsp.xml" to "$BSP_CONFIGURATION_XML"
+file BSP_pic32mz_da_sk_169lfbga_cpu_H   "$HARMONY_VERSION_PATH/bsp/pic32mz_da_sk+169lfbga_cpu/bsp_config.h" to "$PROJECT_HEADER_FILES/bsp/pic32mz_da_sk+169lfbga_cpu/bsp_config.h"
+file BSP_pic32mz_da_sk_169lfbga_cpu_C   "$HARMONY_VERSION_PATH/bsp/pic32mz_da_sk+169lfbga_cpu/bsp_sys_init.c" to "$PROJECT_SOURCE_FILES/bsp/pic32mz_da_sk+169lfbga_cpu/bsp_sys_init.c"
+compiler BSP_COMPILER_INCLUDE_pic32mz_da_sk_169lfbga_cpu includepath "$HARMONY_VERSION_PATH/bsp/pic32mz_da_sk+169lfbga_cpu"
+endif

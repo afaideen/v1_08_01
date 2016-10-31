@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<bsp name="pic32mz_da_sk+169lfbga_cpu+meb2+wvga">
+    <function name="SWITCH_1" pin="RB12" direction="in" mode="digital" pullup="true"/>
+    <function name="SWITCH_2" pin="RB13" direction="in" mode="digital" pullup="true"/>
+    <function name="SWITCH_3" pin="RB14" direction="in" mode="digital" pullup="true"/>
+    <function name="SWITCH_S1" pin="RE6" direction="in" mode="digital" pullup="true"/>
+    <function name="USB_VBUS_SWITCH" pin="RB5" direction="out" mode="digital"/>
+    <function name="LED_1" pin="RH0" direction="out" mode="digital"/>
+    <function name="LED_2" pin="RH1" direction="out" mode="digital"/>
+    <function name="LED_3" pin="RH2" direction="out" mode="digital"/>
+    <function name="LED_D6" pin="RH6" direction="out" mode="digital"/>
+    <function name="LED_D7" pin="RH11" direction="out" mode="digital"/>
+    <function name="BT Pin" pin="RB2" direction="out" mode="digital"/>
+    <function name="CAM_VSYNC" pin="RJ2" direction="in" mode="digital"/>
+    <function name="CAM_PWDN" pin="RH13" direction="out" mode="digital"/>
+    <function name="PDN_AK4953" pin="RH3"  mode="digital" direction="out"/>
+
+</bsp>

@@ -1,0 +1,7 @@
+
+ifblock BSP_PIC32MX470_PIM_E16
+file BSP_pic32mx470_pim_e16_BSP "$HARMONY_VERSION_PATH/bsp/pic32mx470_pim+e16/xml/bsp.xml" to "$BSP_CONFIGURATION_XML"
+file BSP_pic32mx470_pim_e16_H "$HARMONY_VERSION_PATH/bsp/pic32mx470_pim+e16/bsp_config.h" to "$PROJECT_HEADER_FILES/bsp/pic32mx470_pim+e16/bsp_config.h"
+file BSP_pic32mx470_pim_e16_C "$HARMONY_VERSION_PATH/bsp/pic32mx470_pim+e16/bsp_sys_init.c" to "$PROJECT_SOURCE_FILES/bsp/pic32mx470_pim+e16/bsp_sys_init.c"
+compiler BSP_COMPILER_INCLUDE_pic32mx470_pim_e16 includepath "$HARMONY_VERSION_PATH/bsp/pic32mx470_pim+e16"
+endif

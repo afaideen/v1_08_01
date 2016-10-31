@@ -1,0 +1,193 @@
+ifblock DS60001361
+
+
+config BSP_DS60001361_COMMON
+    set JTAGEN optionally to "OFF"
+    set POSCMOD optionally to "EC" if USE_BSP
+    set DSWDTEN optionally to "OFF"
+    set TRCEN optionally to "OFF"
+    set ICESEL optionally to "ICS_PGx2" if USE_BSP
+    set FNOSC optionally to "SPLL"
+    set FWDTEN optionally to "OFF"
+    set FDMTEN optionally to "OFF"
+    set FPLLRNG optionally to "RANGE_5_10_MHZ"
+    set FPLLICLK optionally to "PLL_POSC" if USE_BSP
+    set FPLLICLK optionally to "PLL_FRC" if !USE_BSP
+    set FPLLIDIV optionally to "DIV_3" if USE_BSP
+    set FPLLIDIV optionally to "DIV_1" if !USE_BSP
+    set FPLLMULT optionally to "MUL_50"
+    set FPLLODIV optionally to "DIV_2"
+    set FMIIEN optionally to "OFF" if USE_BSP
+    set TSEQ optionally to "0x0000"
+    set CSEQ optionally to "0xffff"
+    bool
+    default y if USE_BSP
+
+choice
+    prompt "Select BSP To Use For $DEVICE Device"
+    depends on USE_BSP
+    default BSP_PIC32MZ_DA_SK
+    ---help---
+    IDH_HTML_BSP_Board_Support_Packages
+    ---endhelp---
+
+
+config BSP_PIC32MZ_DA_SK
+    depends on USE_BSP
+    select BSP_TRIGGER
+    select BSP_USE_USBSWITCH
+    select BSP_POSC_24MHz
+    select BSP_LED1
+    select BSP_LED2
+    select BSP_LED3
+    bool "PIC32MZ DA Starter Kit"
+    ---help---
+    IDH_HTML_BSP_pic32mz_da_sk
+    ---endhelp---
+
+config BSP_PIC32MZ_DA_SK_MEB2_WVGA
+    depends on USE_BSP
+    select BSP_TRIGGER
+    select BSP_USE_USBSWITCH
+    select BSP_POSC_24MHz
+    select BSP_LED1
+    select BSP_LED2
+    select BSP_LED3
+    select BSP_MEB2_LED3
+    select BSP_MEB2_LED4
+    select BSP_MEB2_LED5
+    select BSP_MEB2_LED6
+    select BSP_MEB2_LED7
+    select USE_GFX_NEWHAVEN_50_800X480_PCAP_NEEDED if BSP_GRAPHICS_NEEDED
+    select USE_DRV_GFX_GLCD_NEEDED if BSP_GRAPHICS_NEEDED
+    set SYS_CLK_REFCLK4_ENABLE to y if USE_DRV_GFX_GLCD_NEEDED
+    set SYS_CLK_RODIV4 to 1 if SYS_CLK_REFCLK4_ENABLE
+    set USE_SYS_MEMORY to y if USE_DRV_GFX_GLCD_NEEDED
+    set USE_SYS_MEMORY_DDR to y if USE_DRV_GFX_GLCD_NEEDED
+    set GFX_CFG_COLOR_DEPTH_SIZE to "GFX_COLOR_DEPTH_32" if USE_DRV_GFX_GLCD_NEEDED
+    set DRV_GFX_GLCD_LAYER0_RES_X to 800 if USE_DRV_GFX_GLCD_NEEDED
+    set DRV_GFX_GLCD_LAYER0_RES_Y to 480 if USE_DRV_GFX_GLCD_NEEDED
+    set DRV_GFX_GLCD_LAYER0_START_X to 0 if USE_DRV_GFX_GLCD_NEEDED
+    set DRV_GFX_GLCD_LAYER0_START_Y to 0 if USE_DRV_GFX_GLCD_NEEDED
+    set DRV_GFX_DISP_HOR_RESOLUTION to 800 if USE_DRV_GFX_GLCD_NEEDED
+    set DRV_GFX_DISP_VER_RESOLUTION to 480 if USE_DRV_GFX_GLCD_NEEDED
+    set DRV_GFX_DISP_HOR_PULSE_WIDTH to 48 if USE_DRV_GFX_GLCD_NEEDED
+    set DRV_GFX_DISP_HOR_BACK_PORCH to 39 if USE_DRV_GFX_GLCD_NEEDED
+    set DRV_GFX_DISP_HOR_FRONT_PORCH to 41 if USE_DRV_GFX_GLCD_NEEDED
+    set DRV_GFX_DISP_VER_PULSE_WIDTH to 3 if USE_DRV_GFX_GLCD_NEEDED
+    set DRV_GFX_DISP_VER_BACK_PORCH to 29 if USE_DRV_GFX_GLCD_NEEDED
+    set DRV_GFX_DISP_VER_FRONT_PORCH to 13 if USE_DRV_GFX_GLCD_NEEDED
+    set DRV_GFX_DISP_PIXEL_CLOCK_FACTOR to 4 if USE_DRV_GFX_GLCD_NEEDED
+    bool "PIC32MZ DA Starter Kit w/ Multimedia Expansion Board (MEB) II and WVGA glass"
+    ---help---
+    IDH_HTML_BSP_pic32mz_da_sk_meb2_wvga
+    ---endhelp---
+
+config BSP_PIC32MZ_DA_SK_MMC_EVK
+    depends on USE_BSP
+    select BSP_TRIGGER
+    select BSP_USE_USBSWITCH
+    select BSP_POSC_24MHz
+    select BSP_LED1
+    select BSP_LED2
+    select BSP_LED3
+    select BSP_LED4
+    select BSP_LED5
+    select BSP_LED6
+    select USE_GFX_NEWHAVEN_50_800X480_PCAP_NEEDED if BSP_GRAPHICS_NEEDED
+    select USE_DRV_GFX_GLCD_NEEDED if BSP_GRAPHICS_NEEDED
+    select USE_DRV_GFX_LCC_NEEDED if BSP_GRAPHICS_NEEDED
+    bool "PIC32MZ DA Starter Kit w/ Multimedia Connection and Expansion Kit"
+    ---help---
+    IDH_HTML_BSP_pic32mz_da_sk_mmc_evk
+    ---endhelp---
+
+
+
+config BSP_PIC32MZ_DA_SK_169LFBGA_CPU
+    depends on USE_BSP
+    select BSP_TRIGGER
+    select BSP_USE_USBSWITCH
+    select BSP_POSC_24MHz
+    select BSP_LED1
+    select BSP_LED2
+    select BSP_LED3
+    set EXTDDRSIZE optionally to "DDR_SIZE_32MB" if BSP_PIC32MZ_DA_SK_169LFBGA_CPU
+    bool "PIC32MZ DA Starter Kit w/ 169lfbga CPU daughter card"
+    ---help---
+    IDH_HTML_BSP_pic32mz_da_sk_169lfbga_cpu
+    ---endhelp---
+
+config BSP_PIC32MZ_DA_SK_169LFBGA_CPU_MEB2_WVGA
+    depends on USE_BSP
+    select BSP_TRIGGER
+    select BSP_USE_USBSWITCH
+    select BSP_POSC_24MHz
+    select BSP_LED1
+    select BSP_LED2
+    select BSP_LED3
+    select BSP_MEB2_LED3
+    select BSP_MEB2_LED4
+    select BSP_MEB2_LED5
+    select BSP_MEB2_LED6
+    select BSP_MEB2_LED7
+    set EXTDDRSIZE optionally to "DDR_SIZE_32MB" if BSP_PIC32MZ_DA_SK_169LFBGA_CPU_MEB2_WVGA
+    select USE_GFX_NEWHAVEN_50_800X480_PCAP_NEEDED if BSP_GRAPHICS_NEEDED
+    select USE_DRV_GFX_GLCD_NEEDED if BSP_GRAPHICS_NEEDED
+    set SYS_CLK_REFCLK4_ENABLE to y if USE_DRV_GFX_GLCD_NEEDED
+    set SYS_CLK_RODIV4 to 1 if SYS_CLK_REFCLK4_ENABLE
+    set USE_SYS_MEMORY to y if USE_DRV_GFX_GLCD_NEEDED
+    set USE_SYS_MEMORY_DDR to y if USE_DRV_GFX_GLCD_NEEDED
+    set GFX_CFG_COLOR_DEPTH_SIZE to "GFX_COLOR_DEPTH_32" if USE_DRV_GFX_GLCD_NEEDED
+    set DRV_GFX_GLCD_LAYER0_RES_X to 800 if USE_DRV_GFX_GLCD_NEEDED
+    set DRV_GFX_GLCD_LAYER0_RES_Y to 480 if USE_DRV_GFX_GLCD_NEEDED
+    set DRV_GFX_GLCD_LAYER0_START_X to 0 if USE_DRV_GFX_GLCD_NEEDED
+    set DRV_GFX_GLCD_LAYER0_START_Y to 0 if USE_DRV_GFX_GLCD_NEEDED
+    set DRV_GFX_DISP_HOR_RESOLUTION to 800 if USE_DRV_GFX_GLCD_NEEDED
+    set DRV_GFX_DISP_VER_RESOLUTION to 480 if USE_DRV_GFX_GLCD_NEEDED
+    set DRV_GFX_DISP_HOR_PULSE_WIDTH to 48 if USE_DRV_GFX_GLCD_NEEDED
+    set DRV_GFX_DISP_HOR_BACK_PORCH to 39 if USE_DRV_GFX_GLCD_NEEDED
+    set DRV_GFX_DISP_HOR_FRONT_PORCH to 41 if USE_DRV_GFX_GLCD_NEEDED
+    set DRV_GFX_DISP_VER_PULSE_WIDTH to 3 if USE_DRV_GFX_GLCD_NEEDED
+    set DRV_GFX_DISP_VER_BACK_PORCH to 29 if USE_DRV_GFX_GLCD_NEEDED
+    set DRV_GFX_DISP_VER_FRONT_PORCH to 13 if USE_DRV_GFX_GLCD_NEEDED
+    set DRV_GFX_DISP_PIXEL_CLOCK_FACTOR to 4 if USE_DRV_GFX_GLCD_NEEDED
+    bool "PIC32MZ DA Starter Kit w/ 169lfbga CPU daughter card w/ Multimedia Expansion Board (MEB) II and WVGA glass"
+    ---help---
+    IDH_HTML_BSP_pic32mz_da_sk_169lfbga_cpu_meb2_wvga
+    ---endhelp---
+
+config BSP_PIC32MZ_DA_SK_169LFBGA_CPU_MMC_EVK
+    depends on USE_BSP
+    select BSP_TRIGGER
+    select BSP_USE_USBSWITCH
+    select BSP_POSC_24MHz
+    select BSP_LED1
+    select BSP_LED2
+    select BSP_LED3
+    select BSP_LED4
+    select BSP_LED5
+    select BSP_LED6
+    set EXTDDRSIZE optionally to "DDR_SIZE_32MB" if BSP_PIC32MZ_DA_SK_169LFBGA_CPU_MMC_EVK
+    select USE_GFX_NEWHAVEN_50_800X480_PCAP_NEEDED if BSP_GRAPHICS_NEEDED
+    select USE_DRV_GFX_GLCD_NEEDED if BSP_GRAPHICS_NEEDED
+    select USE_DRV_GFX_LCC_NEEDED if BSP_GRAPHICS_NEEDED
+    bool "PIC32MZ DA Starter Kit w/ 169lfbga CPU daughter card w/ Multimedia Connection and Expansion Kit"
+    ---help---
+    IDH_HTML_BSP_pic32mz_da_sk_169lfbga_cpu_mmc_evk
+    ---endhelp---
+
+
+    
+endchoice
+
+
+source "$HARMONY_VERSION_PATH/bsp/pic32mz_da_sk/config/bsp.hconfig"
+source "$HARMONY_VERSION_PATH/bsp/pic32mz_da_sk+meb2+wvga/config/bsp.hconfig"
+source "$HARMONY_VERSION_PATH/bsp/pic32mz_da_sk+mmc_evk/config/bsp.hconfig"
+source "$HARMONY_VERSION_PATH/bsp/pic32mz_da_sk+169lfbga_cpu/config/bsp.hconfig"
+source "$HARMONY_VERSION_PATH/bsp/pic32mz_da_sk+169lfbga_cpu+meb2+wvga/config/bsp.hconfig"
+source "$HARMONY_VERSION_PATH/bsp/pic32mz_da_sk+169lfbga_cpu+mmc_evk/config/bsp.hconfig"
+
+endif
+

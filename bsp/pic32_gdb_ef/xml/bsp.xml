@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<bsp name="pic32_gdb_ef">
+    <function name="SWITCH_100" pin="RD0" direction="in" mode="digital" pullup="true">
+        <constraint type="enable">
+            <pair key="BSP_PIC32MZ_EF_LTS_SW100" value="y"/>
+        </constraint>
+    </function>
+    <function name="SWITCH_101" pin="MCLR" direction="in" mode="digital" pullup="true">
+        <constraint type="enable">
+            <pair key="BSP_PIC32MZ_EF_LTS_SW101" value="y"/>
+        </constraint>
+    </function>
+    <function name="LED_B" pin="RB6" direction="out" mode="digital">
+        <constraint type="enable">
+            <pair key="BSP_PIC32MZ_EF_LTS_LEDB" value="y"/>
+        </constraint>
+    </function>
+    <function name="LED_R" pin="RB7" direction="out" mode="digital">
+        <constraint type="enable">
+            <pair key="BSP_PIC32MZ_EF_LTS_LEDR" value="y"/>
+        </constraint>
+    </function>
+    <function name="LED_G" pin="RB7" direction="out" mode="digital">
+        <constraint type="enable">
+            <pair key="BSP_PIC32MZ_EF_LTS_LEDG" value="y"/>
+        </constraint>
+    </function>
+    <function name="LCD_VSYNC" pin="RA9" direction="out" mode="digital">
+        <constraint type="enable">
+            <pair key="BSP_PIC32MZ_EF_LTS_DISPLAY" value="y"/>
+        </constraint>
+    </function>
+    <function name="LCD_HSYNC" pin="RA7" direction="out" mode="digital">
+        <constraint type="enable">
+            <pair key="BSP_PIC32MZ_EF_LTS_DISPLAY" value="y"/>
+        </constraint>
+    </function>
+    <function name="LCD_DATA_ENABLE" pin="RG7" direction="out" mode="digital">
+        <constraint type="enable">
+            <pair key="BSP_PIC32MZ_EF_LTS_DISPLAY" value="y"/>
+        </constraint>
+    </function>
+    <function name="LCD_BACKLIGHT" pin="RB4" direction="out" mode="digital">
+        <constraint type="enable">
+            <pair key="BSP_PIC32MZ_EF_LTS_DISPLAY" value="y"/>
+        </constraint>
+    </function>
+    <function name="LCD_RESET" pin="RE8" direction="out" mode="digital">
+        <constraint type="enable">
+            <pair key="BSP_PIC32MZ_EF_LTS_DISPLAY" value="y"/>
+        </constraint>
+    </function>
+    <function name="LCD_CS" pin="RA2" direction="out" mode="digital">
+        <constraint type="enable">
+            <pair key="BSP_PIC32MZ_EF_LTS_DISPLAY" value="y"/>
+        </constraint>
+    </function>
+	<function name="USB_POWER" pin="RD11" direction="out" mode="digital" latch="high">
+    </function>
+	<function name="USB_BRIDGE_RESET" pin="RB3" direction="out" mode="digital" latch="high">
+    </function>
+	<function name="USB_BRIDGE_POWER_EN" pin="RB13" direction="out" mode="digital" latch="low">
+    </function>
+	<function name="USB_SWITCH_SEL" pin="RA1" direction="out" mode="digital" latch="high">
+    </function>	
+	<function name="USB_SWITCH_EN" pin="RF13" direction="out" mode="digital" latch="low">
+    </function>		
+</bsp>

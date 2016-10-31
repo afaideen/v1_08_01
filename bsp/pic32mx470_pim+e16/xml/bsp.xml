@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<bsp name="pic32mx470_pim+e16">
+  <function name="SWITCH_12" pin="RB12" mode="digital" direction="in"/>
+  <function name="SWITCH_13" pin="RB13" mode="digital" direction="in"/>
+  <function name="SWITCH_CD" pin="RF0" mode="digital" direction="in"/>
+  <function name="SWITCH_WP" pin="RF1" mode="digital" direction="out"/>
+  <function name="LED_1" pin="RA0" mode="digital" direction="out"/>
+  <function name="LED_2" pin="RA1" mode="digital" direction="out"/>
+  <function name="LED_3" pin="RA2" mode="digital" direction="out"/>
+</bsp>

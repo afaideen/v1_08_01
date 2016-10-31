@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<bsp name="pic32mk_evk">
+    <function name="SWITCH_1" pin="RG11" direction="in" mode="digital" pullup="false"/>
+    <function name="SWITCH_2" pin="RF13" direction="in" mode="digital" pullup="false"/>
+    <function name="SWITCH_3" pin="RF12" direction="in" mode="digital" pullup="false"/>
+    <function name="USB_VBUS_SWITCH" pin="RB5" direction="out" mode="digital"/>
+    <function name="LED_1" pin="RG12" direction="out" mode="digital"/>
+    <function name="LED_2" pin="RH1" direction="out" mode="digital"/>
+    <function name="LED_3" pin="RH2" direction="out" mode="digital"/>
+    <function name="USB_OC" pin="RD15" direction="in" mode="digital" pullup="false"/>
+    <function name="OC_CLR" pin="RD14" direction="out" mode="digital"/>
+</bsp>
