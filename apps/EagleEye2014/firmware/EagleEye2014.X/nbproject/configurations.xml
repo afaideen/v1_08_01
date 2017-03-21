@@ -1,17 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><configurationDescriptor version="62">
-  <logicalFolder displayName="root" name="root" projectFiles="true">
-    <logicalFolder displayName="Header Files" name="HeaderFiles" projectFiles="true">
-      <logicalFolder displayName="app" name="f3" projectFiles="true">
-        <logicalFolder displayName="system_config" name="f1" projectFiles="true">
-          <logicalFolder displayName="e-wi" name="f1" projectFiles="true">
-            <logicalFolder displayName="framework" name="f1" projectFiles="true">
-              <logicalFolder displayName="net" name="f1" projectFiles="true">
-                <logicalFolder displayName="pres" name="f1" projectFiles="true">
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="62">
+  <logicalFolder name="root" displayName="root" projectFiles="true">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <logicalFolder name="f3" displayName="app" projectFiles="true">
+        <logicalFolder name="f1" displayName="system_config" projectFiles="true">
+          <logicalFolder name="f1" displayName="e-wi" projectFiles="true">
+            <logicalFolder name="f1" displayName="framework" projectFiles="true">
+              <logicalFolder name="f1" displayName="net" projectFiles="true">
+                <logicalFolder name="f1" displayName="pres" projectFiles="true">
                   <itemPath>../src/system_config/e-wi/framework/net/pres/net_pres_enc_glue.h</itemPath>
                 </logicalFolder>
               </logicalFolder>
-              <logicalFolder displayName="system" name="f2" projectFiles="true">
-                <logicalFolder displayName="clk" name="f1" projectFiles="true">
+              <logicalFolder name="f2" displayName="system" projectFiles="true">
+                <logicalFolder name="f1" displayName="clk" projectFiles="true">
                   <itemPath>../src/system_config/e-wi/framework/system/clk/sys_clk_static.h</itemPath>
                 </logicalFolder>
               </logicalFolder>
@@ -19,15 +22,15 @@
             <itemPath>../src/system_config/e-wi/system_config.h</itemPath>
             <itemPath>../src/system_config/e-wi/system_definitions.h</itemPath>
           </logicalFolder>
-          <logicalFolder displayName="e_wi_spiflash" name="f2" projectFiles="true">
-            <logicalFolder displayName="framework" name="f1" projectFiles="true">
-              <logicalFolder displayName="net" name="f1" projectFiles="true">
-                <logicalFolder displayName="pres" name="f1" projectFiles="true">
+          <logicalFolder name="f2" displayName="e_wi_spiflash" projectFiles="true">
+            <logicalFolder name="f1" displayName="framework" projectFiles="true">
+              <logicalFolder name="f1" displayName="net" projectFiles="true">
+                <logicalFolder name="f1" displayName="pres" projectFiles="true">
                   <itemPath>../src/system_config/e_wi_spiflash/framework/net/pres/net_pres_enc_glue.h</itemPath>
                 </logicalFolder>
               </logicalFolder>
-              <logicalFolder displayName="system" name="f2" projectFiles="true">
-                <logicalFolder displayName="clk" name="f1" projectFiles="true">
+              <logicalFolder name="f2" displayName="system" projectFiles="true">
+                <logicalFolder name="f1" displayName="clk" projectFiles="true">
                   <itemPath>../src/system_config/e_wi_spiflash/framework/system/clk/sys_clk_static.h</itemPath>
                 </logicalFolder>
               </logicalFolder>
@@ -40,16 +43,16 @@
         <itemPath>../src/Sensor.h</itemPath>
         <itemPath>../src/DS1307.h</itemPath>
       </logicalFolder>
-      <logicalFolder displayName="bsp" name="f2" projectFiles="true">
-        <logicalFolder displayName="eagleeye2014" name="f1" projectFiles="true">
+      <logicalFolder name="f2" displayName="bsp" projectFiles="true">
+        <logicalFolder name="f1" displayName="eagleeye2014" projectFiles="true">
           <itemPath>../../../../bsp/eagleeye2014/bsp_config.h</itemPath>
         </logicalFolder>
       </logicalFolder>
-      <logicalFolder displayName="framework" name="f1" projectFiles="true">
-        <logicalFolder displayName="crypto" name="f1" projectFiles="true">
-          <logicalFolder displayName="src" name="f1" projectFiles="true">
-            <logicalFolder displayName="zlib-1.2.7" name="f1" projectFiles="true">
-              <logicalFolder displayName="examples" name="f1" projectFiles="true">
+      <logicalFolder name="f1" displayName="framework" projectFiles="true">
+        <logicalFolder name="f1" displayName="crypto" projectFiles="true">
+          <logicalFolder name="f1" displayName="src" projectFiles="true">
+            <logicalFolder name="f1" displayName="zlib-1.2.7" projectFiles="true">
+              <logicalFolder name="f1" displayName="examples" projectFiles="true">
                 <itemPath>../../../../framework/crypto/src/zlib-1.2.7/examples/gzlog.h</itemPath>
               </logicalFolder>
               <itemPath>../../../../framework/crypto/src/zlib-1.2.7/crc32.h</itemPath>
@@ -108,31 +111,31 @@
           </logicalFolder>
           <itemPath>../../../../framework/crypto/crypto.h</itemPath>
         </logicalFolder>
-        <logicalFolder displayName="driver" name="f2" projectFiles="true">
-          <logicalFolder displayName="nvm" name="f1" projectFiles="true">
-            <logicalFolder displayName="src" name="f1" projectFiles="true">
+        <logicalFolder name="f2" displayName="driver" projectFiles="true">
+          <logicalFolder name="f1" displayName="nvm" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
               <itemPath>../../../../framework/driver/nvm/src/drv_nvm_local.h</itemPath>
               <itemPath>../../../../framework/driver/nvm/src/drv_nvm_variant_mapping.h</itemPath>
             </logicalFolder>
             <itemPath>../../../../framework/driver/nvm/drv_nvm.h</itemPath>
           </logicalFolder>
-          <logicalFolder displayName="spi" name="f2" projectFiles="true">
-            <logicalFolder displayName="private" name="f1" projectFiles="true">
-              <logicalFolder displayName="dynamic" name="f1" projectFiles="true">
+          <logicalFolder name="f2" displayName="spi" projectFiles="true">
+            <logicalFolder name="f1" displayName="private" projectFiles="true">
+              <logicalFolder name="f1" displayName="dynamic" projectFiles="true">
                 <itemPath>../../../../framework/driver/spi/src/dynamic/drv_spi_internal.h</itemPath>
               </logicalFolder>
               <itemPath>../../../../framework/driver/spi/src/drv_spi_sys_queue.h</itemPath>
               <itemPath>../../../../framework/driver/spi/src/drv_spi_sys_queue_local_fifo.h</itemPath>
             </logicalFolder>
-            <logicalFolder displayName="src" name="f2" projectFiles="true">
+            <logicalFolder name="f2" displayName="src" projectFiles="true">
               <itemPath>../../../../framework/driver/spi/src/drv_spi_variant_mapping.h</itemPath>
             </logicalFolder>
             <itemPath>../../../../framework/driver/spi/drv_spi.h</itemPath>
           </logicalFolder>
-          <logicalFolder displayName="spi_flash" name="f3" projectFiles="true">
-            <logicalFolder displayName="sst25vf016b" name="f1" projectFiles="true">
-              <logicalFolder displayName="src" name="f1" projectFiles="true">
-                <logicalFolder displayName="mla" name="f1" projectFiles="true">
+          <logicalFolder name="f3" displayName="spi_flash" projectFiles="true">
+            <logicalFolder name="f1" displayName="sst25vf016b" projectFiles="true">
+              <logicalFolder name="f1" displayName="src" projectFiles="true">
+                <logicalFolder name="f1" displayName="mla" projectFiles="true">
                   <itemPath>../../../../framework/driver/spi_flash/sst25vf016b/src/mla/SPIFlash.h</itemPath>
                 </logicalFolder>
                 <itemPath>../../../../framework/driver/spi_flash/sst25vf016b/src/drv_sst25vf016b_local.h</itemPath>
@@ -141,8 +144,8 @@
               <itemPath>../../../../framework/driver/spi_flash/sst25vf016b/drv_sst25vf016b.h</itemPath>
             </logicalFolder>
           </logicalFolder>
-          <logicalFolder displayName="tmr" name="f4" projectFiles="true">
-            <logicalFolder displayName="src" name="f1" projectFiles="true">
+          <logicalFolder name="f4" displayName="tmr" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
               <itemPath>../../../../framework/driver/tmr/src/drv_tmr_variant_mapping.h</itemPath>
               <itemPath>../../../../framework/driver/tmr/src/drv_tmr_local.h</itemPath>
             </logicalFolder>
@@ -150,9 +153,9 @@
             <itemPath>../../../../framework/driver/tmr/drv_tmr_mapping.h</itemPath>
             <itemPath>../../../../framework/driver/tmr/drv_tmr_compatibility.h</itemPath>
           </logicalFolder>
-          <logicalFolder displayName="usart" name="f5" projectFiles="true">
-            <logicalFolder displayName="src" name="f1" projectFiles="true">
-              <logicalFolder displayName="mla" name="f1" projectFiles="true">
+          <logicalFolder name="f5" displayName="usart" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <logicalFolder name="f1" displayName="mla" projectFiles="true">
                 <itemPath>../../../../framework/driver/usart/src/mla/UART.h</itemPath>
               </logicalFolder>
               <itemPath>../../../../framework/driver/usart/src/drv_usart_local.h</itemPath>
@@ -160,9 +163,9 @@
             </logicalFolder>
             <itemPath>../../../../framework/driver/usart/drv_usart.h</itemPath>
           </logicalFolder>
-          <logicalFolder displayName="wifi" name="f6" projectFiles="true">
-            <logicalFolder displayName="mrf24w" name="f1" projectFiles="true">
-              <logicalFolder displayName="src" name="f1" projectFiles="true">
+          <logicalFolder name="f6" displayName="wifi" projectFiles="true">
+            <logicalFolder name="f1" displayName="mrf24w" projectFiles="true">
+              <logicalFolder name="f1" displayName="src" projectFiles="true">
                 <itemPath>../../../../framework/driver/wifi/mrf24w/src/drv_wifi_commands.h</itemPath>
                 <itemPath>../../../../framework/driver/wifi/mrf24w/src/drv_wifi_config_data.h</itemPath>
                 <itemPath>../../../../framework/driver/wifi/mrf24w/src/drv_wifi_debug_output.h</itemPath>
@@ -182,12 +185,12 @@
           <itemPath>../../../../framework/driver/driver.h</itemPath>
           <itemPath>../../../../framework/driver/driver_common.h</itemPath>
         </logicalFolder>
-        <logicalFolder displayName="gfx" name="f3" projectFiles="true">
+        <logicalFolder name="f3" displayName="gfx" projectFiles="true">
           <itemPath>../../../../framework/gfx/gfx_palette.h</itemPath>
         </logicalFolder>
-        <logicalFolder displayName="net" name="f4" projectFiles="true">
-          <logicalFolder displayName="pres" name="f1" projectFiles="true">
-            <logicalFolder displayName="priv" name="f1" projectFiles="true">
+        <logicalFolder name="f4" displayName="net" projectFiles="true">
+          <logicalFolder name="f1" displayName="pres" projectFiles="true">
+            <logicalFolder name="f1" displayName="priv" projectFiles="true">
               <itemPath>../../../../framework/net/pres/src/net_pres_local.h</itemPath>
             </logicalFolder>
             <itemPath>../../../../framework/net/pres/net_pres.h</itemPath>
@@ -198,59 +201,59 @@
             <itemPath>../../../../framework/net/pres/net_pres_socketapiconversion.h</itemPath>
           </logicalFolder>
         </logicalFolder>
-        <logicalFolder displayName="osal" name="f5" projectFiles="true">
-          <logicalFolder displayName="src" name="f1" projectFiles="true">
+        <logicalFolder name="f5" displayName="osal" projectFiles="true">
+          <logicalFolder name="f1" displayName="src" projectFiles="true">
             <itemPath>../../../../framework/osal/src/osal_impl_basic.h</itemPath>
             <itemPath>../../../../framework/osal/src/osal_impl_none.h</itemPath>
           </logicalFolder>
           <itemPath>../../../../framework/osal/osal.h</itemPath>
           <itemPath>../../../../framework/osal/osal_definitions.h</itemPath>
         </logicalFolder>
-        <logicalFolder displayName="peripheral" name="f6" projectFiles="true">
+        <logicalFolder name="f6" displayName="peripheral" projectFiles="true">
           <itemPath>../../../../framework/peripheral/peripheral.h</itemPath>
           <itemPath>../../../../framework/peripheral/peripheral_common.h</itemPath>
           <itemPath>../../../../framework/peripheral/peripheral_common_32bit.h</itemPath>
         </logicalFolder>
-        <logicalFolder displayName="system" name="f7" projectFiles="true">
-          <logicalFolder displayName="clk" name="f1" projectFiles="true">
+        <logicalFolder name="f7" displayName="system" projectFiles="true">
+          <logicalFolder name="f1" displayName="clk" projectFiles="true">
             <itemPath>../../../../framework/system/clk/sys_clk.h</itemPath>
             <itemPath>../../../../framework/system/clk/sys_clk_mapping.h</itemPath>
           </logicalFolder>
-          <logicalFolder displayName="command" name="f2" projectFiles="true">
+          <logicalFolder name="f2" displayName="command" projectFiles="true">
             <itemPath>../../../../framework/system/command/sys_command.h</itemPath>
           </logicalFolder>
-          <logicalFolder displayName="common" name="f3" projectFiles="true">
+          <logicalFolder name="f3" displayName="common" projectFiles="true">
             <itemPath>../../../../framework/system/common/sys_common.h</itemPath>
             <itemPath>../../../../framework/system/common/sys_module.h</itemPath>
             <itemPath>../../../../framework/system/common/sys_buffer.h</itemPath>
             <itemPath>../../../../framework/system/common/sys_queue.h</itemPath>
           </logicalFolder>
-          <logicalFolder displayName="console" name="f4" projectFiles="true">
-            <logicalFolder displayName="src" name="f1" projectFiles="true">
+          <logicalFolder name="f4" displayName="console" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
               <itemPath>../../../../framework/system/console/src/sys_console_local.h</itemPath>
               <itemPath>../../../../framework/system/console/src/sys_console_uart.h</itemPath>
             </logicalFolder>
             <itemPath>../../../../framework/system/console/sys_console.h</itemPath>
           </logicalFolder>
-          <logicalFolder displayName="debug" name="f5" projectFiles="true">
-            <logicalFolder displayName="src" name="f1" projectFiles="true">
+          <logicalFolder name="f5" displayName="debug" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
               <itemPath>../../../../framework/system/debug/src/sys_debug_local.h</itemPath>
             </logicalFolder>
             <itemPath>../../../../framework/system/debug/sys_debug.h</itemPath>
           </logicalFolder>
-          <logicalFolder displayName="devcon" name="f6" projectFiles="true">
-            <logicalFolder displayName="src" name="f1" projectFiles="true">
+          <logicalFolder name="f6" displayName="devcon" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
               <itemPath>../../../../framework/system/devcon/src/sys_devcon_local.h</itemPath>
             </logicalFolder>
             <itemPath>../../../../framework/system/devcon/sys_devcon.h</itemPath>
           </logicalFolder>
-          <logicalFolder displayName="fs" name="f7" projectFiles="true">
-            <logicalFolder displayName="mpfs" name="f2" projectFiles="true">
-              <logicalFolder displayName="src" name="f1" projectFiles="true">
+          <logicalFolder name="f7" displayName="fs" projectFiles="true">
+            <logicalFolder name="f2" displayName="mpfs" projectFiles="true">
+              <logicalFolder name="f1" displayName="src" projectFiles="true">
                 <itemPath>../../../../framework/system/fs/mpfs/src/mpfs_local.h</itemPath>
               </logicalFolder>
             </logicalFolder>
-            <logicalFolder displayName="src" name="f1" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
               <itemPath>../../../../framework/system/fs/src/sys_fs_local.h</itemPath>
               <itemPath>../../../../framework/system/fs/src/sys_fs_media_manager_local.h</itemPath>
             </logicalFolder>
@@ -258,43 +261,43 @@
             <itemPath>../../../../framework/system/fs/sys_fs_media_manager.h</itemPath>
             <itemPath>../../../../framework/system/fs/mpfs/mpfs.h</itemPath>
           </logicalFolder>
-          <logicalFolder displayName="int" name="f8" projectFiles="true">
-            <logicalFolder displayName="src" name="f1" projectFiles="true">
+          <logicalFolder name="f8" displayName="int" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
               <itemPath>../../../../framework/system/int/src/sys_int_private.h</itemPath>
             </logicalFolder>
             <itemPath>../../../../framework/system/int/sys_int.h</itemPath>
             <itemPath>../../../../framework/system/int/sys_int_mapping.h</itemPath>
           </logicalFolder>
-          <logicalFolder displayName="ports" name="f9" projectFiles="true">
+          <logicalFolder name="f9" displayName="ports" projectFiles="true">
             <itemPath>../../../../framework/system/ports/sys_ports.h</itemPath>
           </logicalFolder>
-          <logicalFolder displayName="random" name="f10" projectFiles="true">
-            <logicalFolder displayName="src" name="f1" projectFiles="true">
+          <logicalFolder name="f10" displayName="random" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
               <itemPath>../../../../framework/system/random/src/sys_random_local.h</itemPath>
             </logicalFolder>
             <itemPath>../../../../framework/system/random/sys_random.h</itemPath>
           </logicalFolder>
-          <logicalFolder displayName="reset" name="f11" projectFiles="true">
-            <logicalFolder displayName="src" name="f1" projectFiles="true">
+          <logicalFolder name="f11" displayName="reset" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
               <itemPath>../../../../framework/system/reset/src/sys_reset_local.h</itemPath>
               <itemPath>../../../../framework/system/reset/src/sys_reset_mapping.h</itemPath>
             </logicalFolder>
             <itemPath>../../../../framework/system/reset/sys_reset.h</itemPath>
           </logicalFolder>
-          <logicalFolder displayName="tmr" name="f12" projectFiles="true">
-            <logicalFolder displayName="src" name="f1" projectFiles="true">
+          <logicalFolder name="f12" displayName="tmr" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
               <itemPath>../../../../framework/system/tmr/src/sys_tmr_local.h</itemPath>
             </logicalFolder>
             <itemPath>../../../../framework/system/tmr/sys_tmr.h</itemPath>
           </logicalFolder>
           <itemPath>../../../../framework/system/system.h</itemPath>
         </logicalFolder>
-        <logicalFolder displayName="tcpip" name="f8" projectFiles="true">
-          <logicalFolder displayName="common" name="f2" projectFiles="true">
+        <logicalFolder name="f8" displayName="tcpip" projectFiles="true">
+          <logicalFolder name="f2" displayName="common" projectFiles="true">
             <itemPath>../../../../framework/tcpip/src/common/sys_fs_wrapper.h</itemPath>
             <itemPath>../../../../framework/tcpip/src/common/helpers.h</itemPath>
           </logicalFolder>
-          <logicalFolder displayName="src" name="f3" projectFiles="true">
+          <logicalFolder name="f3" displayName="src" projectFiles="true">
             <itemPath>../../../../framework/tcpip/src/berkeley_manager.h</itemPath>
             <itemPath>../../../../framework/tcpip/src/dhcpv6_manager.h</itemPath>
             <itemPath>../../../../framework/tcpip/src/dhcpv6_private.h</itemPath>
@@ -302,7 +305,7 @@
             <itemPath>../../../../framework/tcpip/src/lldp_private.h</itemPath>
             <itemPath>../../../../framework/tcpip/src/lldp_tlv.h</itemPath>
           </logicalFolder>
-          <logicalFolder displayName="stack" name="f1" projectFiles="true">
+          <logicalFolder name="f1" displayName="stack" projectFiles="true">
             <itemPath>../../../../framework/tcpip/src/tcp_private.h</itemPath>
             <itemPath>../../../../framework/tcpip/src/tcp_manager.h</itemPath>
             <itemPath>../../../../framework/tcpip/src/udp_private.h</itemPath>
@@ -372,36 +375,40 @@
         </logicalFolder>
       </logicalFolder>
     </logicalFolder>
-    <logicalFolder displayName="Linker Files" name="LinkerScript" projectFiles="true">
+    <logicalFolder name="LinkerScript"
+                   displayName="Linker Files"
+                   projectFiles="true">
       <itemPath>../src/linker/p32MX795F512L.ld</itemPath>
     </logicalFolder>
-    <logicalFolder displayName="Source Files" name="SourceFiles" projectFiles="true">
-      <logicalFolder displayName="app" name="f3" projectFiles="true">
-        <logicalFolder displayName="system_config" name="f1" projectFiles="true">
-          <logicalFolder displayName="e_wi_spiflash" name="f1" projectFiles="true">
-            <logicalFolder displayName="framework" name="f1" projectFiles="true">
-              <logicalFolder displayName="driver" name="f1" projectFiles="true">
-                <logicalFolder displayName="spi" name="f1" projectFiles="true">
-                  <logicalFolder displayName="dynamic" name="f1" projectFiles="true">
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <logicalFolder name="f3" displayName="app" projectFiles="true">
+        <logicalFolder name="f1" displayName="system_config" projectFiles="true">
+          <logicalFolder name="f1" displayName="e_wi_spiflash" projectFiles="true">
+            <logicalFolder name="f1" displayName="framework" projectFiles="true">
+              <logicalFolder name="f1" displayName="driver" projectFiles="true">
+                <logicalFolder name="f1" displayName="spi" projectFiles="true">
+                  <logicalFolder name="f1" displayName="dynamic" projectFiles="true">
                     <itemPath>../src/system_config/e_wi_spiflash/framework/driver/spi/dynamic/drv_spi_tasks.c</itemPath>
                     <itemPath>../src/system_config/e_wi_spiflash/framework/driver/spi/dynamic/drv_spi_api.c</itemPath>
                     <itemPath>../src/system_config/e_wi_spiflash/framework/driver/spi/dynamic/drv_spi_master_rm_tasks.c</itemPath>
                   </logicalFolder>
                 </logicalFolder>
               </logicalFolder>
-              <logicalFolder displayName="net" name="f2" projectFiles="true">
-                <logicalFolder displayName="pres" name="f1" projectFiles="true">
+              <logicalFolder name="f2" displayName="net" projectFiles="true">
+                <logicalFolder name="f1" displayName="pres" projectFiles="true">
                   <itemPath>../src/system_config/e_wi_spiflash/framework/net/pres/net_pres_enc_glue.c</itemPath>
                 </logicalFolder>
               </logicalFolder>
-              <logicalFolder displayName="system" name="f3" projectFiles="true">
-                <logicalFolder displayName="clk" name="f1" projectFiles="true">
-                  <logicalFolder displayName="src" name="f1" projectFiles="true">
+              <logicalFolder name="f3" displayName="system" projectFiles="true">
+                <logicalFolder name="f1" displayName="clk" projectFiles="true">
+                  <logicalFolder name="f1" displayName="src" projectFiles="true">
                     <itemPath>../src/system_config/e_wi_spiflash/framework/system/clk/src/sys_clk_static.c</itemPath>
                   </logicalFolder>
                 </logicalFolder>
-                <logicalFolder displayName="ports" name="f2" projectFiles="true">
-                  <logicalFolder displayName="src" name="f1" projectFiles="true">
+                <logicalFolder name="f2" displayName="ports" projectFiles="true">
+                  <logicalFolder name="f1" displayName="src" projectFiles="true">
                     <itemPath>../src/system_config/e_wi_spiflash/framework/system/ports/src/sys_ports_static.c</itemPath>
                   </logicalFolder>
                 </logicalFolder>
@@ -425,20 +432,20 @@
         <itemPath>../src/mpfs_img2.c</itemPath>
         <itemPath>../src/DS1307 v2.c</itemPath>
       </logicalFolder>
-      <logicalFolder displayName="bsp" name="f2" projectFiles="true">
-        <logicalFolder displayName="eagleeye2014" name="f1" projectFiles="true">
+      <logicalFolder name="f2" displayName="bsp" projectFiles="true">
+        <logicalFolder name="f1" displayName="eagleeye2014" projectFiles="true">
           <itemPath>../../../../bsp/eagleeye2014/bsp_sys_init.c</itemPath>
         </logicalFolder>
       </logicalFolder>
-      <logicalFolder displayName="framework" name="f1" projectFiles="true">
-        <logicalFolder displayName="common" name="common" projectFiles="true">
-          <logicalFolder displayName="src" name="src" projectFiles="true">
+      <logicalFolder name="f1" displayName="framework" projectFiles="true">
+        <logicalFolder name="common" displayName="common" projectFiles="true">
+          <logicalFolder name="src" displayName="src" projectFiles="true">
             <itemPath>../../../../framework/common/src/delay.c</itemPath>
           </logicalFolder>
         </logicalFolder>
-        <logicalFolder displayName="crypto" name="f1" projectFiles="true">
-          <logicalFolder displayName="src" name="f1" projectFiles="true">
-            <logicalFolder displayName="zlib-1.2.7" name="f1" projectFiles="true">
+        <logicalFolder name="f1" displayName="crypto" projectFiles="true">
+          <logicalFolder name="f1" displayName="src" projectFiles="true">
+            <logicalFolder name="f1" displayName="zlib-1.2.7" projectFiles="true">
               <itemPath>../../../../framework/crypto/src/zlib-1.2.7/adler32.c</itemPath>
               <itemPath>../../../../framework/crypto/src/zlib-1.2.7/compress.c</itemPath>
               <itemPath>../../../../framework/crypto/src/zlib-1.2.7/crc32.c</itemPath>
@@ -476,55 +483,55 @@
             <itemPath>../../../../framework/crypto/src/port.c</itemPath>
           </logicalFolder>
         </logicalFolder>
-        <logicalFolder displayName="driver" name="f2" projectFiles="true">
-          <logicalFolder displayName="nvm" name="f1" projectFiles="true">
-            <logicalFolder displayName="src" name="f1" projectFiles="true">
-              <logicalFolder displayName="dynamic" name="f1" projectFiles="true">
+        <logicalFolder name="f2" displayName="driver" projectFiles="true">
+          <logicalFolder name="f1" displayName="nvm" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <logicalFolder name="f1" displayName="dynamic" projectFiles="true">
                 <itemPath>../../../../framework/driver/nvm/src/dynamic/drv_nvm.c</itemPath>
                 <itemPath>../../../../framework/driver/nvm/src/dynamic/drv_nvm_erasewrite.c</itemPath>
               </logicalFolder>
             </logicalFolder>
           </logicalFolder>
-          <logicalFolder displayName="spi" name="f2" projectFiles="true">
-            <logicalFolder displayName="dynamic" name="f1" projectFiles="true">
+          <logicalFolder name="f2" displayName="spi" projectFiles="true">
+            <logicalFolder name="f1" displayName="dynamic" projectFiles="true">
               <itemPath>../../../../framework/driver/spi/src/dynamic/drv_spi.c</itemPath>
             </logicalFolder>
             <itemPath>../../../../framework/driver/spi/src/drv_spi_sys_queue_fifo.c</itemPath>
           </logicalFolder>
-          <logicalFolder displayName="spi_flash" name="f3" projectFiles="true">
-            <logicalFolder displayName="sst25vf016b" name="f1" projectFiles="true">
-              <logicalFolder displayName="src" name="f1" projectFiles="true">
-                <logicalFolder displayName="dynamic" name="f1" projectFiles="true">
+          <logicalFolder name="f3" displayName="spi_flash" projectFiles="true">
+            <logicalFolder name="f1" displayName="sst25vf016b" projectFiles="true">
+              <logicalFolder name="f1" displayName="src" projectFiles="true">
+                <logicalFolder name="f1" displayName="dynamic" projectFiles="true">
                   <itemPath>../../../../framework/driver/spi_flash/sst25vf016b/src/dynamic/drv_sst25vf016b.c</itemPath>
                 </logicalFolder>
-                <logicalFolder displayName="mla" name="f2" projectFiles="true">
+                <logicalFolder name="f2" displayName="mla" projectFiles="true">
                   <itemPath>../../../../framework/driver/spi_flash/sst25vf016b/src/mla/SPIFlash.c</itemPath>
                 </logicalFolder>
               </logicalFolder>
             </logicalFolder>
           </logicalFolder>
-          <logicalFolder displayName="tmr" name="f4" projectFiles="true">
-            <logicalFolder displayName="src" name="f1" projectFiles="true">
-              <logicalFolder displayName="dynamic" name="f1" projectFiles="true">
+          <logicalFolder name="f4" displayName="tmr" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <logicalFolder name="f1" displayName="dynamic" projectFiles="true">
                 <itemPath>../../../../framework/driver/tmr/src/dynamic/drv_tmr.c</itemPath>
               </logicalFolder>
             </logicalFolder>
           </logicalFolder>
-          <logicalFolder displayName="usart" name="f5" projectFiles="true">
-            <logicalFolder displayName="src" name="f1" projectFiles="true">
-              <logicalFolder displayName="dynamic" name="f1" projectFiles="true">
+          <logicalFolder name="f5" displayName="usart" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <logicalFolder name="f1" displayName="dynamic" projectFiles="true">
                 <itemPath>../../../../framework/driver/usart/src/dynamic/drv_usart.c</itemPath>
                 <itemPath>../../../../framework/driver/usart/src/dynamic/drv_usart_buffer_queue.c</itemPath>
                 <itemPath>../../../../framework/driver/usart/src/dynamic/drv_usart_read_write.c</itemPath>
               </logicalFolder>
-              <logicalFolder displayName="mla" name="f2" projectFiles="true">
+              <logicalFolder name="f2" displayName="mla" projectFiles="true">
                 <itemPath>../../../../framework/driver/usart/src/mla/UART.c</itemPath>
               </logicalFolder>
             </logicalFolder>
           </logicalFolder>
-          <logicalFolder displayName="wifi" name="f6" projectFiles="true">
-            <logicalFolder displayName="mrf24w" name="f1" projectFiles="true">
-              <logicalFolder displayName="src" name="f1" projectFiles="true">
+          <logicalFolder name="f6" displayName="wifi" projectFiles="true">
+            <logicalFolder name="f1" displayName="mrf24w" projectFiles="true">
+              <logicalFolder name="f1" displayName="src" projectFiles="true">
                 <itemPath>../../../../framework/driver/wifi/mrf24w/src/drv_wifi_com.c</itemPath>
                 <itemPath>../../../../framework/driver/wifi/mrf24w/src/drv_wifi_commands.c</itemPath>
                 <itemPath>../../../../framework/driver/wifi/mrf24w/src/drv_wifi_config_data.c</itemPath>
@@ -554,76 +561,76 @@
             </logicalFolder>
           </logicalFolder>
         </logicalFolder>
-        <logicalFolder displayName="net" name="f3" projectFiles="true">
-          <logicalFolder displayName="pres" name="f1" projectFiles="true">
+        <logicalFolder name="f3" displayName="net" projectFiles="true">
+          <logicalFolder name="f1" displayName="pres" projectFiles="true">
             <itemPath>../../../../framework/net/pres/src/net_pres.c</itemPath>
           </logicalFolder>
         </logicalFolder>
-        <logicalFolder displayName="system" name="f4" projectFiles="true">
-          <logicalFolder displayName="command" name="f1" projectFiles="true">
-            <logicalFolder displayName="src" name="f1" projectFiles="true">
+        <logicalFolder name="f4" displayName="system" projectFiles="true">
+          <logicalFolder name="f1" displayName="command" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
               <itemPath>../../../../framework/system/command/src/sys_command.c</itemPath>
             </logicalFolder>
           </logicalFolder>
-          <logicalFolder displayName="common" name="f2" projectFiles="true">
-            <logicalFolder displayName="src" name="f1" projectFiles="true">
+          <logicalFolder name="f2" displayName="common" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
               <itemPath>../../../../framework/system/common/src/sys_buffer.c</itemPath>
               <itemPath>../../../../framework/system/common/src/sys_queue.c</itemPath>
             </logicalFolder>
           </logicalFolder>
-          <logicalFolder displayName="console" name="f3" projectFiles="true">
-            <logicalFolder displayName="src" name="f1" projectFiles="true">
+          <logicalFolder name="f3" displayName="console" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
               <itemPath>../../../../framework/system/console/src/sys_console.c</itemPath>
               <itemPath>../../../../framework/system/console/src/sys_console_uart.c</itemPath>
             </logicalFolder>
           </logicalFolder>
-          <logicalFolder displayName="debug" name="f4" projectFiles="true">
-            <logicalFolder displayName="src" name="f1" projectFiles="true">
+          <logicalFolder name="f4" displayName="debug" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
               <itemPath>../../../../framework/system/debug/src/sys_debug.c</itemPath>
             </logicalFolder>
           </logicalFolder>
-          <logicalFolder displayName="devcon" name="f5" projectFiles="true">
-            <logicalFolder displayName="src" name="f1" projectFiles="true">
+          <logicalFolder name="f5" displayName="devcon" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
               <itemPath>../../../../framework/system/devcon/src/sys_devcon.c</itemPath>
               <itemPath>../../../../framework/system/devcon/src/sys_devcon_pic32mx.c</itemPath>
             </logicalFolder>
           </logicalFolder>
-          <logicalFolder displayName="fs" name="f6" projectFiles="true">
-            <logicalFolder displayName="src" name="f1" projectFiles="true">
-              <logicalFolder displayName="dynamic" name="f1" projectFiles="true">
+          <logicalFolder name="f6" displayName="fs" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <logicalFolder name="f1" displayName="dynamic" projectFiles="true">
                 <itemPath>../../../../framework/system/fs/src/dynamic/sys_fs.c</itemPath>
                 <itemPath>../../../../framework/system/fs/src/dynamic/sys_fs_media_manager.c</itemPath>
               </logicalFolder>
             </logicalFolder>
             <itemPath>../../../../framework/system/fs/mpfs/src/mpfs.c</itemPath>
           </logicalFolder>
-          <logicalFolder displayName="int" name="f7" projectFiles="true">
-            <logicalFolder displayName="src" name="f1" projectFiles="true">
+          <logicalFolder name="f7" displayName="int" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
               <itemPath>../../../../framework/system/int/src/sys_int_pic32.c</itemPath>
             </logicalFolder>
           </logicalFolder>
-          <logicalFolder displayName="random" name="f8" projectFiles="true">
-            <logicalFolder displayName="src" name="f1" projectFiles="true">
+          <logicalFolder name="f8" displayName="random" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
               <itemPath>../../../../framework/system/random/src/sys_random.c</itemPath>
             </logicalFolder>
           </logicalFolder>
-          <logicalFolder displayName="reset" name="f9" projectFiles="true">
-            <logicalFolder displayName="src" name="f1" projectFiles="true">
+          <logicalFolder name="f9" displayName="reset" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
               <itemPath>../../../../framework/system/reset/src/sys_reset.c</itemPath>
             </logicalFolder>
           </logicalFolder>
-          <logicalFolder displayName="tmr" name="f10" projectFiles="true">
-            <logicalFolder displayName="src" name="f1" projectFiles="true">
+          <logicalFolder name="f10" displayName="tmr" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
               <itemPath>../../../../framework/system/tmr/src/sys_tmr.c</itemPath>
             </logicalFolder>
           </logicalFolder>
         </logicalFolder>
-        <logicalFolder displayName="tcpip" name="f5" projectFiles="true">
-          <logicalFolder displayName="common" name="f2" projectFiles="true">
+        <logicalFolder name="f5" displayName="tcpip" projectFiles="true">
+          <logicalFolder name="f2" displayName="common" projectFiles="true">
             <itemPath>../../../../framework/tcpip/src/common/sys_fs_wrapper.c</itemPath>
             <itemPath>../../../../framework/tcpip/src/common/helpers.c</itemPath>
           </logicalFolder>
-          <logicalFolder displayName="stack" name="f1" projectFiles="true">
+          <logicalFolder name="f1" displayName="stack" projectFiles="true">
             <itemPath>../../../../framework/tcpip/src/tcp.c</itemPath>
             <itemPath>../../../../framework/tcpip/src/udp.c</itemPath>
             <itemPath>../../../../framework/tcpip/src/tcpip_heap_alloc.c</itemPath>
@@ -654,7 +661,9 @@
         </logicalFolder>
       </logicalFolder>
     </logicalFolder>
-    <logicalFolder displayName="Important Files" name="ExternalFiles" projectFiles="false">
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
   </logicalFolder>
@@ -675,8 +684,8 @@
       <toolsSet>
         <developmentServer>localhost</developmentServer>
         <targetDevice>PIC32MX795F512L</targetDevice>
-        <targetHeader/>
-        <targetPluginBoard/>
+        <targetHeader></targetHeader>
+        <targetPluginBoard></targetPluginBoard>
         <platformTool>RealICEPlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
         <languageToolchainVersion>1.31</languageToolchainVersion>
@@ -692,19 +701,21 @@
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
           <parseOnProdLoad>true</parseOnProdLoad>
-          <alternateLoadableFile/>
+          <alternateLoadableFile></alternateLoadableFile>
         </loading>
       </compileType>
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
-        <makeCustomizationPreStep/>
+        <makeCustomizationPreStep></makeCustomizationPreStep>
         <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
-        <makeCustomizationPostStep/>
+        <makeCustomizationPostStep></makeCustomizationPostStep>
         <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
-      <item ex="true" overriding="false" path="../../../../bsp/eagleeye2014/bsp_config.h">
+      <item path="../../../../bsp/eagleeye2014/bsp_config.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -718,7 +729,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../bsp/eagleeye2014/bsp_sys_init.c">
+      <item path="../../../../bsp/eagleeye2014/bsp_sys_init.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -732,7 +745,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/crypto.h">
+      <item path="../../../../framework/crypto/crypto.h" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -746,7 +759,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/aes.c">
+      <item path="../../../../framework/crypto/src/aes.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -760,7 +775,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/aes.h">
+      <item path="../../../../framework/crypto/src/aes.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -774,7 +791,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/arc4.c">
+      <item path="../../../../framework/crypto/src/arc4.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -788,7 +807,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/arc4.h">
+      <item path="../../../../framework/crypto/src/arc4.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -802,7 +823,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/asn.c">
+      <item path="../../../../framework/crypto/src/asn.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -816,7 +839,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/asn.h">
+      <item path="../../../../framework/crypto/src/asn.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -830,7 +855,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/asn_public.h">
+      <item path="../../../../framework/crypto/src/asn_public.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -844,7 +871,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/camellia.h">
+      <item path="../../../../framework/crypto/src/camellia.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -858,7 +887,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/certs_test.h">
+      <item path="../../../../framework/crypto/src/certs_test.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -872,7 +903,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/coding.c">
+      <item path="../../../../framework/crypto/src/coding.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -886,7 +919,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/coding.h">
+      <item path="../../../../framework/crypto/src/coding.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -900,7 +935,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/compress.c">
+      <item path="../../../../framework/crypto/src/compress.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -914,7 +951,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/compress.h">
+      <item path="../../../../framework/crypto/src/compress.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -928,7 +967,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/crypto.c">
+      <item path="../../../../framework/crypto/src/crypto.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -942,7 +983,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/des3.c">
+      <item path="../../../../framework/crypto/src/des3.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -956,7 +999,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/des3.h">
+      <item path="../../../../framework/crypto/src/des3.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -970,7 +1015,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/dh.h">
+      <item path="../../../../framework/crypto/src/dh.h" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -984,7 +1029,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/dsa.h">
+      <item path="../../../../framework/crypto/src/dsa.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -998,7 +1045,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/ec.h">
+      <item path="../../../../framework/crypto/src/ec.h" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1012,7 +1059,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/ecc.c">
+      <item path="../../../../framework/crypto/src/ecc.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1026,7 +1075,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/ecc.h">
+      <item path="../../../../framework/crypto/src/ecc.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1040,7 +1091,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/error-crypt.h">
+      <item path="../../../../framework/crypto/src/error-crypt.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1054,7 +1107,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/error.c">
+      <item path="../../../../framework/crypto/src/error.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1068,7 +1123,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/hash.c">
+      <item path="../../../../framework/crypto/src/hash.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1082,7 +1139,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/hash.h">
+      <item path="../../../../framework/crypto/src/hash.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1096,7 +1155,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/hc128.h">
+      <item path="../../../../framework/crypto/src/hc128.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1110,7 +1171,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/hmac.c">
+      <item path="../../../../framework/crypto/src/hmac.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1124,7 +1187,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/hmac.h">
+      <item path="../../../../framework/crypto/src/hmac.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1138,7 +1203,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/integer.c">
+      <item path="../../../../framework/crypto/src/integer.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1152,7 +1219,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/integer.h">
+      <item path="../../../../framework/crypto/src/integer.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1166,7 +1235,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/internal.h">
+      <item path="../../../../framework/crypto/src/internal.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1180,7 +1251,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/logging.c">
+      <item path="../../../../framework/crypto/src/logging.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1194,7 +1267,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/logging.h">
+      <item path="../../../../framework/crypto/src/logging.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1208,7 +1283,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/md2.h">
+      <item path="../../../../framework/crypto/src/md2.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1222,7 +1299,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/md4.h">
+      <item path="../../../../framework/crypto/src/md4.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1236,7 +1315,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/md5.c">
+      <item path="../../../../framework/crypto/src/md5.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1250,7 +1331,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/md5.h">
+      <item path="../../../../framework/crypto/src/md5.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1264,7 +1347,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/memory.c">
+      <item path="../../../../framework/crypto/src/memory.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1278,7 +1363,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/memory.h">
+      <item path="../../../../framework/crypto/src/memory.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1292,7 +1379,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/misc.c">
+      <item path="../../../../framework/crypto/src/misc.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1306,7 +1395,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/misc.h">
+      <item path="../../../../framework/crypto/src/misc.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1320,7 +1411,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/mpi_class.h">
+      <item path="../../../../framework/crypto/src/mpi_class.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1334,7 +1427,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/mpi_superclass.h">
+      <item path="../../../../framework/crypto/src/mpi_superclass.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1348,7 +1443,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/port.c">
+      <item path="../../../../framework/crypto/src/port.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1362,7 +1459,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/port.h">
+      <item path="../../../../framework/crypto/src/port.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1376,7 +1475,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/pwdbased.c">
+      <item path="../../../../framework/crypto/src/pwdbased.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1390,7 +1491,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/pwdbased.h">
+      <item path="../../../../framework/crypto/src/pwdbased.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1404,7 +1507,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/rabbit.h">
+      <item path="../../../../framework/crypto/src/rabbit.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1418,7 +1523,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/ripemd.h">
+      <item path="../../../../framework/crypto/src/ripemd.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1432,7 +1539,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/rsa.c">
+      <item path="../../../../framework/crypto/src/rsa.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1446,7 +1555,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/rsa.h">
+      <item path="../../../../framework/crypto/src/rsa.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1460,7 +1571,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/settings.h">
+      <item path="../../../../framework/crypto/src/settings.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1474,7 +1587,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/sha.c">
+      <item path="../../../../framework/crypto/src/sha.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1488,7 +1603,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/sha.h">
+      <item path="../../../../framework/crypto/src/sha.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1502,7 +1619,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/sha256.c">
+      <item path="../../../../framework/crypto/src/sha256.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1516,7 +1635,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/sha256.h">
+      <item path="../../../../framework/crypto/src/sha256.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1530,7 +1651,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/sha512.c">
+      <item path="../../../../framework/crypto/src/sha512.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1544,7 +1667,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/sha512.h">
+      <item path="../../../../framework/crypto/src/sha512.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1558,7 +1683,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/ssl.h">
+      <item path="../../../../framework/crypto/src/ssl.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1572,7 +1699,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/tfm.c">
+      <item path="../../../../framework/crypto/src/tfm.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1586,7 +1715,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/tfm.h">
+      <item path="../../../../framework/crypto/src/tfm.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1600,7 +1731,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/types.h">
+      <item path="../../../../framework/crypto/src/types.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1614,7 +1747,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/version.h">
+      <item path="../../../../framework/crypto/src/version.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1628,7 +1763,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/visibility.h">
+      <item path="../../../../framework/crypto/src/visibility.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1642,7 +1779,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/zlib-1.2.7/adler32.c">
+      <item path="../../../../framework/crypto/src/zlib-1.2.7/adler32.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1656,7 +1795,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/zlib-1.2.7/compress.c">
+      <item path="../../../../framework/crypto/src/zlib-1.2.7/compress.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1670,7 +1811,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/zlib-1.2.7/crc32.c">
+      <item path="../../../../framework/crypto/src/zlib-1.2.7/crc32.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1684,7 +1827,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/zlib-1.2.7/crc32.h">
+      <item path="../../../../framework/crypto/src/zlib-1.2.7/crc32.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1698,7 +1843,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/zlib-1.2.7/deflate.c">
+      <item path="../../../../framework/crypto/src/zlib-1.2.7/deflate.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1712,7 +1859,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/zlib-1.2.7/deflate.h">
+      <item path="../../../../framework/crypto/src/zlib-1.2.7/deflate.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1726,7 +1875,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/zlib-1.2.7/examples/gzlog.h">
+      <item path="../../../../framework/crypto/src/zlib-1.2.7/examples/gzlog.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1740,7 +1891,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/zlib-1.2.7/gzguts.h">
+      <item path="../../../../framework/crypto/src/zlib-1.2.7/gzguts.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1754,7 +1907,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/zlib-1.2.7/infback.c">
+      <item path="../../../../framework/crypto/src/zlib-1.2.7/infback.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1768,7 +1923,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/zlib-1.2.7/inffast.c">
+      <item path="../../../../framework/crypto/src/zlib-1.2.7/inffast.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1782,7 +1939,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/zlib-1.2.7/inffast.h">
+      <item path="../../../../framework/crypto/src/zlib-1.2.7/inffast.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1796,7 +1955,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/zlib-1.2.7/inffixed.h">
+      <item path="../../../../framework/crypto/src/zlib-1.2.7/inffixed.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1810,7 +1971,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/zlib-1.2.7/inflate.c">
+      <item path="../../../../framework/crypto/src/zlib-1.2.7/inflate.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1824,7 +1987,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/zlib-1.2.7/inflate.h">
+      <item path="../../../../framework/crypto/src/zlib-1.2.7/inflate.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1838,7 +2003,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/zlib-1.2.7/inftrees.c">
+      <item path="../../../../framework/crypto/src/zlib-1.2.7/inftrees.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1852,7 +2019,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/zlib-1.2.7/inftrees.h">
+      <item path="../../../../framework/crypto/src/zlib-1.2.7/inftrees.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1866,7 +2035,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/zlib-1.2.7/trees.c">
+      <item path="../../../../framework/crypto/src/zlib-1.2.7/trees.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1880,7 +2051,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/zlib-1.2.7/trees.h">
+      <item path="../../../../framework/crypto/src/zlib-1.2.7/trees.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1894,7 +2067,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/zlib-1.2.7/uncompr.c">
+      <item path="../../../../framework/crypto/src/zlib-1.2.7/uncompr.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1908,7 +2083,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/zlib-1.2.7/zconf.h">
+      <item path="../../../../framework/crypto/src/zlib-1.2.7/zconf.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1922,7 +2099,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/zlib-1.2.7/zlib.h">
+      <item path="../../../../framework/crypto/src/zlib-1.2.7/zlib.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1936,7 +2115,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/zlib-1.2.7/zutil.c">
+      <item path="../../../../framework/crypto/src/zlib-1.2.7/zutil.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1950,7 +2131,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/crypto/src/zlib-1.2.7/zutil.h">
+      <item path="../../../../framework/crypto/src/zlib-1.2.7/zutil.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1964,7 +2147,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/driver.h">
+      <item path="../../../../framework/driver/driver.h" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1978,7 +2161,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/driver_common.h">
+      <item path="../../../../framework/driver/driver_common.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -1992,7 +2177,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/spi/drv_spi.h">
+      <item path="../../../../framework/driver/spi/drv_spi.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2006,7 +2193,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/spi/src/drv_spi_sys_queue.h">
+      <item path="../../../../framework/driver/spi/src/drv_spi_sys_queue.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2020,7 +2209,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/spi/src/drv_spi_sys_queue_fifo.c">
+      <item path="../../../../framework/driver/spi/src/drv_spi_sys_queue_fifo.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2034,7 +2225,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/spi/src/drv_spi_sys_queue_local_fifo.h">
+      <item path="../../../../framework/driver/spi/src/drv_spi_sys_queue_local_fifo.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2048,7 +2241,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/spi/src/drv_spi_variant_mapping.h">
+      <item path="../../../../framework/driver/spi/src/drv_spi_variant_mapping.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2062,7 +2257,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/spi/src/dynamic/drv_spi.c">
+      <item path="../../../../framework/driver/spi/src/dynamic/drv_spi.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2076,7 +2273,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/spi/src/dynamic/drv_spi_internal.h">
+      <item path="../../../../framework/driver/spi/src/dynamic/drv_spi_internal.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2090,7 +2289,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/spi_flash/sst25vf016b/drv_sst25vf016b.h">
+      <item path="../../../../framework/driver/spi_flash/sst25vf016b/drv_sst25vf016b.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2104,7 +2305,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/spi_flash/sst25vf016b/src/drv_sst25vf016b_local.h">
+      <item path="../../../../framework/driver/spi_flash/sst25vf016b/src/drv_sst25vf016b_local.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2118,7 +2321,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/spi_flash/sst25vf016b/src/drv_sst25vf016b_variant_mapping.h">
+      <item path="../../../../framework/driver/spi_flash/sst25vf016b/src/drv_sst25vf016b_variant_mapping.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2132,7 +2337,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/spi_flash/sst25vf016b/src/dynamic/drv_sst25vf016b.c">
+      <item path="../../../../framework/driver/spi_flash/sst25vf016b/src/dynamic/drv_sst25vf016b.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2146,7 +2353,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/spi_flash/sst25vf016b/src/mla/SPIFlash.c">
+      <item path="../../../../framework/driver/spi_flash/sst25vf016b/src/mla/SPIFlash.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2160,7 +2369,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/spi_flash/sst25vf016b/src/mla/SPIFlash.h">
+      <item path="../../../../framework/driver/spi_flash/sst25vf016b/src/mla/SPIFlash.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2174,7 +2385,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/tmr/drv_tmr.h">
+      <item path="../../../../framework/driver/tmr/drv_tmr.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2188,7 +2401,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/tmr/drv_tmr_compatibility.h">
+      <item path="../../../../framework/driver/tmr/drv_tmr_compatibility.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2202,7 +2417,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/tmr/drv_tmr_mapping.h">
+      <item path="../../../../framework/driver/tmr/drv_tmr_mapping.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2216,7 +2433,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/tmr/src/drv_tmr_local.h">
+      <item path="../../../../framework/driver/tmr/src/drv_tmr_local.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2230,7 +2449,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/tmr/src/drv_tmr_variant_mapping.h">
+      <item path="../../../../framework/driver/tmr/src/drv_tmr_variant_mapping.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2244,7 +2465,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/tmr/src/dynamic/drv_tmr.c">
+      <item path="../../../../framework/driver/tmr/src/dynamic/drv_tmr.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2258,7 +2481,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/usart/drv_usart.h">
+      <item path="../../../../framework/driver/usart/drv_usart.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2272,7 +2497,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/usart/src/drv_usart_local.h">
+      <item path="../../../../framework/driver/usart/src/drv_usart_local.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2286,7 +2513,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/usart/src/drv_usart_variant_mapping.h">
+      <item path="../../../../framework/driver/usart/src/drv_usart_variant_mapping.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2300,7 +2529,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/usart/src/dynamic/drv_usart.c">
+      <item path="../../../../framework/driver/usart/src/dynamic/drv_usart.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2314,7 +2545,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/usart/src/dynamic/drv_usart_buffer_queue.c">
+      <item path="../../../../framework/driver/usart/src/dynamic/drv_usart_buffer_queue.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2328,7 +2561,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/usart/src/dynamic/drv_usart_read_write.c">
+      <item path="../../../../framework/driver/usart/src/dynamic/drv_usart_read_write.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2342,7 +2577,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/usart/src/mla/UART.c">
+      <item path="../../../../framework/driver/usart/src/mla/UART.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2356,7 +2593,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/usart/src/mla/UART.h">
+      <item path="../../../../framework/driver/usart/src/mla/UART.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2370,7 +2609,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/wifi/mrf24w/drv_wifi.h">
+      <item path="../../../../framework/driver/wifi/mrf24w/drv_wifi.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2384,7 +2625,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_com.c">
+      <item path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_com.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2398,7 +2641,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_commands.c">
+      <item path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_commands.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2412,7 +2657,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_commands.h">
+      <item path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_commands.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2426,7 +2673,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_config_data.c">
+      <item path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_config_data.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2440,7 +2689,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_config_data.h">
+      <item path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_config_data.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2454,7 +2705,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_connection_algorithm.c">
+      <item path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_connection_algorithm.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2468,7 +2721,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_connection_manager.c">
+      <item path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_connection_manager.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2482,7 +2737,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_connection_profile.c">
+      <item path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_connection_profile.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2496,7 +2753,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_context_loader.c">
+      <item path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_context_loader.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2510,7 +2769,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_debug_output.c">
+      <item path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_debug_output.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2524,7 +2785,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_debug_output.h">
+      <item path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_debug_output.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2538,7 +2801,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_eint.c">
+      <item path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_eint.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2552,7 +2817,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_eint.h">
+      <item path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_eint.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2566,7 +2833,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_event_handler.c">
+      <item path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_event_handler.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2580,7 +2849,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_events.c">
+      <item path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_events.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2594,7 +2865,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_init.c">
+      <item path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_init.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2608,7 +2881,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_iwpriv.c">
+      <item path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_iwpriv.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2622,7 +2897,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_iwpriv.h">
+      <item path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_iwpriv.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2636,7 +2913,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_mac.c">
+      <item path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_mac.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2650,7 +2929,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_mac.h">
+      <item path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_mac.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2664,7 +2945,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_main.c">
+      <item path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_main.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2678,7 +2961,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_mgmt_msg.c">
+      <item path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_mgmt_msg.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2692,7 +2977,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_mgmt_msg.h">
+      <item path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_mgmt_msg.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2706,7 +2993,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_param_msg.c">
+      <item path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_param_msg.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2720,7 +3009,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_pbkdf2.c">
+      <item path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_pbkdf2.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2734,7 +3025,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_power_save.c">
+      <item path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_power_save.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2748,7 +3041,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_priv.h">
+      <item path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_priv.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2762,7 +3057,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_raw.c">
+      <item path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_raw.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2776,7 +3073,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_raw.h">
+      <item path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_raw.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2790,7 +3089,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_scan.c">
+      <item path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_scan.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2804,7 +3105,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_scan_helper.c">
+      <item path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_scan_helper.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2818,7 +3121,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_scan_helper.h">
+      <item path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_scan_helper.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2832,7 +3137,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_softap_client_cache.c">
+      <item path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_softap_client_cache.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2846,7 +3153,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_softap_client_cache.h">
+      <item path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_softap_client_cache.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2860,7 +3169,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_spi.c">
+      <item path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_spi.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2874,7 +3185,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_spi.h">
+      <item path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_spi.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2888,7 +3201,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_tx_power.c">
+      <item path="../../../../framework/driver/wifi/mrf24w/src/drv_wifi_tx_power.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2902,7 +3217,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/gfx/gfx_palette.h">
+      <item path="../../../../framework/gfx/gfx_palette.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2916,7 +3233,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/net/pres/net_pres.h">
+      <item path="../../../../framework/net/pres/net_pres.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2930,7 +3249,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/net/pres/net_pres_certstore.h">
+      <item path="../../../../framework/net/pres/net_pres_certstore.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2944,7 +3265,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/net/pres/net_pres_encryptionproviderapi.h">
+      <item path="../../../../framework/net/pres/net_pres_encryptionproviderapi.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2958,7 +3281,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/net/pres/net_pres_socketapi.h">
+      <item path="../../../../framework/net/pres/net_pres_socketapi.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2972,7 +3297,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/net/pres/net_pres_socketapiconversion.h">
+      <item path="../../../../framework/net/pres/net_pres_socketapiconversion.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2986,7 +3313,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/net/pres/net_pres_transportapi.h">
+      <item path="../../../../framework/net/pres/net_pres_transportapi.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3000,7 +3329,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/net/pres/src/net_pres.c">
+      <item path="../../../../framework/net/pres/src/net_pres.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3014,7 +3345,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/net/pres/src/net_pres_local.h">
+      <item path="../../../../framework/net/pres/src/net_pres_local.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3028,7 +3361,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/osal/osal.h">
+      <item path="../../../../framework/osal/osal.h" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3042,7 +3375,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/osal/osal_definitions.h">
+      <item path="../../../../framework/osal/osal_definitions.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3056,7 +3391,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/osal/src/osal_impl_basic.h">
+      <item path="../../../../framework/osal/src/osal_impl_basic.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3070,7 +3407,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/osal/src/osal_impl_none.h">
+      <item path="../../../../framework/osal/src/osal_impl_none.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3084,7 +3423,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/peripheral/peripheral.h">
+      <item path="../../../../framework/peripheral/peripheral.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3098,7 +3439,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/peripheral/peripheral_common.h">
+      <item path="../../../../framework/peripheral/peripheral_common.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3112,7 +3455,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/peripheral/peripheral_common_32bit.h">
+      <item path="../../../../framework/peripheral/peripheral_common_32bit.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3126,7 +3471,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/system/clk/sys_clk.h">
+      <item path="../../../../framework/system/clk/sys_clk.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3140,7 +3487,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/system/clk/sys_clk_mapping.h">
+      <item path="../../../../framework/system/clk/sys_clk_mapping.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3154,7 +3503,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/system/command/src/sys_command.c">
+      <item path="../../../../framework/system/command/src/sys_command.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3168,7 +3519,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/system/command/sys_command.h">
+      <item path="../../../../framework/system/command/sys_command.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3182,7 +3535,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/system/common/src/sys_buffer.c">
+      <item path="../../../../framework/system/common/src/sys_buffer.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3196,7 +3551,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/system/common/src/sys_queue.c">
+      <item path="../../../../framework/system/common/src/sys_queue.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3210,7 +3567,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/system/common/sys_buffer.h">
+      <item path="../../../../framework/system/common/sys_buffer.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3224,7 +3583,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/system/common/sys_common.h">
+      <item path="../../../../framework/system/common/sys_common.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3238,7 +3599,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/system/common/sys_module.h">
+      <item path="../../../../framework/system/common/sys_module.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3252,7 +3615,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/system/common/sys_queue.h">
+      <item path="../../../../framework/system/common/sys_queue.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3266,7 +3631,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/system/console/src/sys_console.c">
+      <item path="../../../../framework/system/console/src/sys_console.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3280,7 +3647,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/system/console/src/sys_console_local.h">
+      <item path="../../../../framework/system/console/src/sys_console_local.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3294,7 +3663,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/system/console/src/sys_console_uart.c">
+      <item path="../../../../framework/system/console/src/sys_console_uart.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3308,7 +3679,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/system/console/src/sys_console_uart.h">
+      <item path="../../../../framework/system/console/src/sys_console_uart.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3322,7 +3695,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/system/console/sys_console.h">
+      <item path="../../../../framework/system/console/sys_console.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3336,7 +3711,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/system/debug/src/sys_debug.c">
+      <item path="../../../../framework/system/debug/src/sys_debug.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3350,7 +3727,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/system/debug/src/sys_debug_local.h">
+      <item path="../../../../framework/system/debug/src/sys_debug_local.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3364,7 +3743,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/system/debug/sys_debug.h">
+      <item path="../../../../framework/system/debug/sys_debug.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3378,7 +3759,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/system/devcon/src/sys_devcon.c">
+      <item path="../../../../framework/system/devcon/src/sys_devcon.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3392,7 +3775,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/system/devcon/src/sys_devcon_local.h">
+      <item path="../../../../framework/system/devcon/src/sys_devcon_local.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3406,7 +3791,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/system/devcon/src/sys_devcon_pic32mx.c">
+      <item path="../../../../framework/system/devcon/src/sys_devcon_pic32mx.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3420,7 +3807,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/system/devcon/sys_devcon.h">
+      <item path="../../../../framework/system/devcon/sys_devcon.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3434,7 +3823,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/system/fs/mpfs/mpfs.h">
+      <item path="../../../../framework/system/fs/mpfs/mpfs.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3448,7 +3839,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/system/fs/mpfs/src/mpfs.c">
+      <item path="../../../../framework/system/fs/mpfs/src/mpfs.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3462,7 +3855,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/system/fs/mpfs/src/mpfs_local.h">
+      <item path="../../../../framework/system/fs/mpfs/src/mpfs_local.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3476,7 +3871,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/system/fs/src/dynamic/sys_fs.c">
+      <item path="../../../../framework/system/fs/src/dynamic/sys_fs.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3490,7 +3887,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/system/fs/src/dynamic/sys_fs_media_manager.c">
+      <item path="../../../../framework/system/fs/src/dynamic/sys_fs_media_manager.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3504,7 +3903,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/system/fs/src/sys_fs_local.h">
+      <item path="../../../../framework/system/fs/src/sys_fs_local.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3518,7 +3919,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/system/fs/src/sys_fs_media_manager_local.h">
+      <item path="../../../../framework/system/fs/src/sys_fs_media_manager_local.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3532,7 +3935,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/system/fs/sys_fs.h">
+      <item path="../../../../framework/system/fs/sys_fs.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3546,7 +3951,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/system/fs/sys_fs_media_manager.h">
+      <item path="../../../../framework/system/fs/sys_fs_media_manager.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3560,7 +3967,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/system/int/src/sys_int_pic32.c">
+      <item path="../../../../framework/system/int/src/sys_int_pic32.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3574,7 +3983,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/system/int/src/sys_int_private.h">
+      <item path="../../../../framework/system/int/src/sys_int_private.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3588,7 +3999,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/system/int/sys_int.h">
+      <item path="../../../../framework/system/int/sys_int.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3602,7 +4015,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/system/int/sys_int_mapping.h">
+      <item path="../../../../framework/system/int/sys_int_mapping.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3616,7 +4031,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/system/ports/sys_ports.h">
+      <item path="../../../../framework/system/ports/sys_ports.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3630,7 +4047,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/system/random/src/sys_random.c">
+      <item path="../../../../framework/system/random/src/sys_random.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3644,7 +4063,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/system/random/src/sys_random_local.h">
+      <item path="../../../../framework/system/random/src/sys_random_local.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3658,7 +4079,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/system/random/sys_random.h">
+      <item path="../../../../framework/system/random/sys_random.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3672,7 +4095,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/system/reset/src/sys_reset.c">
+      <item path="../../../../framework/system/reset/src/sys_reset.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3686,7 +4111,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/system/reset/src/sys_reset_local.h">
+      <item path="../../../../framework/system/reset/src/sys_reset_local.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3700,7 +4127,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/system/reset/src/sys_reset_mapping.h">
+      <item path="../../../../framework/system/reset/src/sys_reset_mapping.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3714,7 +4143,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/system/reset/sys_reset.h">
+      <item path="../../../../framework/system/reset/sys_reset.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3728,7 +4159,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/system/system.h">
+      <item path="../../../../framework/system/system.h" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3742,7 +4173,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/system/tmr/src/sys_tmr.c">
+      <item path="../../../../framework/system/tmr/src/sys_tmr.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3756,7 +4189,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/system/tmr/src/sys_tmr_local.h">
+      <item path="../../../../framework/system/tmr/src/sys_tmr_local.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3770,7 +4205,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/system/tmr/sys_tmr.h">
+      <item path="../../../../framework/system/tmr/sys_tmr.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3784,7 +4221,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/arp.h">
+      <item path="../../../../framework/tcpip/arp.h" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3798,7 +4235,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/ddns.h">
+      <item path="../../../../framework/tcpip/ddns.h" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3812,7 +4249,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/dhcp.h">
+      <item path="../../../../framework/tcpip/dhcp.h" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3826,7 +4263,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/dhcps.h">
+      <item path="../../../../framework/tcpip/dhcps.h" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3840,7 +4277,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/dhcpv6.h">
+      <item path="../../../../framework/tcpip/dhcpv6.h" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3854,7 +4291,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/dns.h">
+      <item path="../../../../framework/tcpip/dns.h" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3868,7 +4305,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/dnss.h">
+      <item path="../../../../framework/tcpip/dnss.h" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3882,7 +4319,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/http.h">
+      <item path="../../../../framework/tcpip/http.h" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3896,7 +4333,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/icmp.h">
+      <item path="../../../../framework/tcpip/icmp.h" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3910,7 +4347,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/ipv4.h">
+      <item path="../../../../framework/tcpip/ipv4.h" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3924,7 +4361,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/lldp.h">
+      <item path="../../../../framework/tcpip/lldp.h" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3938,7 +4375,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/nbns.h">
+      <item path="../../../../framework/tcpip/nbns.h" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3952,7 +4389,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/smtp.h">
+      <item path="../../../../framework/tcpip/smtp.h" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3966,7 +4403,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/sntp.h">
+      <item path="../../../../framework/tcpip/sntp.h" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3980,7 +4417,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/arp.c">
+      <item path="../../../../framework/tcpip/src/arp.c" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -3994,7 +4431,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/arp_manager.h">
+      <item path="../../../../framework/tcpip/src/arp_manager.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4008,7 +4447,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/arp_private.h">
+      <item path="../../../../framework/tcpip/src/arp_private.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4022,7 +4463,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/berkeley_manager.h">
+      <item path="../../../../framework/tcpip/src/berkeley_manager.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4036,7 +4479,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/common/helpers.c">
+      <item path="../../../../framework/tcpip/src/common/helpers.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4050,7 +4495,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/common/helpers.h">
+      <item path="../../../../framework/tcpip/src/common/helpers.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4064,7 +4511,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/common/sys_fs_wrapper.c">
+      <item path="../../../../framework/tcpip/src/common/sys_fs_wrapper.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4078,7 +4527,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/common/sys_fs_wrapper.h">
+      <item path="../../../../framework/tcpip/src/common/sys_fs_wrapper.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4092,7 +4543,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/ddns.c">
+      <item path="../../../../framework/tcpip/src/ddns.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4106,7 +4559,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/ddns_manager.h">
+      <item path="../../../../framework/tcpip/src/ddns_manager.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4120,7 +4575,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/dhcp.c">
+      <item path="../../../../framework/tcpip/src/dhcp.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4134,7 +4591,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/dhcp_manager.h">
+      <item path="../../../../framework/tcpip/src/dhcp_manager.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4148,7 +4607,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/dhcp_private.h">
+      <item path="../../../../framework/tcpip/src/dhcp_private.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4162,7 +4623,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/dhcps.c">
+      <item path="../../../../framework/tcpip/src/dhcps.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4176,7 +4639,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/dhcps_manager.h">
+      <item path="../../../../framework/tcpip/src/dhcps_manager.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4190,7 +4655,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/dhcps_private.h">
+      <item path="../../../../framework/tcpip/src/dhcps_private.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4204,7 +4671,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/dhcpv6_manager.h">
+      <item path="../../../../framework/tcpip/src/dhcpv6_manager.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4218,7 +4687,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/dhcpv6_private.h">
+      <item path="../../../../framework/tcpip/src/dhcpv6_private.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4232,7 +4703,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/dns.c">
+      <item path="../../../../framework/tcpip/src/dns.c" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4246,7 +4717,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/dns_manager.h">
+      <item path="../../../../framework/tcpip/src/dns_manager.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4260,7 +4733,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/dns_private.h">
+      <item path="../../../../framework/tcpip/src/dns_private.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4274,7 +4749,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/dnss.c">
+      <item path="../../../../framework/tcpip/src/dnss.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4288,7 +4765,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/dnss_manager.h">
+      <item path="../../../../framework/tcpip/src/dnss_manager.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4302,7 +4781,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/dnss_private.h">
+      <item path="../../../../framework/tcpip/src/dnss_private.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4316,7 +4797,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/hash_fnv.c">
+      <item path="../../../../framework/tcpip/src/hash_fnv.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4330,7 +4813,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/hash_fnv.h">
+      <item path="../../../../framework/tcpip/src/hash_fnv.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4344,7 +4829,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/http.c">
+      <item path="../../../../framework/tcpip/src/http.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4358,7 +4845,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/http_manager.h">
+      <item path="../../../../framework/tcpip/src/http_manager.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4372,7 +4861,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/http_private.h">
+      <item path="../../../../framework/tcpip/src/http_private.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4386,7 +4877,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/icmp.c">
+      <item path="../../../../framework/tcpip/src/icmp.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4400,7 +4893,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/icmp_manager.h">
+      <item path="../../../../framework/tcpip/src/icmp_manager.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4414,7 +4909,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/ipv4.c">
+      <item path="../../../../framework/tcpip/src/ipv4.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4428,7 +4925,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/ipv4_manager.h">
+      <item path="../../../../framework/tcpip/src/ipv4_manager.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4442,7 +4941,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/ipv4_private.h">
+      <item path="../../../../framework/tcpip/src/ipv4_private.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4456,7 +4957,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/link_list.h">
+      <item path="../../../../framework/tcpip/src/link_list.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4470,7 +4973,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/lldp_manager.h">
+      <item path="../../../../framework/tcpip/src/lldp_manager.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4484,7 +4989,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/lldp_private.h">
+      <item path="../../../../framework/tcpip/src/lldp_private.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4498,7 +5005,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/lldp_tlv.h">
+      <item path="../../../../framework/tcpip/src/lldp_tlv.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4512,7 +5021,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/nbns.c">
+      <item path="../../../../framework/tcpip/src/nbns.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4526,7 +5037,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/nbns_manager.h">
+      <item path="../../../../framework/tcpip/src/nbns_manager.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4540,7 +5053,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/oahash.c">
+      <item path="../../../../framework/tcpip/src/oahash.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4554,7 +5069,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/oahash.h">
+      <item path="../../../../framework/tcpip/src/oahash.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4568,7 +5085,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/smtp.c">
+      <item path="../../../../framework/tcpip/src/smtp.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4582,7 +5101,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/smtp_manager.h">
+      <item path="../../../../framework/tcpip/src/smtp_manager.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4596,7 +5117,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/sntp.c">
+      <item path="../../../../framework/tcpip/src/sntp.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4610,7 +5133,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/sntp_manager.h">
+      <item path="../../../../framework/tcpip/src/sntp_manager.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4624,7 +5149,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/tcp.c">
+      <item path="../../../../framework/tcpip/src/tcp.c" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4638,7 +5163,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/tcp_manager.h">
+      <item path="../../../../framework/tcpip/src/tcp_manager.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4652,7 +5179,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/tcp_private.h">
+      <item path="../../../../framework/tcpip/src/tcp_private.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4666,7 +5195,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/tcpip_announce.c">
+      <item path="../../../../framework/tcpip/src/tcpip_announce.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4680,7 +5211,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/tcpip_announce_manager.h">
+      <item path="../../../../framework/tcpip/src/tcpip_announce_manager.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4694,7 +5227,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/tcpip_commands.c">
+      <item path="../../../../framework/tcpip/src/tcpip_commands.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4708,7 +5243,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/tcpip_commands_manager.h">
+      <item path="../../../../framework/tcpip/src/tcpip_commands_manager.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4722,7 +5259,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/tcpip_heap_alloc.c">
+      <item path="../../../../framework/tcpip/src/tcpip_heap_alloc.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4736,7 +5275,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/tcpip_heap_alloc.h">
+      <item path="../../../../framework/tcpip/src/tcpip_heap_alloc.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4750,7 +5291,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/tcpip_heap_internal.c">
+      <item path="../../../../framework/tcpip/src/tcpip_heap_internal.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4764,7 +5307,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/tcpip_helper_c32.S">
+      <item path="../../../../framework/tcpip/src/tcpip_helper_c32.S"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4778,7 +5323,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/tcpip_helpers.c">
+      <item path="../../../../framework/tcpip/src/tcpip_helpers.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4792,7 +5339,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/tcpip_helpers_private.h">
+      <item path="../../../../framework/tcpip/src/tcpip_helpers_private.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4806,7 +5355,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/tcpip_manager.c">
+      <item path="../../../../framework/tcpip/src/tcpip_manager.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4820,7 +5371,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/tcpip_manager_control.h">
+      <item path="../../../../framework/tcpip/src/tcpip_manager_control.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4834,7 +5387,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/tcpip_module_manager.h">
+      <item path="../../../../framework/tcpip/src/tcpip_module_manager.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4848,7 +5403,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/tcpip_notify.c">
+      <item path="../../../../framework/tcpip/src/tcpip_notify.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4862,7 +5419,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/tcpip_notify.h">
+      <item path="../../../../framework/tcpip/src/tcpip_notify.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4876,7 +5435,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/tcpip_packet.c">
+      <item path="../../../../framework/tcpip/src/tcpip_packet.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4890,7 +5451,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/tcpip_packet.h">
+      <item path="../../../../framework/tcpip/src/tcpip_packet.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4904,7 +5467,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/tcpip_private.h">
+      <item path="../../../../framework/tcpip/src/tcpip_private.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4918,7 +5483,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/tcpip_reboot.c">
+      <item path="../../../../framework/tcpip/src/tcpip_reboot.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4932,7 +5499,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/tcpip_reboot_manager.h">
+      <item path="../../../../framework/tcpip/src/tcpip_reboot_manager.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4946,7 +5515,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/tcpip_types.h">
+      <item path="../../../../framework/tcpip/src/tcpip_types.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4960,7 +5531,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/udp.c">
+      <item path="../../../../framework/tcpip/src/udp.c" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4974,7 +5545,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/udp_manager.h">
+      <item path="../../../../framework/tcpip/src/udp_manager.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -4988,7 +5561,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/src/udp_private.h">
+      <item path="../../../../framework/tcpip/src/udp_private.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -5002,7 +5577,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/tcp.h">
+      <item path="../../../../framework/tcpip/tcp.h" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -5016,7 +5591,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/tcpip.h">
+      <item path="../../../../framework/tcpip/tcpip.h" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -5030,7 +5605,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/tcpip_announce.h">
+      <item path="../../../../framework/tcpip/tcpip_announce.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -5044,7 +5621,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/tcpip_commands.h">
+      <item path="../../../../framework/tcpip/tcpip_commands.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -5058,7 +5637,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/tcpip_common_ports.h">
+      <item path="../../../../framework/tcpip/tcpip_common_ports.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -5072,7 +5653,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/tcpip_ethernet.h">
+      <item path="../../../../framework/tcpip/tcpip_ethernet.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -5086,7 +5669,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/tcpip_heap.h">
+      <item path="../../../../framework/tcpip/tcpip_heap.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -5100,7 +5685,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/tcpip_helpers.h">
+      <item path="../../../../framework/tcpip/tcpip_helpers.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -5114,7 +5701,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/tcpip_mac.h">
+      <item path="../../../../framework/tcpip/tcpip_mac.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -5128,7 +5717,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/tcpip_mac_object.h">
+      <item path="../../../../framework/tcpip/tcpip_mac_object.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -5142,7 +5733,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/tcpip_manager.h">
+      <item path="../../../../framework/tcpip/tcpip_manager.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -5156,7 +5749,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/tcpip_reboot.h">
+      <item path="../../../../framework/tcpip/tcpip_reboot.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -5170,7 +5765,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/tls.h">
+      <item path="../../../../framework/tcpip/tls.h" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -5184,7 +5779,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/tcpip/udp.h">
+      <item path="../../../../framework/tcpip/udp.h" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -5198,7 +5793,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/custom_http_app.c">
+      <item path="../src/custom_http_app.c" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -5212,7 +5807,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/http_print.c">
+      <item path="../src/http_print.c" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -5226,7 +5821,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/linker/p32MX795F512L.ld">
+      <item path="../src/linker/p32MX795F512L.ld" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -5240,7 +5835,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/mpfs_img2.c">
+      <item path="../src/mpfs_img2.c" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -5254,7 +5849,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/system_config/e_wi_spiflash/framework/driver/spi/dynamic/drv_spi_api.c">
+      <item path="../src/system_config/e_wi_spiflash/framework/driver/spi/dynamic/drv_spi_api.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -5268,7 +5865,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/system_config/e_wi_spiflash/framework/driver/spi/dynamic/drv_spi_master_rm_tasks.c">
+      <item path="../src/system_config/e_wi_spiflash/framework/driver/spi/dynamic/drv_spi_master_rm_tasks.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -5282,7 +5881,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/system_config/e_wi_spiflash/framework/driver/spi/dynamic/drv_spi_tasks.c">
+      <item path="../src/system_config/e_wi_spiflash/framework/driver/spi/dynamic/drv_spi_tasks.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -5296,7 +5897,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/system_config/e_wi_spiflash/framework/net/pres/net_pres_enc_glue.c">
+      <item path="../src/system_config/e_wi_spiflash/framework/net/pres/net_pres_enc_glue.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -5310,7 +5913,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/system_config/e_wi_spiflash/framework/net/pres/net_pres_enc_glue.h">
+      <item path="../src/system_config/e_wi_spiflash/framework/net/pres/net_pres_enc_glue.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -5324,7 +5929,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/system_config/e_wi_spiflash/framework/system/clk/src/sys_clk_static.c">
+      <item path="../src/system_config/e_wi_spiflash/framework/system/clk/src/sys_clk_static.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -5338,7 +5945,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/system_config/e_wi_spiflash/framework/system/clk/sys_clk_static.h">
+      <item path="../src/system_config/e_wi_spiflash/framework/system/clk/sys_clk_static.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -5352,7 +5961,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/system_config/e_wi_spiflash/framework/system/ports/src/sys_ports_static.c">
+      <item path="../src/system_config/e_wi_spiflash/framework/system/ports/src/sys_ports_static.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -5366,7 +5977,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/system_config/e_wi_spiflash/system_config.h">
+      <item path="../src/system_config/e_wi_spiflash/system_config.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -5380,7 +5993,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/system_config/e_wi_spiflash/system_definitions.h">
+      <item path="../src/system_config/e_wi_spiflash/system_definitions.h"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -5394,7 +6009,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/system_config/e_wi_spiflash/system_exceptions.c">
+      <item path="../src/system_config/e_wi_spiflash/system_exceptions.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -5408,7 +6025,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/system_config/e_wi_spiflash/system_init.c">
+      <item path="../src/system_config/e_wi_spiflash/system_init.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -5422,7 +6041,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/system_config/e_wi_spiflash/system_interrupt.c">
+      <item path="../src/system_config/e_wi_spiflash/system_interrupt.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -5436,7 +6057,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../src/system_config/e_wi_spiflash/system_tasks.c">
+      <item path="../src/system_config/e_wi_spiflash/system_tasks.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -5458,7 +6081,8 @@
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories" value="../src;../src/system_config/e-wi;../../../../framework;../src/system_config/e-wi/framework;../../../../bsp/eagleeye2014"/>
+        <property key="extra-include-directories"
+                  value="../src;../src/system_config/e-wi;../../../../framework;../src/system_config/e-wi/framework;../../../../bsp/eagleeye2014"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -5610,7 +6234,8 @@
         <property key="TIMER3" value="true"/>
         <property key="TIMER4" value="true"/>
         <property key="TIMER5" value="true"/>
-        <property key="ToolFirmwareFilePath" value="Press to browse for a specific firmware version"/>
+        <property key="ToolFirmwareFilePath"
+                  value="Press to browse for a specific firmware version"/>
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
         <property key="UART1" value="true"/>
         <property key="UART2" value="true"/>
@@ -5629,13 +6254,17 @@
         <property key="memories.flashdata" value="true"/>
         <property key="memories.id" value="true"/>
         <property key="memories.instruction.ram" value="true"/>
-        <property key="memories.instruction.ram.end" value="${memories.instruction.ram.end.value}"/>
-        <property key="memories.instruction.ram.start" value="${memories.instruction.ram.start.value}"/>
+        <property key="memories.instruction.ram.end"
+                  value="${memories.instruction.ram.end.value}"/>
+        <property key="memories.instruction.ram.start"
+                  value="${memories.instruction.ram.start.value}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.end" value="0x1d003fff"/>
         <property key="memories.programmemory.partition2" value="true"/>
-        <property key="memories.programmemory.partition2.end" value="${memories.programmemory.partition2.end.value}"/>
-        <property key="memories.programmemory.partition2.start" value="${memories.programmemory.partition2.start.value}"/>
+        <property key="memories.programmemory.partition2.end"
+                  value="${memories.programmemory.partition2.end.value}"/>
+        <property key="memories.programmemory.partition2.start"
+                  value="${memories.programmemory.partition2.start.value}"/>
         <property key="memories.programmemory.start" value="0x1d000000"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmertogo.imagename" value=""/>
@@ -5701,7 +6330,8 @@
         <property key="TIMER3" value="true"/>
         <property key="TIMER4" value="true"/>
         <property key="TIMER5" value="true"/>
-        <property key="ToolFirmwareFilePath" value="Press to browse for a specific firmware version"/>
+        <property key="ToolFirmwareFilePath"
+                  value="Press to browse for a specific firmware version"/>
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
         <property key="UART1" value="true"/>
         <property key="UART2" value="true"/>
@@ -5723,13 +6353,17 @@
         <property key="memories.flashdata" value="true"/>
         <property key="memories.id" value="true"/>
         <property key="memories.instruction.ram" value="true"/>
-        <property key="memories.instruction.ram.end" value="${memories.instruction.ram.end.value}"/>
-        <property key="memories.instruction.ram.start" value="${memories.instruction.ram.start.value}"/>
+        <property key="memories.instruction.ram.end"
+                  value="${memories.instruction.ram.end.value}"/>
+        <property key="memories.instruction.ram.start"
+                  value="${memories.instruction.ram.start.value}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.end" value="0x1d07ffff"/>
         <property key="memories.programmemory.partition2" value="true"/>
-        <property key="memories.programmemory.partition2.end" value="${memories.programmemory.partition2.end.value}"/>
-        <property key="memories.programmemory.partition2.start" value="${memories.programmemory.partition2.start.value}"/>
+        <property key="memories.programmemory.partition2.end"
+                  value="${memories.programmemory.partition2.end.value}"/>
+        <property key="memories.programmemory.partition2.start"
+                  value="${memories.programmemory.partition2.start.value}"/>
         <property key="memories.programmemory.start" value="0x1d000000"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
@@ -5759,8 +6393,8 @@
       <toolsSet>
         <developmentServer>localhost</developmentServer>
         <targetDevice>PIC32MX795F512L</targetDevice>
-        <targetHeader/>
-        <targetPluginBoard/>
+        <targetHeader></targetHeader>
+        <targetPluginBoard></targetPluginBoard>
         <platformTool>RealICEPlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
         <languageToolchainVersion>1.31</languageToolchainVersion>
@@ -5778,19 +6412,21 @@
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
           <parseOnProdLoad>true</parseOnProdLoad>
-          <alternateLoadableFile/>
+          <alternateLoadableFile></alternateLoadableFile>
         </loading>
       </compileType>
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
-        <makeCustomizationPreStep/>
+        <makeCustomizationPreStep></makeCustomizationPreStep>
         <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
-        <makeCustomizationPostStep/>
+        <makeCustomizationPostStep></makeCustomizationPostStep>
         <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
-      <item ex="true" overriding="false" path="../../../../framework/driver/nvm/src/dynamic/drv_nvm.c">
+      <item path="../../../../framework/driver/nvm/src/dynamic/drv_nvm.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -5804,7 +6440,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item ex="true" overriding="false" path="../../../../framework/driver/nvm/src/dynamic/drv_nvm_erasewrite.c">
+      <item path="../../../../framework/driver/nvm/src/dynamic/drv_nvm_erasewrite.c"
+            ex="true"
+            overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -5826,7 +6464,8 @@
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories" value="../src;../src/system_config/e_wi_spiflash;../../../../framework;../src/system_config/e_wi_spiflash/framework;../../../../bsp/eagleeye2014"/>
+        <property key="extra-include-directories"
+                  value="../src;../src/system_config/e_wi_spiflash;../../../../framework;../src/system_config/e_wi_spiflash/framework;../../../../bsp/eagleeye2014"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -5986,7 +6625,8 @@
         <property key="TIMER3" value="true"/>
         <property key="TIMER4" value="true"/>
         <property key="TIMER5" value="true"/>
-        <property key="ToolFirmwareFilePath" value="Press to browse for a specific firmware version"/>
+        <property key="ToolFirmwareFilePath"
+                  value="Press to browse for a specific firmware version"/>
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
         <property key="UART1" value="true"/>
         <property key="UART2" value="true"/>
@@ -6009,13 +6649,17 @@
         <property key="memories.flashdata" value="true"/>
         <property key="memories.id" value="true"/>
         <property key="memories.instruction.ram" value="true"/>
-        <property key="memories.instruction.ram.end" value="${memories.instruction.ram.end.value}"/>
-        <property key="memories.instruction.ram.start" value="${memories.instruction.ram.start.value}"/>
+        <property key="memories.instruction.ram.end"
+                  value="${memories.instruction.ram.end.value}"/>
+        <property key="memories.instruction.ram.start"
+                  value="${memories.instruction.ram.start.value}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.end" value="0x1d07ffff"/>
         <property key="memories.programmemory.partition2" value="true"/>
-        <property key="memories.programmemory.partition2.end" value="${memories.programmemory.partition2.end.value}"/>
-        <property key="memories.programmemory.partition2.start" value="${memories.programmemory.partition2.start.value}"/>
+        <property key="memories.programmemory.partition2.end"
+                  value="${memories.programmemory.partition2.end.value}"/>
+        <property key="memories.programmemory.partition2.start"
+                  value="${memories.programmemory.partition2.start.value}"/>
         <property key="memories.programmemory.start" value="0x1d000000"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>

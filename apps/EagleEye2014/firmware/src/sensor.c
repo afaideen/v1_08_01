@@ -25,7 +25,7 @@ void SENSOR_Initialize_Setting(void)
 	appData.config.WAN_IPAddr[1].my_ip.Val = 0;
 	appData.config.WAN_IPAddr[1].event_time = 0;
 	strcpy(appData.config.ddns.username, "afaideen");
-	strcpy(appData.config.ddns.password, "pencouch69");
+	strcpy(appData.config.ddns.password, "password");
 //	strcpy(appData.config.ddns.hostname, "hanpeek.dynns.com");//enhanced domain name require pay!
 	strcpy(appData.config.ddns.hostname, "birdpeek.ddns.net");
 	appData.config.ddns.svcid = 1;
@@ -34,7 +34,7 @@ void SENSOR_Initialize_Setting(void)
     strcpy(appData.config.email.server, "smtp.mail.com");
     appData.config.email.port = 25;	//use 587(TLS) or 465(SSL) unsecured for smtp.mail.com	
     strcpy(appData.config.email.username, "afaideen@mail.com");
-	strcpy(appData.config.email.password, "pencouch69");
+	strcpy(appData.config.email.password, "password");
 	appData.config.email.useSSL = 0;
 	strcpy(appData.config.email.To, "whiteking80@yahoo.co.uk");
 
